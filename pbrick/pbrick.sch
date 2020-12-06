@@ -1,0 +1,1211 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L pbrick-rescue:PROTEUS-III-WIRL-BLTE_PROTEUS-III PROTEUS-III1
+U 1 1 5F0B4C78
+P 5850 2900
+F 0 "PROTEUS-III1" H 6650 2500 50  0000 C CNN
+F 1 "PROTEUS-III" H 3250 2550 50  0001 C CNN
+F 2 "Common:WIRL-BLTE_Proteus-III" H 3300 1650 50  0001 C CNN
+F 3 "https://www.we-online.de/katalog/manual/2611011024000_Proteus-III%202611011024000%20Manual_rev1.pdf" H 5800 2400 50  0001 C CNN
+F 4 "WIRL-BTLE PROTEUS-III BLUETOOTH" H 3300 2250 50  0001 C CNN "Description"
+F 5 "1917-2611011024000CT-ND" H 3300 2100 50  0001 C CNN "Digi-Key_PN"
+F 6 "2611011024000" H 3300 1950 50  0001 C CNN "MPN"
+F 7 "Würth Elektronik" H 3300 2400 50  0001 C CNN "Manufacturer"
+F 8 "https://www.we-online.de/katalog/datasheet/2611011024000.pdf" H 3400 1800 50  0001 C CNN "Footprint_Reference"
+F 9 "Charles R. Portwood II (charlesportwoodii@erianna.com)" H 3450 1500 50  0001 C CNN "Author"
+	1    5850 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L pbrick-rescue:KMR621NGLFS-KMR621NGLFS S1
+U 1 1 5F0E3EAF
+P 5650 1400
+F 0 "S1" H 5650 1600 50  0000 C CNN
+F 1 "KMR621NGLFS" H 5650 1576 50  0001 C CNN
+F 2 "SW_KMR621NGLFS" H 5650 1400 50  0001 L BNN
+F 3 "N/A" H 5650 1400 50  0001 L BNN
+F 4 "1.9mm" H 5650 1400 50  0001 L BNN "Field4"
+F 5 "C&K SWITCHES" H 5650 1400 50  0001 L BNN "Field5"
+F 6 "Manufacturer Recommendations" H 5650 1400 50  0001 L BNN "Field6"
+	1    5650 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 1400 5350 1400
+Text Label 5050 2950 2    50   ~ 0
+SWDIO
+Text Label 5050 3050 2    50   ~ 0
+P0.18
+Text Label 5050 3150 2    50   ~ 0
+P0.02
+Text Label 5050 2650 2    50   ~ 0
+RF
+Text Label 5050 2550 2    50   ~ 0
+ANT
+Text Label 5600 2000 1    50   ~ 0
+P0.09
+Text Label 5700 2000 1    50   ~ 0
+P0.10
+Text Label 5800 2000 1    50   ~ 0
+P0.23
+Text Label 5900 2000 1    50   ~ 0
+P1.00
+Text Label 6000 2000 1    50   ~ 0
+P0.21
+Text Label 6100 2000 1    50   ~ 0
+P0.07
+Text Label 6600 2850 0    50   ~ 0
+P0.03
+Text Label 6600 2950 0    50   ~ 0
+P0.12
+Text Label 6600 3050 0    50   ~ 0
+P0.11
+Text Label 6600 3150 0    50   ~ 0
+P1.09
+Text Label 6600 3250 0    50   ~ 0
+P1.08
+Text Label 5700 4250 3    50   ~ 0
+P0.19
+Text Label 5800 4250 3    50   ~ 0
+P0.22
+$Comp
+L pbrick-rescue:3.3V-SparkFun-PowerSymbols #SUPPLY0101
+U 1 1 5F0EE61B
+P 4400 3250
+F 0 "#SUPPLY0101" H 4450 3250 45  0001 L BNN
+F 1 "3.3V" V 4400 3378 45  0000 L CNN
+F 2 "XXX-00000" V 4358 3377 60  0001 L CNN
+F 3 "" H 4400 3250 60  0001 C CNN
+	1    4400 3250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:Earth #PWR0101
+U 1 1 5F0EF49B
+P 5250 1400
+F 0 "#PWR0101" H 5250 1150 50  0001 C CNN
+F 1 "Earth" H 5250 1250 50  0001 C CNN
+F 2 "" H 5250 1400 50  0001 C CNN
+F 3 "~" H 5250 1400 50  0001 C CNN
+	1    5250 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0102
+U 1 1 5F0EF953
+P 5150 2750
+F 0 "#PWR0102" H 5150 2500 50  0001 C CNN
+F 1 "Earth" H 5150 2600 50  0001 C CNN
+F 2 "" H 5150 2750 50  0001 C CNN
+F 3 "~" H 5150 2750 50  0001 C CNN
+	1    5150 2750
+	0    1    1    0   
+$EndComp
+$Comp
+L power:Earth #PWR0103
+U 1 1 5F0F03E6
+P 6450 2750
+F 0 "#PWR0103" H 6450 2500 50  0001 C CNN
+F 1 "Earth" H 6450 2600 50  0001 C CNN
+F 2 "" H 6450 2750 50  0001 C CNN
+F 3 "~" H 6450 2750 50  0001 C CNN
+	1    6450 2750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5050 3150 5150 3150
+Wire Wire Line
+	5050 3050 5150 3050
+Wire Wire Line
+	5050 2950 5150 2950
+Wire Wire Line
+	5050 2850 5150 2850
+Wire Wire Line
+	5050 2650 5150 2650
+Wire Wire Line
+	5050 2550 5150 2550
+Wire Wire Line
+	5700 4250 5700 4150
+Wire Wire Line
+	5800 4150 5800 4250
+Wire Wire Line
+	5900 4250 5900 4150
+Wire Wire Line
+	6000 4150 6000 4250
+Wire Wire Line
+	6450 3250 6600 3250
+Wire Wire Line
+	6600 3150 6450 3150
+Wire Wire Line
+	6450 3050 6600 3050
+Wire Wire Line
+	6600 2950 6450 2950
+Wire Wire Line
+	6450 2850 6600 2850
+Wire Wire Line
+	6100 2100 6100 2000
+Wire Wire Line
+	6000 2100 6000 2000
+Wire Wire Line
+	5900 2100 5900 2000
+Wire Wire Line
+	5800 2100 5800 2000
+Wire Wire Line
+	5700 2100 5700 2000
+Wire Wire Line
+	5600 2100 5600 2000
+Text Label 6200 1400 0    50   ~ 0
+P0.18
+Wire Wire Line
+	5950 1400 6050 1400
+$Comp
+L pbrick-rescue:RESISTOR_0603-MF_Passives R7
+U 1 1 5F1004DF
+P 6050 1150
+F 0 "R7" H 6118 1192 45  0000 L CNN
+F 1 "10K 0603" H 6118 1108 45  0000 L CNN
+F 2 "Resistors:0603" H 6300 1060 20  0001 C CNN
+F 3 "https://d1d2qsbl8m0m72.cloudfront.net/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf" H 6050 1150 60  0001 C CNN
+F 4 "RHM10KDCT-ND" H 6050 1150 50  0001 C CNN "Digi-Key_PN"
+F 5 "Rohm Semiconductor" H 6050 1150 50  0001 C CNN "Manufacturer"
+F 6 "ESR03EZPJ103" H 6050 1150 50  0001 C CNN "MPN"
+F 7 "RES SMD 10K OHM 5% 1/4W 0603" H 6050 1150 50  0001 C CNN "Description"
+	1    6050 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L pbrick-rescue:3.3V-SparkFun-PowerSymbols #SUPPLY0102
+U 1 1 5F101A67
+P 6050 900
+F 0 "#SUPPLY0102" H 6100 900 45  0001 L BNN
+F 1 "3.3V" H 6050 1070 45  0000 C CNN
+F 2 "XXX-00000" V 6008 1027 60  0001 L CNN
+F 3 "" H 6050 900 60  0001 C CNN
+	1    6050 900 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 900  6050 950 
+Wire Wire Line
+	6050 1350 6050 1400
+Connection ~ 6050 1400
+Wire Wire Line
+	6050 1400 6200 1400
+Text Label 6100 5750 3    50   ~ 0
+P0.18
+Text Label 5050 2850 2    50   ~ 0
+SWDCLK
+Text Label 5900 5750 3    50   ~ 0
+SWDCLK
+Text Label 5800 5750 3    50   ~ 0
+SWDIO
+$Comp
+L pbrick-rescue:3.3V-SparkFun-PowerSymbols #SUPPLY0103
+U 1 1 5F10E31F
+P 6400 5100
+F 0 "#SUPPLY0103" H 6450 5100 45  0001 L BNN
+F 1 "3.3V" H 6400 5270 45  0000 C CNN
+F 2 "XXX-00000" V 6358 5227 60  0001 L CNN
+F 3 "" H 6400 5100 60  0001 C CNN
+	1    6400 5100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5200 5000 5200 5050
+NoConn ~ 5700 5600
+NoConn ~ 5600 5600
+Wire Wire Line
+	6100 5600 6100 5750
+Wire Wire Line
+	5900 5750 5900 5600
+Wire Wire Line
+	5800 5600 5800 5750
+$Comp
+L power:Earth #PWR0104
+U 1 1 5F110ED4
+P 5200 5050
+F 0 "#PWR0104" H 5200 4800 50  0001 C CNN
+F 1 "Earth" H 5200 4900 50  0001 C CNN
+F 2 "" H 5200 5050 50  0001 C CNN
+F 3 "~" H 5200 5050 50  0001 C CNN
+	1    5200 5050
+	0    1    1    0   
+$EndComp
+Connection ~ 5200 5050
+Wire Wire Line
+	5200 5050 5200 5100
+$Comp
+L pbrick-rescue:I2C_STANDARDQWIIC-SparkFun-Connectors J2
+U 1 1 5F11DB2A
+P 5500 7300
+F 0 "J2" V 5150 7450 45  0000 C CNN
+F 1 "QWIIC" V 5250 7450 45  0000 C CNN
+F 2 "1X04_1MM_RA" H 5500 7800 20  0001 C CNN
+F 3 "" H 5500 7300 50  0001 C CNN
+F 4 "CONN-13729" H 5458 7731 60  0001 C CNN "Field4"
+	1    5500 7300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:Earth #PWR0105
+U 1 1 5F11F9F0
+P 5500 7200
+F 0 "#PWR0105" H 5500 6950 50  0001 C CNN
+F 1 "Earth" H 5500 7050 50  0001 C CNN
+F 2 "" H 5500 7200 50  0001 C CNN
+F 3 "~" H 5500 7200 50  0001 C CNN
+	1    5500 7200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L pbrick-rescue:3.3V-SparkFun-PowerSymbols #SUPPLY0104
+U 1 1 5F120160
+P 5400 7200
+F 0 "#SUPPLY0104" H 5450 7200 45  0001 L BNN
+F 1 "3.3V" H 5400 7370 45  0000 C CNN
+F 2 "XXX-00000" V 5358 7327 60  0001 L CNN
+F 3 "" H 5400 7200 60  0001 C CNN
+	1    5400 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L pbrick-rescue:RESISTOR_0603-MF_Passives R4
+U 1 1 5F125DEC
+P 5000 6550
+F 0 "R4" H 5068 6592 45  0000 L CNN
+F 1 "2.2K Ω 0603" H 5068 6508 45  0000 L CNN
+F 2 "Resistors:0603" H 5250 6460 20  0001 C CNN
+F 3 "https://d1d2qsbl8m0m72.cloudfront.net/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf" H 5000 6550 60  0001 C CNN
+F 4 "RES SMD 2.2K OHM 5% 1/4W 0603" H 5000 6550 50  0001 C CNN "Description"
+F 5 "ESR03EZPJ222" H 5000 6550 50  0001 C CNN "MPN"
+F 6 "Rohm Semiconductor" H 5000 6550 50  0001 C CNN "Manufacturer"
+F 7 "RHM2.2KDCT-ND" H 5000 6550 50  0001 C CNN "Digi-Key_PN"
+	1    5000 6550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L pbrick-rescue:RESISTOR_0603-MF_Passives R5
+U 1 1 5F1266C1
+P 5500 6550
+F 0 "R5" H 5568 6592 45  0000 L CNN
+F 1 "2.2K Ω 0603" H 5568 6508 45  0000 L CNN
+F 2 "Resistors:0603" H 5750 6460 20  0001 C CNN
+F 3 "https://d1d2qsbl8m0m72.cloudfront.net/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf" H 5500 6550 60  0001 C CNN
+F 4 "RHM2.2KDCT-ND" H 5500 6550 50  0001 C CNN "Digi-Key_PN"
+F 5 "Rohm Semiconductor" H 5500 6550 50  0001 C CNN "Manufacturer"
+F 6 "ESR03EZPJ222" H 5500 6550 50  0001 C CNN "MPN"
+F 7 "RES SMD 2.2K OHM 5% 1/4W 0603" H 5500 6550 50  0001 C CNN "Description"
+	1    5500 6550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5200 7200 5200 6550
+Wire Wire Line
+	5300 7200 5300 6550
+Wire Wire Line
+	5200 6550 5200 6450
+Connection ~ 5200 6550
+Wire Wire Line
+	5300 6550 5300 6450
+Connection ~ 5300 6550
+$Comp
+L pbrick-rescue:3.3V-SparkFun-PowerSymbols #SUPPLY0105
+U 1 1 5F12E308
+P 4800 6550
+F 0 "#SUPPLY0105" H 4850 6550 45  0001 L BNN
+F 1 "3.3V" H 4800 6720 45  0000 C CNN
+F 2 "XXX-00000" V 4758 6677 60  0001 L CNN
+F 3 "" H 4800 6550 60  0001 C CNN
+	1    4800 6550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L pbrick-rescue:3.3V-SparkFun-PowerSymbols #SUPPLY0106
+U 1 1 5F12E9A7
+P 5700 6550
+F 0 "#SUPPLY0106" H 5750 6550 45  0001 L BNN
+F 1 "3.3V" H 5700 6720 45  0000 C CNN
+F 2 "XXX-00000" V 5658 6677 60  0001 L CNN
+F 3 "" H 5700 6550 60  0001 C CNN
+	1    5700 6550
+	0    1    1    0   
+$EndComp
+$Comp
+L pbrick-rescue:JST_2MM_MALE-SparkFun-Connectors J1
+U 1 1 5F132F9C
+P 6400 7300
+F 0 "J1" H 6350 7600 45  0000 L CNN
+F 1 "JST_2MM_MALE" H 6500 7100 45  0001 L BNN
+F 2 "JST-2-SMD" H 6400 7650 20  0001 C CNN
+F 3 "" H 6400 7300 50  0001 C CNN
+F 4 "CONN-11443" V 6650 7100 60  0001 L CNN "Field4"
+	1    6400 7300
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:Earth #PWR0106
+U 1 1 5F134828
+P 6450 7100
+F 0 "#PWR0106" H 6450 6850 50  0001 C CNN
+F 1 "Earth" H 6450 6950 50  0001 C CNN
+F 2 "" H 6450 7100 50  0001 C CNN
+F 3 "~" H 6450 7100 50  0001 C CNN
+	1    6450 7100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VDD #PWR0107
+U 1 1 5F16990D
+P 6350 7100
+F 0 "#PWR0107" H 6350 6950 50  0001 C CNN
+F 1 "VDD" H 6365 7273 50  0000 C CNN
+F 2 "" H 6350 7100 50  0001 C CNN
+F 3 "" H 6350 7100 50  0001 C CNN
+	1    6350 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_ARM_JTAG_SWD_10 P0
+U 1 1 5F109E09
+P 5800 5100
+F 0 "P0" V 5500 5550 50  0001 R CNN
+F 1 "SWD" V 5300 5200 50  0000 R CNN
+F 2 "Connectors:SAMTECH_FTSH-105-01" H 5800 5100 50  0001 C CNN
+F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresight_components_trm.pdf" V 5450 3850 50  0001 C CNN
+	1    5800 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L pbrick-rescue:150121M153000-150121M153000 LED1
+U 1 1 5F1A9C53
+P 3400 4900
+F 0 "LED1" H 3250 5350 50  0000 L CNN
+F 1 "150121M153000" H 4150 4900 50  0001 C CNN
+F 2 "Common:150121M153000" H 3850 4700 60  0001 L CNN
+F 3 "https://www.we-online.de/katalog/datasheet/150121M153000.pdf" H 3600 5200 60  0001 L CNN
+F 4 "LED RGB DIFFUSED SMD" H 3850 5000 60  0001 L CNN "Description"
+F 5 "Würth Elektronik" H 3850 5100 60  0001 L CNN "Manufacturer"
+F 6 "150121M153000" H 4150 4800 50  0001 C CNN "MPN"
+F 7 "732-11394-1-ND" H 3400 4900 50  0001 C CNN "DigiKey_PN"
+	1    3400 4900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:Earth #PWR0108
+U 1 1 5F18297A
+P 3550 2000
+F 0 "#PWR0108" H 3550 1750 50  0001 C CNN
+F 1 "Earth" H 3550 1850 50  0001 C CNN
+F 2 "" H 3550 2000 50  0001 C CNN
+F 3 "~" H 3550 2000 50  0001 C CNN
+	1    3550 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0109
+U 1 1 5F182453
+P 1650 1700
+F 0 "#PWR0109" H 1650 1450 50  0001 C CNN
+F 1 "Earth" H 1650 1550 50  0001 C CNN
+F 2 "" H 1650 1700 50  0001 C CNN
+F 3 "~" H 1650 1700 50  0001 C CNN
+	1    1650 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 1300 1450 1500
+$Comp
+L power:VDD #PWR0110
+U 1 1 5F17EDE8
+P 1450 1300
+F 0 "#PWR0110" H 1450 1150 50  0001 C CNN
+F 1 "VDD" H 1465 1473 50  0000 C CNN
+F 2 "" H 1450 1300 50  0001 C CNN
+F 3 "" H 1450 1300 50  0001 C CNN
+	1    1450 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 1700 3700 1700
+Wire Wire Line
+	3550 1800 3550 1700
+Connection ~ 3550 1700
+Wire Wire Line
+	3450 1700 3550 1700
+$Comp
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C2
+U 1 1 5F177E00
+P 3550 1900
+F 0 "C2" H 3650 1950 45  0000 L CNN
+F 1 "470nF 0603" H 3650 1850 45  0000 L CNN
+F 2 "Capacitors:0603" H 3800 1810 20  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/885012106015.pdf" H 3550 1900 60  0001 C CNN
+F 4 "732-7912-1-ND" H 3550 1900 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" H 3550 1900 50  0001 C CNN "Manufacturer"
+F 6 "885012106015" H 3550 1900 50  0001 C CNN "MPN"
+F 7 "CAP CER 0.47UF 16V X5R 0603" H 3550 1900 50  0001 C CNN "Description"
+	1    3550 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 1500 1650 1500
+Wire Wire Line
+	1650 1500 1900 1500
+Connection ~ 1650 1500
+$Comp
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C1
+U 1 1 5F17448E
+P 1650 1600
+F 0 "C1" H 1450 1650 45  0000 L CNN
+F 1 "470nF 0603" H 1150 1550 45  0000 L CNN
+F 2 "Capacitors:0603" H 1900 1510 20  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/885012106015.pdf" H 1650 1600 60  0001 C CNN
+F 4 "732-7912-1-ND" H 1650 1600 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" H 1650 1600 50  0001 C CNN "Manufacturer"
+F 6 "885012106015" H 1650 1600 50  0001 C CNN "MPN"
+F 7 "CAP CER 0.47UF 16V X5R 0603" H 1650 1600 50  0001 C CNN "Description"
+	1    1650 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 1900 2050 1900
+Wire Wire Line
+	1900 1500 1900 1900
+Connection ~ 1900 1500
+Wire Wire Line
+	2050 1500 1900 1500
+$Comp
+L power:Earth #PWR0111
+U 1 1 5F172988
+P 2050 2100
+F 0 "#PWR0111" H 2050 1850 50  0001 C CNN
+F 1 "Earth" H 2050 1950 50  0001 C CNN
+F 2 "" H 2050 2100 50  0001 C CNN
+F 3 "~" H 2050 2100 50  0001 C CNN
+	1    2050 2100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3450 1500
+NoConn ~ 2050 1700
+$Comp
+L pbrick-rescue:ADP3330ARTZ-5-RL7-ADP3330ARTZ-5-RL7 U1
+U 1 1 5F16D626
+P 2750 1700
+F 0 "U1" H 2750 2270 50  0000 C CNN
+F 1 "ADP3330ARTZ-5-RL7" H 2750 2179 50  0000 C CNN
+F 2 "SOT95P280X145-6N" H 2750 1700 50  0001 L BNN
+F 3 "https://www.digikey.com/htmldatasheets/production/184601/0/0/1/adp3330.html" H 2750 1700 50  0001 L BNN
+F 4 "ADP3330ARTZ-5-RL7" H 2750 1700 50  0001 C CNN "MPN"
+F 5 "ADP3330ARTZ-5-RL7CT-ND" H 2750 1700 50  0001 C CNN "Digi-Key_PN"
+F 6 "Analog Devices Inc." H 2750 1700 50  0001 C CNN "Manufacturer"
+F 7 "IC REG LINEAR 5V 200MA SOT23-6" H 2750 1700 50  0001 C CNN "Description"
+	1    2750 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L pbrick-rescue:5V-SparkFun-PowerSymbols #SUPPLY0107
+U 1 1 5F2286D7
+P 3700 1700
+F 0 "#SUPPLY0107" H 3750 1700 45  0001 L BNN
+F 1 "5V" V 3700 1828 45  0000 L CNN
+F 2 "XXX-00000" V 3742 1828 60  0001 L CNN
+F 3 "" H 3700 1700 60  0001 C CNN
+	1    3700 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L pbrick-rescue:5V-SparkFun-PowerSymbols #SUPPLY0108
+U 1 1 5F22A686
+P 3250 4900
+F 0 "#SUPPLY0108" H 3300 4900 45  0001 L BNN
+F 1 "5V" V 3250 5070 45  0000 C CNN
+F 2 "XXX-00000" V 3292 5028 60  0001 L CNN
+F 3 "" H 3250 4900 60  0001 C CNN
+	1    3250 4900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L pbrick-rescue:RESISTOR_0603-MF_Passives R1
+U 1 1 5F2549E3
+P 3750 4500
+F 0 "R1" H 3700 4300 45  0000 R CNN
+F 1 "85 Ω 0603" H 3600 4300 45  0000 R CNN
+F 2 "Resistors:0603" H 4000 4410 20  0001 C CNN
+F 3 "https://d1d2qsbl8m0m72.cloudfront.net/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf" H 3750 4500 60  0001 C CNN
+F 4 "RHM82DCT-ND" H 3750 4500 50  0001 C CNN "Digi-Key_PN"
+F 5 "Rohm Semiconductor" H 3750 4500 50  0001 C CNN "Manufacturer"
+F 6 "ESR03EZPJ820" H 3750 4500 50  0001 C CNN "MPN"
+F 7 "RES SMD 82 OHM 5% 1/4W 0603" H 3750 4500 50  0001 C CNN "Description"
+	1    3750 4500
+	-1   0    0    1   
+$EndComp
+$Comp
+L pbrick-rescue:RESISTOR_0603-MF_Passives R2
+U 1 1 5F2566BD
+P 3900 4700
+F 0 "R2" H 3800 4550 45  0000 R CNN
+F 1 "85 Ω 0603" H 3700 4550 45  0000 R CNN
+F 2 "Resistors:0603" H 4150 4610 20  0001 C CNN
+F 3 "https://d1d2qsbl8m0m72.cloudfront.net/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf" H 3900 4700 60  0001 C CNN
+F 4 "RHM82DCT-ND" H 3900 4700 50  0001 C CNN "Digi-Key_PN"
+F 5 "RES SMD 82 OHM 5% 1/4W 0603" H 3900 4700 50  0001 C CNN "Description"
+F 6 "ESR03EZPJ820" H 3900 4700 50  0001 C CNN "MPN"
+F 7 "Rohm Semiconductor" H 3900 4700 50  0001 C CNN "Manufacturer"
+	1    3900 4700
+	-1   0    0    1   
+$EndComp
+$Comp
+L pbrick-rescue:RESISTOR_0603-MF_Passives R3
+U 1 1 5F262595
+P 4050 4900
+F 0 "R3" H 4000 4750 45  0000 R CNN
+F 1 "140 Ω 0603" H 3900 4750 45  0000 R CNN
+F 2 "Resistors:0603" H 4300 4810 20  0001 C CNN
+F 3 "https://www.vishay.com/docs/20043/crcwhpe3.pdf" H 4050 4900 60  0001 C CNN
+F 4 "541-143SCT-ND" H 4050 4900 50  0001 C CNN "Digi-Key_PN"
+F 5 "Vishay Dale" H 4050 4900 50  0001 C CNN "Manufacturer"
+F 6 "CRCW0603143RFKEAHP" H 4050 4900 50  0001 C CNN "MPN"
+F 7 "RES SMD 143 OHM 1% 1/4W 0603" H 4050 4900 50  0001 C CNN "Description"
+	1    4050 4900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3600 4700 3750 4700
+Wire Wire Line
+	3600 4900 3900 4900
+Wire Wire Line
+	3600 5100 4050 5100
+Text Label 3750 4300 2    50   ~ 0
+P0.02
+Text Label 3900 4500 0    50   ~ 0
+P0.19
+Text Label 4050 4700 0    50   ~ 0
+P0.22
+$Comp
+L pbrick-rescue:3.3V-SparkFun-PowerSymbols #SUPPLY0109
+U 1 1 5F226DE7
+P 3350 3650
+F 0 "#SUPPLY0109" H 3400 3650 45  0001 L BNN
+F 1 "3.3V" V 3350 3778 45  0000 L CNN
+F 2 "XXX-00000" V 3308 3777 60  0001 L CNN
+F 3 "" H 3350 3650 60  0001 C CNN
+	1    3350 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L power:Earth #PWR0112
+U 1 1 5F226DDE
+P 3150 3850
+F 0 "#PWR0112" H 3150 3600 50  0001 C CNN
+F 1 "Earth" H 3150 3700 50  0001 C CNN
+F 2 "" H 3150 3850 50  0001 C CNN
+F 3 "~" H 3150 3850 50  0001 C CNN
+	1    3150 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 3650 3150 3650
+Wire Wire Line
+	3000 3650 3150 3650
+Connection ~ 3150 3650
+$Comp
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C4
+U 1 1 5F226DD8
+P 3150 3750
+F 0 "C4" H 3248 3792 45  0000 L CNN
+F 1 "2.2uf" H 3248 3708 45  0000 L CNN
+F 2 "Capacitors:0603" H 3400 3660 20  0001 C CNN
+F 3 "https://katalog.we-online.de/pbs/datasheet/885012106018.pdf" H 3150 3750 60  0001 C CNN
+F 4 "732-7915-1-ND" H 3150 3750 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" H 3150 3750 50  0001 C CNN "Manufacturer"
+F 6 "885012106018" H 3150 3750 50  0001 C CNN "MPN"
+F 7 "CAP CER 2.2UF 16V X5R 0603" H 3150 3750 50  0001 C CNN "Description"
+	1    3150 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3000 3450 3150 3450
+$Comp
+L power:Earth #PWR0113
+U 1 1 5F226DD1
+P 3150 3250
+F 0 "#PWR0113" H 3150 3000 50  0001 C CNN
+F 1 "Earth" H 3150 3100 50  0001 C CNN
+F 2 "" H 3150 3250 50  0001 C CNN
+F 3 "~" H 3150 3250 50  0001 C CNN
+	1    3150 3250
+	-1   0    0    1   
+$EndComp
+$Comp
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C3
+U 1 1 5F226DCB
+P 3150 3350
+F 0 "C3" H 3248 3392 45  0000 L CNN
+F 1 "470pF" H 3248 3308 45  0000 L CNN
+F 2 "Capacitors:0603" H 3400 3260 20  0001 C CNN
+F 3 "CAP CER 2.2UF 16V X5R 0603" H 3150 3350 60  0001 C CNN
+F 4 "732-7770-1-ND" H 3150 3350 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" H 3150 3350 50  0001 C CNN "Manufacturer"
+F 6 "885012006027" H 3150 3350 50  0001 C CNN "MPN"
+F 7 "CAP CER 470PF 16V C0G/NP0 0603" H 3150 3350 50  0001 C CNN "Description"
+	1    3150 3350
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3000 3550
+Wire Wire Line
+	2200 3650 2400 3650
+Wire Wire Line
+	2400 3450 2200 3450
+$Comp
+L power:Earth #PWR0115
+U 1 1 5F226DB9
+P 2400 3550
+F 0 "#PWR0115" H 2400 3300 50  0001 C CNN
+F 1 "Earth" H 2400 3400 50  0001 C CNN
+F 2 "" H 2400 3550 50  0001 C CNN
+F 3 "~" H 2400 3550 50  0001 C CNN
+	1    2400 3550
+	0    1    1    0   
+$EndComp
+$Comp
+L pbrick-rescue:MIC5219-x.xYML-mic5219-x.xyml U2
+U 1 1 5F226DB3
+P 2600 3300
+F 0 "U2" H 2700 3375 50  0000 C CNN
+F 1 "MIC5219-3.3YML-TR" H 2700 3284 50  0001 C CNN
+F 2 "Common:QFN6_THERMAL_PAD" H 4150 3300 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/268/mic5219-1082354.pdf" H 2600 3300 50  0001 C CNN
+F 4 "MIC5219-3.3YML-TR " H 4050 3200 50  0001 C CNN "MPN"
+F 5 "Microchip Technology / Micrel " H 4200 3100 50  0001 C CNN "Manufacturer"
+F 6 "576-2768-1-ND" H 2600 3300 50  0001 C CNN "Digi-Key_PN"
+	1    2600 3300
+	1    0    0    -1  
+$EndComp
+Text Label 6000 4250 3    50   ~ 0
+P0.01
+Text Label 5900 4250 3    50   ~ 0
+P0.00
+Text Label 5300 6450 1    50   ~ 0
+P0.01
+Text Label 5200 6450 1    50   ~ 0
+P0.00
+Text Label 1950 5850 1    50   ~ 0
+P0.03
+Text Label 1850 5850 1    50   ~ 0
+P0.12
+$Comp
+L pbrick-rescue:5V-SparkFun-PowerSymbols #SUPPLY0110
+U 1 1 5F148911
+P 3050 5850
+F 0 "#SUPPLY0110" H 3100 5850 45  0001 L BNN
+F 1 "5V" V 3050 6020 45  0000 C CNN
+F 2 "XXX-00000" V 3092 5978 60  0001 L CNN
+F 3 "" H 3050 5850 60  0001 C CNN
+	1    3050 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR0116
+U 1 1 5F14CA74
+P 3750 6650
+F 0 "#PWR0116" H 3750 6500 50  0001 C CNN
+F 1 "VDD" H 3765 6823 50  0000 C CNN
+F 2 "" H 3750 6650 50  0001 C CNN
+F 3 "" H 3750 6650 50  0001 C CNN
+	1    3750 6650
+	0    1    1    0   
+$EndComp
+Text Label 2400 7150 3    50   ~ 0
+M0_0
+Text Label 2200 7150 3    50   ~ 0
+M0_1
+$Comp
+L power:Earth #PWR0117
+U 1 1 5F155420
+P 1050 6300
+F 0 "#PWR0117" H 1050 6050 50  0001 C CNN
+F 1 "Earth" H 1050 6150 50  0001 C CNN
+F 2 "" H 1050 6300 50  0001 C CNN
+F 3 "~" H 1050 6300 50  0001 C CNN
+	1    1050 6300
+	0    1    1    0   
+$EndComp
+$Comp
+L pbrick-rescue:B4B-XH-A(LF)(SN)-B4B-XH-A_LF__SN_ J3
+U 1 1 5F166103
+P 4200 7350
+F 0 "J3" H 4307 7817 50  0000 C CNN
+F 1 "B4B-XH-A(LF)(SN)" H 4300 7000 50  0001 C CNN
+F 2 "JST_B4B-XH-A(LF)(SN)" H 4200 7350 50  0001 L BNN
+F 3 "NA" H 4200 7350 50  0001 L BNN
+F 4 "Manufacturer Recommendation" H 4200 7350 50  0001 L BNN "Field4"
+F 5 "JST Sales America Inc" H 4200 7350 50  0001 L BNN "Field5"
+	1    4200 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR0118
+U 1 1 5F189B11
+P 4500 7150
+F 0 "#PWR0118" H 4500 7000 50  0001 C CNN
+F 1 "VDD" H 4515 7323 50  0000 C CNN
+F 2 "" H 4500 7150 50  0001 C CNN
+F 3 "" H 4500 7150 50  0001 C CNN
+	1    4500 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0119
+U 1 1 5F18A29B
+P 4500 7450
+F 0 "#PWR0119" H 4500 7200 50  0001 C CNN
+F 1 "Earth" H 4500 7300 50  0001 C CNN
+F 2 "" H 4500 7450 50  0001 C CNN
+F 3 "~" H 4500 7450 50  0001 C CNN
+	1    4500 7450
+	1    0    0    -1  
+$EndComp
+Text Label 4500 7350 0    50   ~ 0
+M0_0
+Text Label 4500 7250 0    50   ~ 0
+M0_1
+$Comp
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C5
+U 1 1 5F1A6E37
+P 3600 6550
+F 0 "C5" V 3600 6800 45  0000 L CNN
+F 1 ".22uF" V 3600 6950 45  0000 L CNN
+F 2 "Capacitors:0603" H 3850 6460 20  0001 C CNN
+F 3 "CAP CER 470PF 16V C0G/NP0 0603" H 3600 6550 60  0001 C CNN
+F 4 "732-7910-1-ND" V 3600 6550 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" V 3600 6550 50  0001 C CNN "Manufactuer"
+F 6 "885012106013" V 3600 6550 50  0001 C CNN "MPN"
+F 7 "CAP CER 0.22UF 16V X5R 0603" V 3600 6550 50  0001 C CNN "Description"
+	1    3600 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0120
+U 1 1 5F1AE9FD
+P 3600 6450
+F 0 "#PWR0120" H 3600 6200 50  0001 C CNN
+F 1 "Earth" H 3600 6300 50  0001 C CNN
+F 2 "" H 3600 6450 50  0001 C CNN
+F 3 "~" H 3600 6450 50  0001 C CNN
+	1    3600 6450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3600 6650 3750 6650
+$Comp
+L pbrick-rescue:68UF-POLAR-EIA3528-10V-10%_TANT_-SparkFun-Capacitors C7
+U 1 1 5F1D8554
+P 3400 6550
+F 0 "C7" V 3550 6450 45  0000 C CNN
+F 1 "16V 10uF" V 3550 6200 45  0000 C CNN
+F 2 "EIA3528" H 3400 6800 20  0001 C CNN
+F 3 "https://www.vishay.com/docs/40182/tmch.pdf" H 3400 6550 50  0001 C CNN
+F 4 "718-2344-1-ND" V 3400 6550 50  0001 C CNN "Digi-Key_PN"
+F 5 "Vishay Sprague" V 3400 6550 50  0001 C CNN "Manufacturer"
+F 6 "TMCHB1C106MTRF" V 3400 6550 50  0001 C CNN "MPN"
+F 7 "CAP TANT 10UF 20% 16V 1411" V 3400 6550 50  0001 C CNN "Description"
+	1    3400 6550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3400 6650 3600 6650
+Connection ~ 3600 6650
+$Comp
+L power:Earth #PWR0121
+U 1 1 5F1DCDD0
+P 3400 6350
+F 0 "#PWR0121" H 3400 6100 50  0001 C CNN
+F 1 "Earth" H 3400 6200 50  0001 C CNN
+F 2 "" H 3400 6350 50  0001 C CNN
+F 3 "~" H 3400 6350 50  0001 C CNN
+	1    3400 6350
+	-1   0    0    1   
+$EndComp
+$Comp
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C27
+U 1 1 5F1FECBD
+P 9250 1200
+F 0 "C27" H 9300 1300 45  0000 L CNN
+F 1 "22pF 0603" H 9500 1300 45  0000 L CNN
+F 2 "Capacitors:0603" H 9500 1110 20  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 9250 1200 60  0001 C CNN
+F 4 "732-7762-1-ND" H 9250 1200 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" H 9250 1200 50  0001 C CNN "Manufacturer"
+F 6 "885012006019" H 9250 1200 50  0001 C CNN "MPN"
+F 7 "CAP CER 22PF 16V C0G/NP0 0603" H 9250 1200 50  0001 C CNN "Description"
+	1    9250 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C28
+U 1 1 5F203760
+P 9250 1550
+F 0 "C28" H 9300 1650 45  0000 L CNN
+F 1 "22pF 0603" H 9450 1650 45  0000 L CNN
+F 2 "Capacitors:0603" H 9500 1460 20  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 9250 1550 60  0001 C CNN
+F 4 "732-7762-1-ND" H 9250 1550 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" H 9250 1550 50  0001 C CNN "Manufacturer"
+F 6 "885012006019" H 9250 1550 50  0001 C CNN "MPN"
+F 7 "CAP CER 22PF 16V C0G/NP0 0603" H 9250 1550 50  0001 C CNN "Description"
+	1    9250 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C26
+U 1 1 5F203D38
+P 9000 1650
+F 0 "C26" V 9150 1250 45  0000 C CNN
+F 1 "22pF 0603" V 9150 1550 45  0000 C CNN
+F 2 "Capacitors:0603" H 9250 1560 20  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 9000 1650 60  0001 C CNN
+F 4 "732-7762-1-ND" V 9000 1650 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" V 9000 1650 50  0001 C CNN "Manufacturer"
+F 6 "885012006019" V 9000 1650 50  0001 C CNN "MPN"
+F 7 "CAP CER 22PF 16V C0G/NP0 0603" V 9000 1650 50  0001 C CNN "Description"
+	1    9000 1650
+	0    1    1    0   
+$EndComp
+$Comp
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C6
+U 1 1 5F20459A
+P 8750 1450
+F 0 "C6" H 8600 1450 45  0000 C CNN
+F 1 "22pF 0603" H 8500 1550 45  0000 C CNN
+F 2 "Capacitors:0603" H 9000 1360 20  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 8750 1450 60  0001 C CNN
+F 4 "732-7762-1-ND" H 8750 1450 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" H 8750 1450 50  0001 C CNN "Manufacturer"
+F 6 "885012006019" H 8750 1450 50  0001 C CNN "MPN"
+F 7 "CAP CER 22PF 16V C0G/NP0 0603" H 8750 1450 50  0001 C CNN "Description"
+	1    8750 1450
+	0    1    1    0   
+$EndComp
+$Comp
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C21
+U 1 1 5F205059
+P 8500 1350
+F 0 "C21" H 8150 1650 45  0000 L CNN
+F 1 "22pF 0603" H 8350 1650 45  0000 L CNN
+F 2 "Capacitors:0603" H 8750 1260 20  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 8500 1350 60  0001 C CNN
+F 4 "732-7762-1-ND" H 8500 1350 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" H 8500 1350 50  0001 C CNN "Manufacturer"
+F 6 "885012006019" H 8500 1350 50  0001 C CNN "MPN"
+F 7 "CAP CER 22PF 16V C0G/NP0 0603" H 8500 1350 50  0001 C CNN "Description"
+	1    8500 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L pbrick-rescue:U.FL2PIN-SparkFun-Connectors J5
+U 1 1 5F205E4A
+P 7900 1450
+F 0 "J5" H 7958 1704 45  0000 C CNN
+F 1 "U.FL2PIN" H 7958 1620 45  0000 C CNN
+F 2 "U.FL" H 7900 1700 20  0001 C CNN
+F 3 "" H 7900 1450 50  0001 C CNN
+F 4 "CONN-09193" H 7958 1631 60  0001 C CNN "Field4"
+	1    7900 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0122
+U 1 1 5F2073DE
+P 7900 1650
+F 0 "#PWR0122" H 7900 1400 50  0001 C CNN
+F 1 "Earth" H 7900 1500 50  0001 C CNN
+F 2 "" H 7900 1650 50  0001 C CNN
+F 3 "~" H 7900 1650 50  0001 C CNN
+	1    7900 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0123
+U 1 1 5F207A9A
+P 8500 1250
+F 0 "#PWR0123" H 8500 1000 50  0001 C CNN
+F 1 "Earth" H 8500 1100 50  0001 C CNN
+F 2 "" H 8500 1250 50  0001 C CNN
+F 3 "~" H 8500 1250 50  0001 C CNN
+	1    8500 1250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:Earth #PWR0124
+U 1 1 5F208219
+P 9250 1100
+F 0 "#PWR0124" H 9250 850 50  0001 C CNN
+F 1 "Earth" H 9250 950 50  0001 C CNN
+F 2 "" H 9250 1100 50  0001 C CNN
+F 3 "~" H 9250 1100 50  0001 C CNN
+	1    9250 1100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:Earth #PWR0125
+U 1 1 5F20876F
+P 8900 1650
+F 0 "#PWR0125" H 8900 1400 50  0001 C CNN
+F 1 "Earth" H 8900 1500 50  0001 C CNN
+F 2 "" H 8900 1650 50  0001 C CNN
+F 3 "~" H 8900 1650 50  0001 C CNN
+	1    8900 1650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8100 1450 8500 1450
+Connection ~ 8500 1450
+Wire Wire Line
+	8500 1450 8650 1450
+Wire Wire Line
+	8850 1450 9100 1450
+Wire Wire Line
+	9100 1450 9100 1650
+Wire Wire Line
+	9250 1300 9250 1400
+Text Label 9750 1400 0    50   ~ 0
+ANT
+Text Label 9750 1650 0    50   ~ 0
+RF
+Wire Wire Line
+	9100 1650 9250 1650
+Connection ~ 9100 1650
+Wire Wire Line
+	9750 1400 9250 1400
+Connection ~ 9250 1400
+Wire Wire Line
+	9250 1400 9250 1450
+Wire Wire Line
+	9250 1650 9750 1650
+Connection ~ 9250 1650
+Wire Notes Line
+	9150 950  9150 1700
+Wire Notes Line
+	9150 1700 9400 1700
+Wire Notes Line
+	9400 1700 9400 950 
+Wire Notes Line
+	9400 950  9150 950 
+Text Notes 8100 900  0    50   ~ 0
+Onboard Antenna: DNP C6, C21 C26, J4\n\nExternal Antenna: DNP  C27, C28\n
+$Comp
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C8
+U 1 1 5F248942
+P 4600 3350
+F 0 "C8" V 4500 2900 45  0000 L CNN
+F 1 "100nF 0603" V 4500 3000 45  0000 L CNN
+F 2 "Capacitors:0603" H 4850 3260 20  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/885012106015.pdf" H 4600 3350 60  0001 C CNN
+F 4 "732-7965-1-ND" V 4600 3350 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" V 4600 3350 50  0001 C CNN "Manufacturer"
+F 6 "885012206046" V 4600 3350 50  0001 C CNN "MPN"
+F 7 "CAP CER 0.1UF 16V X7R 0603" V 4600 3350 50  0001 C CNN "Description"
+	1    4600 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C9
+U 1 1 5F24CFB9
+P 4850 3350
+F 0 "C9" V 5000 3000 45  0000 L CNN
+F 1 "1uF 0603" V 5000 3100 45  0000 L CNN
+F 2 "Capacitors:0603" H 5100 3260 20  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/885012206052.pdf" H 4850 3350 60  0001 C CNN
+F 4 "732-7971-1-ND" V 4850 3350 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" V 4850 3350 50  0001 C CNN "Manufacturer"
+F 6 "885012206052" V 4850 3350 50  0001 C CNN "MPN"
+F 7 "CAP CER 1UF 16V X7R 0603" V 4850 3350 50  0001 C CNN "Description"
+	1    4850 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0126
+U 1 1 5F251140
+P 4600 3450
+F 0 "#PWR0126" H 4600 3200 50  0001 C CNN
+F 1 "Earth" H 4600 3300 50  0001 C CNN
+F 2 "" H 4600 3450 50  0001 C CNN
+F 3 "~" H 4600 3450 50  0001 C CNN
+	1    4600 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0127
+U 1 1 5F2523DD
+P 4850 3450
+F 0 "#PWR0127" H 4850 3200 50  0001 C CNN
+F 1 "Earth" H 4850 3300 50  0001 C CNN
+F 2 "" H 4850 3450 50  0001 C CNN
+F 3 "~" H 4850 3450 50  0001 C CNN
+	1    4850 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 3250 4600 3250
+Wire Wire Line
+	4850 3250 4600 3250
+Connection ~ 4600 3250
+Wire Wire Line
+	4850 3250 5150 3250
+Connection ~ 4850 3250
+Wire Notes Line
+	7750 950  7750 1900
+Wire Notes Line
+	7750 1900 9100 1900
+Wire Notes Line
+	9100 1900 9100 950 
+Wire Notes Line
+	7750 950  9100 950 
+$Comp
+L pbrick-rescue:5V-SparkFun-PowerSymbols #SUPPLY0111
+U 1 1 5F72C6F2
+P 2200 3550
+F 0 "#SUPPLY0111" H 2250 3550 45  0001 L BNN
+F 1 "5V" V 2200 3678 45  0000 L CNN
+F 2 "XXX-00000" V 2242 3678 60  0001 L CNN
+F 3 "" H 2200 3550 60  0001 C CNN
+	1    2200 3550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2200 3450 2200 3550
+Connection ~ 2200 3550
+Wire Wire Line
+	2200 3550 2200 3650
+$Comp
+L Driver_Motor:TB6612FNG U3
+U 1 1 5F83C00F
+P 2050 6450
+F 0 "U3" V 2550 7000 50  0000 L CNN
+F 1 "TB6612FNG" V 2700 7000 50  0000 L CNN
+F 2 "Package_SO:SSOP-24_5.3x8.2mm_P0.65mm" H 2500 7050 50  0001 C CNN
+F 3 "https://toshiba.semicon-storage.com/us/product/linear/motordriver/detail.TB6612FNG.html" H 2500 7050 50  0001 C CNN
+	1    2050 6450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3050 6750 3050 6650
+Connection ~ 3050 6650
+Wire Wire Line
+	3050 6650 3050 6550
+Wire Wire Line
+	3050 6650 3400 6650
+Connection ~ 3400 6650
+Wire Wire Line
+	3050 6150 3050 5850
+Wire Wire Line
+	3050 5850 2450 5850
+Connection ~ 3050 5850
+Wire Wire Line
+	1650 7050 1700 7050
+Wire Wire Line
+	1700 7050 1700 7150
+Connection ~ 1700 7050
+Wire Wire Line
+	1700 7050 1750 7050
+Wire Wire Line
+	1850 7050 1900 7050
+Wire Wire Line
+	1900 7050 1900 7150
+Connection ~ 1900 7050
+Wire Wire Line
+	1900 7050 1950 7050
+Wire Wire Line
+	2150 7050 2200 7050
+Wire Wire Line
+	2200 7050 2200 7150
+Connection ~ 2200 7050
+Wire Wire Line
+	2200 7050 2250 7050
+Wire Wire Line
+	2350 7050 2400 7050
+Wire Wire Line
+	2400 7050 2400 7150
+Connection ~ 2400 7050
+Wire Wire Line
+	2400 7050 2450 7050
+Wire Wire Line
+	1050 6750 1050 6650
+Wire Wire Line
+	1050 6550 1050 6650
+Connection ~ 1050 6650
+Wire Wire Line
+	1050 6450 1050 6550
+Connection ~ 1050 6550
+Wire Wire Line
+	1050 6450 1050 6300
+Connection ~ 1050 6450
+Connection ~ 1050 6300
+Wire Wire Line
+	1050 6300 1050 6150
+Text Label 2250 5850 1    50   ~ 0
+P0.11
+Text Label 1750 5850 1    50   ~ 0
+P1.09
+Text Label 1650 5850 1    50   ~ 0
+P1.08
+$Comp
+L pbrick-rescue:B4B-XH-A(LF)(SN)-B4B-XH-A_LF__SN_ J4
+U 1 1 5F91940E
+P 3500 7350
+F 0 "J4" H 3607 7817 50  0000 C CNN
+F 1 "B4B-XH-A(LF)(SN)" H 3600 7000 50  0001 C CNN
+F 2 "JST_B4B-XH-A(LF)(SN)" H 3500 7350 50  0001 L BNN
+F 3 "NA" H 3500 7350 50  0001 L BNN
+F 4 "Manufacturer Recommendation" H 3500 7350 50  0001 L BNN "Field4"
+F 5 "JST Sales America Inc" H 3500 7350 50  0001 L BNN "Field5"
+	1    3500 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR0114
+U 1 1 5F919418
+P 3800 7150
+F 0 "#PWR0114" H 3800 7000 50  0001 C CNN
+F 1 "VDD" H 3815 7323 50  0000 C CNN
+F 2 "" H 3800 7150 50  0001 C CNN
+F 3 "" H 3800 7150 50  0001 C CNN
+	1    3800 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR0128
+U 1 1 5F919422
+P 3800 7450
+F 0 "#PWR0128" H 3800 7200 50  0001 C CNN
+F 1 "Earth" H 3800 7300 50  0001 C CNN
+F 2 "" H 3800 7450 50  0001 C CNN
+F 3 "~" H 3800 7450 50  0001 C CNN
+	1    3800 7450
+	1    0    0    -1  
+$EndComp
+Text Label 3800 7350 0    50   ~ 0
+M1_0
+Text Label 3800 7250 0    50   ~ 0
+M1_1
+Text Label 1900 7150 3    50   ~ 0
+M1_0
+Text Label 1700 7150 3    50   ~ 0
+M1_1
+Text Label 2150 5850 1    50   ~ 0
+P0.07
+$EndSCHEMATC

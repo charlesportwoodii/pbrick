@@ -1,0 +1,131 @@
+
+(rules PCB pbrick
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout on)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 40)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 2258)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.5)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.5)
+    )
+  )
+  (rule
+    (width 200.0)
+    (clear 200.2)
+    (clear 100.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd_smd))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_800:400_um-3.3V" "Via[0-1]_800:400_um" 3.3V
+  )
+  (via 
+    "Via[0-1]_800:400_um-5V" "Via[0-1]_800:400_um" 5V
+  )
+  (via 
+    "Via[0-1]_800:400_um-VDD" "Via[0-1]_800:400_um" VDD
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (via_rule
+    3.3V "Via[0-1]_800:400_um-3.3V"
+  )
+  (via_rule
+    5V "Via[0-1]_800:400_um-5V"
+  )
+  (via_rule
+    VDD "Via[0-1]_800:400_um-VDD"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 200.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    Earth "Net-(J1-PadNC2)" "Net-(J1-PadNC1)" /P0.00 /P0.01 "/M0_0" "/M0_1" "Net-(C21-Pad2)"
+    "Net-(LED1-Pad3)" "Net-(LED1-Pad2)" "Net-(LED1-Pad1)" /P0.18 "Net-(P0-Pad8)" "Net-(P0-Pad7)" "Net-(P0-Pad6)" /SWDCLK
+    /SWDIO /P0.07 /P0.21 /P1.00 /P0.23 /P0.10 /P0.09 /P0.22
+    /P0.19 /P1.09 /P0.11 /P0.12 /P0.03 /P1.08 /P0.02 /RF
+    /ANT "Net-(U1-Pad5)" "Net-(U1-Pad3)" "Net-(C3-Pad2)" "Net-(U2-Pad5)" "/M1_0" "/M1_1"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 200.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class 3.3V
+    3.3V
+    (clearance_class 3.3V)
+    (via_rule 3.3V)
+    (rule
+      (width 200.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class 5V
+    5V
+    (clearance_class 5V)
+    (via_rule 5V)
+    (rule
+      (width 200.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class VDD
+    VDD
+    (clearance_class VDD)
+    (via_rule VDD)
+    (rule
+      (width 400.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
