@@ -1,4 +1,4 @@
-update=Sun 06 Dec 2020 04:18:32 PM CST
+update=Thu 31 Dec 2020 09:47:01 AM CST
 version=1
 last_client=kicad
 [general]
@@ -73,11 +73,11 @@ Name=F.Cu
 Type=0
 Enabled=1
 [pcbnew/Layer.In1.Cu]
-Name=PWR
+Name=GND
 Type=0
 Enabled=1
 [pcbnew/Layer.In2.Cu]
-Name=GDN
+Name=PWR
 Type=0
 Enabled=1
 [pcbnew/Layer.In3.Cu]
@@ -269,9 +269,20 @@ dPairWidth=0.2
 dPairGap=0.25
 dPairViaGap=0.25
 [pcbnew/Netclasses/3]
+Name=M
+Clearance=0.2
+TrackWidth=0.68
+ViaDiameter=0.8
+ViaDrill=0.4
+uViaDiameter=0.3
+uViaDrill=0.1
+dPairWidth=0.2
+dPairGap=0.25
+dPairViaGap=0.25
+[pcbnew/Netclasses/4]
 Name=VDD
 Clearance=0.2
-TrackWidth=0.4
+TrackWidth=1
 ViaDiameter=0.8
 ViaDrill=0.4
 uViaDiameter=0.3

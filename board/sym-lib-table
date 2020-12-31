@@ -21,4 +21,7 @@
   (lib (name TB67H420FTG_O_EL_)(type Legacy)(uri /home/charlesportwoodii/Documents/KiCad/global-library/Libraries/TB67H420FTG_O_EL_.lib)(options "")(descr ""))
   (lib (name TB6612FNG_C_8_EL)(type Legacy)(uri /home/charlesportwoodii/Documents/KiCad/global-library/Libraries/TB6612FNG_C_8_EL.lib)(options "")(descr ""))
   (lib (name WIRL-BLTE_PROTEUS-III)(type Legacy)(uri /home/charlesportwoodii/Documents/KiCad/global-library/Libraries/WIRL-BLTE_PROTEUS-III.lib)(options "")(descr ""))
+  (lib (name S6B-PH-SM4-TB_LF__SN_)(type Legacy)(uri /mnt/storage/Documents/KiCad/global-library/Libraries/S6B-PH-SM4-TB_LF__SN_.lib)(options "")(descr ""))
+  (lib (name S8B-PH-SM4-TB_LF__SN_)(type Legacy)(uri /home/charlesportwoodii/Documents/KiCad/global-library/Libraries/S8B-PH-SM4-TB_LF__SN_.lib)(options "")(descr ""))
+  (lib (name S4B-XH-SM4-TB_LF__SN_)(type Legacy)(uri /home/charlesportwoodii/Documents/KiCad/global-library/Libraries/S4B-XH-SM4-TB_LF__SN_.lib)(options "")(descr ""))
 )

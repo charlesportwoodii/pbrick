@@ -20,4 +20,5 @@
   (lib (name Silicon-Custom)(type KiCad)(uri /home/charlesportwoodii/Documents/KiCad/SparkFun-KiCad-Libraries/Footprints/Silicon-Custom.pretty)(options "")(descr ""))
   (lib (name Silicon-Standard)(type KiCad)(uri /home/charlesportwoodii/Documents/KiCad/SparkFun-KiCad-Libraries/Footprints/Silicon-Standard.pretty)(options "")(descr ""))
   (lib (name Switches)(type KiCad)(uri /home/charlesportwoodii/Documents/KiCad/SparkFun-KiCad-Libraries/Footprints/Switches.pretty)(options "")(descr ""))
+  (lib (name Common)(type KiCad)(uri /home/charlesportwoodii/Documents/KiCad/global-library/Footprints/Common.pretty)(options "")(descr ""))
 )

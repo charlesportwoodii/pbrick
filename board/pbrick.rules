@@ -8,10 +8,10 @@
     (autoroute on)
     (postroute on)
     (vias on)
-    (via_costs 35)
+    (via_costs 30)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 2827)
+    (start_pass_no 4134)
     (layer_rule F.Cu
       (active on)
       (preferred_direction vertical)
@@ -20,15 +20,15 @@
     )
     (layer_rule PWR
       (active on)
-      (preferred_direction vertical)
-      (preferred_direction_trace_costs 1.0)
-      (against_preferred_direction_trace_costs 1.8)
-    )
-    (layer_rule GDN
-      (active on)
       (preferred_direction horizontal)
       (preferred_direction_trace_costs 1.0)
-      (against_preferred_direction_trace_costs 1.8)
+      (against_preferred_direction_trace_costs 1.5)
+    )
+    (layer_rule GDN
+      (active off)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 3.0)
     )
     (layer_rule B.Cu
       (active on)
@@ -71,6 +71,9 @@
     "Via[0-3]_800:400_um-5V" "Via[0-3]_800:400_um" 5V
   )
   (via 
+    "Via[0-3]_800:400_um-M" "Via[0-3]_800:400_um" M
+  )
+  (via 
     "Via[0-3]_800:400_um-VDD" "Via[0-3]_800:400_um" VDD
   )
   (via_rule
@@ -84,6 +87,9 @@
   )
   (via_rule
     5V "Via[0-3]_800:400_um-5V"
+  )
+  (via_rule
+    M "Via[0-3]_800:400_um-M"
   )
   (via_rule
     VDD "Via[0-3]_800:400_um-VDD"
@@ -103,7 +109,7 @@
     /SWDIO /P0.07 /P0.21 /P1.00 /P0.23 /P0.10 /P0.09 /P0.22
     /P0.19 /P1.09 /P0.11 /P0.12 /P0.03 /P1.08 /P0.02 /RF
     /ANT "Net-(C3-Pad2)" "Net-(U2-Pad5)" "Net-(C10-Pad2)" "Net-(J4-PadNC2)" "Net-(J4-PadNC1)" "Net-(P1-Pad8)" "Net-(P1-Pad7)"
-    "Net-(P1-Pad6)" "Net-(U3-Pad5)" "Net-(U3-Pad3)" "Net-(C14-Pad2)" "Net-(U1-Pad48)" "Net-(U1-Pad47)"
+    "Net-(P1-Pad6)" "Net-(U3-Pad5)" "Net-(U3-Pad3)" "Net-(C14-Pad2)" "Net-(U1-Pad48)" "Net-(U1-Pad47)" "Net-(J1-PadS1)"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule
@@ -135,12 +141,23 @@
       (use_layer F.Cu PWR GDN B.Cu)
     )
   )
+  (class M
+    "/M0_0" "/M0_1" "/M1_0" "/M1_1"
+    (clearance_class M)
+    (via_rule M)
+    (rule
+      (width 680.0)
+    )
+    (circuit 
+      (use_layer F.Cu PWR GDN B.Cu)
+    )
+  )
   (class VDD
-    VDD "/M0_0" "/M0_1" "/M1_0" "/M1_1"
+    VDD
     (clearance_class VDD)
     (via_rule VDD)
     (rule
-      (width 400.0)
+      (width 1000.0)
     )
     (circuit 
       (use_layer F.Cu PWR GDN B.Cu)
