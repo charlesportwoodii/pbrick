@@ -1212,41 +1212,6 @@ Connection ~ 3550 5050
 NoConn ~ 2750 6200
 NoConn ~ 2750 6300
 $Comp
-L pbrick-rescue:JST_2MM_MALE-SparkFun-Connectors J4
-U 1 1 5F132F9C
-P 6400 7300
-F 0 "J4" H 6350 7600 45  0000 L CNN
-F 1 "JST_2MM_MALE" H 6500 7100 45  0001 L BNN
-F 2 "JST-2-SMD" H 6400 7650 20  0001 C CNN
-F 3 "" H 6400 7300 50  0001 C CNN
-F 4 "CONN-11443" V 6650 7100 60  0001 L CNN "Field4"
-F 5 "dnp" H 6400 7300 50  0001 C CNN "fit_field"
-	1    6400 7300
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:VDD #PWR023
-U 1 1 5F16990D
-P 6350 7100
-F 0 "#PWR023" H 6350 6950 50  0001 C CNN
-F 1 "VDD" H 6365 7273 50  0000 C CNN
-F 2 "" H 6350 7100 50  0001 C CNN
-F 3 "" H 6350 7100 50  0001 C CNN
-	1    6350 7100
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:Earth #PWR025
-U 1 1 5F134828
-P 6450 7100
-F 0 "#PWR025" H 6450 6850 50  0001 C CNN
-F 1 "Earth" H 6450 6950 50  0001 C CNN
-F 2 "" H 6450 7100 50  0001 C CNN
-F 3 "~" H 6450 7100 50  0001 C CNN
-	1    6450 7100
-	-1   0    0    1   
-$EndComp
-$Comp
 L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C1
 U 1 1 5F17448E
 P 1650 1600
@@ -1261,24 +1226,24 @@ F 7 "CAP CER 0.47UF 25V X7R 0603" H 1650 1600 50  0001 C CNN "Description"
 	1    1650 1600
 	1    0    0    -1  
 $EndComp
-NoConn ~ 3650 7000
-Text Label 4250 7000 1    50   ~ 0
-M0_0
+NoConn ~ 4250 7900
 Text Label 4150 7000 1    50   ~ 0
+M0_0
+Text Label 4250 7000 1    50   ~ 0
 M0_1
-Text Label 4050 7000 1    50   ~ 0
+Text Label 3850 7000 1    50   ~ 0
 M1_0
-Text Label 3950 7000 1    50   ~ 0
+Text Label 3750 7000 1    50   ~ 0
 M1_1
 $Comp
 L power:Earth #PWR0109
 U 1 1 5FF3EB22
-P 3850 7000
-F 0 "#PWR0109" H 3850 6750 50  0001 C CNN
-F 1 "Earth" H 3850 6850 50  0001 C CNN
-F 2 "" H 3850 7000 50  0001 C CNN
-F 3 "~" H 3850 7000 50  0001 C CNN
-	1    3850 7000
+P 3650 7000
+F 0 "#PWR0109" H 3650 6750 50  0001 C CNN
+F 1 "Earth" H 3650 6850 50  0001 C CNN
+F 2 "" H 3650 7000 50  0001 C CNN
+F 3 "~" H 3650 7000 50  0001 C CNN
+	1    3650 7000
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -1293,16 +1258,27 @@ F 3 "" H 4350 7000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L S6B-PH-SM4-TB_LF__SN_:S6B-PH-SM4-TB(LF)(SN) J1
-U 1 1 5FF58FC9
-P 4050 7300
-F 0 "J1" V 4450 7250 50  0000 L CNN
-F 1 "S6B-PH-SM4-TB(LF)(SN)" V 4350 6800 50  0000 L CNN
-F 2 "JST_S6B-PH-SM4-TB(LF)(SN)" H 4050 7300 50  0001 L BNN
-F 3 "" H 4050 7300 50  0001 L BNN
-F 4 "Manufacturer Recommendation" H 4050 7300 50  0001 L BNN "STANDARD"
-F 5 "JST" H 4050 7300 50  0001 L BNN "MANUFACTURER"
-	1    4050 7300
+L S8B-PH-SM4-TB_LF__SN_:S8B-PH-SM4-TB_LF__SN_ J1
+U 1 1 5FF1A68D
+P 4350 7000
+F 0 "J1" V 4754 7128 50  0000 L CNN
+F 1 "S8B-PH-SM4-TB_LF__SN_" V 4845 7128 50  0000 L CNN
+F 2 "S8BPHSM4TBLFSN" H 5100 7100 50  0001 L CNN
+F 3 "https://www.digikey.com/product-detail/en/jst-sales-america-inc/S8B-PH-SM4-TB-LF-SN/455-1755-1-ND/926852" H 5100 7000 50  0001 L CNN
+F 4 "Conn Shrouded Header (4 Sides) HDR 8 POS 2mm Solder RA Side Entry SMD T/R" H 5100 6900 50  0001 L CNN "Description"
+F 5 "5.5" H 5100 6800 50  0001 L CNN "Height"
+F 6 "JST (JAPAN SOLDERLESS TERMINALS)" H 5100 6700 50  0001 L CNN "Manufacturer_Name"
+F 7 "S8B-PH-SM4-TB(LF)(SN)" H 5100 6600 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "" H 5100 6500 50  0001 L CNN "Mouser Part Number"
+F 9 "" H 5100 6400 50  0001 L CNN "Mouser Price/Stock"
+F 10 "S8B-PH-SM4-TB(LF)(SN)" H 5100 6300 50  0001 L CNN "Arrow Part Number"
+F 11 "https://www.arrow.com/en/products/s8b-ph-sm4-tb-lf-sn/jst-manufacturing" H 5100 6200 50  0001 L CNN "Arrow Price/Stock"
+	1    4350 7000
 	0    1    1    0   
 $EndComp
+NoConn ~ 4350 7900
+Text Label 3950 7000 1    50   ~ 0
+P0.21
+Text Label 4050 7000 1    50   ~ 0
+P1.00
 $EndSCHEMATC

@@ -11,30 +11,30 @@
     (via_costs 30)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 4134)
+    (start_pass_no 3928)
     (layer_rule F.Cu
       (active on)
-      (preferred_direction vertical)
-      (preferred_direction_trace_costs 1.8)
-      (against_preferred_direction_trace_costs 1.8)
-    )
-    (layer_rule PWR
-      (active on)
       (preferred_direction horizontal)
-      (preferred_direction_trace_costs 1.0)
+      (preferred_direction_trace_costs 1.8)
       (against_preferred_direction_trace_costs 1.5)
     )
-    (layer_rule GDN
+    (layer_rule GND
+      (active off)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.6)
+    )
+    (layer_rule PWR
       (active off)
       (preferred_direction vertical)
       (preferred_direction_trace_costs 1.0)
-      (against_preferred_direction_trace_costs 3.0)
+      (against_preferred_direction_trace_costs 2.7)
     )
     (layer_rule B.Cu
       (active on)
-      (preferred_direction horizontal)
+      (preferred_direction vertical)
       (preferred_direction_trace_costs 1.8)
-      (against_preferred_direction_trace_costs 1.8)
+      (against_preferred_direction_trace_costs 1.5)
     )
   )
   (rule
@@ -48,10 +48,10 @@
       (circle F.Cu 800.0 0.0 0.0)
     )
     (shape
-      (circle PWR 800.0 0.0 0.0)
+      (circle GND 800.0 0.0 0.0)
     )
     (shape
-      (circle GDN 800.0 0.0 0.0)
+      (circle PWR 800.0 0.0 0.0)
     )
     (shape
       (circle B.Cu 800.0 0.0 0.0)
@@ -101,22 +101,22 @@
       (width 200.0)
     )
     (circuit 
-      (use_layer F.Cu PWR GDN B.Cu)
+      (use_layer F.Cu GND PWR B.Cu)
     )
   )
   (class "kicad_default"
     Earth /P0.00 /P0.01 "Net-(LED1-Pad3)" "Net-(LED1-Pad2)" "Net-(LED1-Pad1)" /P0.18 /SWDCLK
     /SWDIO /P0.07 /P0.21 /P1.00 /P0.23 /P0.10 /P0.09 /P0.22
     /P0.19 /P1.09 /P0.11 /P0.12 /P0.03 /P1.08 /P0.02 /RF
-    /ANT "Net-(C3-Pad2)" "Net-(U2-Pad5)" "Net-(C10-Pad2)" "Net-(J4-PadNC2)" "Net-(J4-PadNC1)" "Net-(P1-Pad8)" "Net-(P1-Pad7)"
-    "Net-(P1-Pad6)" "Net-(U3-Pad5)" "Net-(U3-Pad3)" "Net-(C14-Pad2)" "Net-(U1-Pad48)" "Net-(U1-Pad47)" "Net-(J1-PadS1)"
+    /ANT "Net-(C3-Pad2)" "Net-(U2-Pad5)" "Net-(C10-Pad2)" "Net-(P1-Pad8)" "Net-(P1-Pad7)" "Net-(P1-Pad6)" "Net-(U3-Pad5)"
+    "Net-(U3-Pad3)" "Net-(C14-Pad2)" "Net-(U1-Pad48)" "Net-(U1-Pad47)" "Net-(J1-PadMP2)" "Net-(J1-PadMP1)"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule
       (width 200.0)
     )
     (circuit 
-      (use_layer F.Cu PWR GDN B.Cu)
+      (use_layer F.Cu GND PWR B.Cu)
     )
   )
   (class 3.3V
@@ -127,7 +127,7 @@
       (width 200.0)
     )
     (circuit 
-      (use_layer F.Cu PWR GDN B.Cu)
+      (use_layer F.Cu GND PWR B.Cu)
     )
   )
   (class 5V
@@ -138,7 +138,7 @@
       (width 200.0)
     )
     (circuit 
-      (use_layer F.Cu PWR GDN B.Cu)
+      (use_layer F.Cu GND PWR B.Cu)
     )
   )
   (class M
@@ -146,10 +146,10 @@
     (clearance_class M)
     (via_rule M)
     (rule
-      (width 680.0)
+      (width 350.0)
     )
     (circuit 
-      (use_layer F.Cu PWR GDN B.Cu)
+      (use_layer F.Cu GND PWR B.Cu)
     )
   )
   (class VDD
@@ -160,7 +160,7 @@
       (width 1000.0)
     )
     (circuit 
-      (use_layer F.Cu PWR GDN B.Cu)
+      (use_layer F.Cu GND PWR B.Cu)
     )
   )
 )
