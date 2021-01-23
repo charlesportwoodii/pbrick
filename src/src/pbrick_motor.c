@@ -131,6 +131,12 @@ void pbrick_motor_set(const uint8_t data[])
     uint8_t pwm = data[1];
     uint8_t direction = data[2];
 
+    // If the PWM is disabled put the motor into a STOP (OFF) mode by flagging the direction pin, which will prevent 
+    // the GPIO pins from being set.
+    if (pwm == 0) {
+        direction = 0xFF;
+    }
+
     // For PWM0, set the channel and speed directly since PWM just controls the speed
     if (motor == 0x00 || motor == 0x01) {
         pbrick_motor_set_internal(motor, direction, pwm);
@@ -140,7 +146,7 @@ void pbrick_motor_set(const uint8_t data[])
         pbrick_motor_stop_all();
 
         if (motor == 0x02) {
-            // Set both motors to operate in the same rotational direction
+            // Set both motors to operate in the same rotational directionx
             pbrick_motor_set_internal(0x00, direction, pwm);
             pbrick_motor_set_internal(0x01, direction, pwm);
         } else if (motor == 0x03) {
