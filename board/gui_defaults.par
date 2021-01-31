@@ -40,7 +40,7 @@
     (select_parameter
       not_visible
       (bounds
-        0 0 246 517
+        0 0 246 492
       )
     )
     (route_parameter
@@ -70,7 +70,7 @@
     (clearance_matrix
       not_visible
       (bounds
-        0 150 870 321
+        0 150 1070 353
       )
     )
     (via_rules
@@ -82,13 +82,13 @@
     (edit_vias
       not_visible
       (bounds
-        100 150 413 167
+        100 150 413 199
       )
     )
     (edit_net_rules
       not_visible
       (bounds
-        100 200 913 167
+        100 200 913 199
       )
     )
     (assign_net_rules
