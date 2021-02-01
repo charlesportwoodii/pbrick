@@ -1747,8 +1747,8 @@
       (net 1 Earth))
     (pad 1 smd rect (at 7 -3.25) (size 1 3.5) (layers B.Cu B.Paste B.Mask)
       (net 2 VDD))
-    (model S8B-PH-SM4-TB_LF__SN_.stp
-      (at (xyz 0 0 0))
+    (model "/home/charlesportwoodii/Documents/KiCad/global-library/Footprints/Common.pretty/3d/JST - PH - SMD (R) - 8Pin - 2.00mm.step"
+      (offset (xyz 0 -4.5 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
