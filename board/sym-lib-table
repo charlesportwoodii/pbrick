@@ -30,4 +30,6 @@
   (lib (name STUSB4500QTR)(type Legacy)(uri /home/charlesportwoodii/Documents/KiCad/global-library/Libraries/STUSB4500QTR.lib)(options "")(descr ""))
   (lib (name SSM6J507NU_LF)(type Legacy)(uri /home/charlesportwoodii/Documents/KiCad/global-library/Libraries/SSM6J507NU_LF.lib)(options "")(descr ""))
   (lib (name UJC-HP-3-SMT-TR)(type Legacy)(uri /home/charlesportwoodii/Documents/KiCad/global-library/Libraries/UJC-HP-3-SMT-TR.lib)(options "")(descr ""))
+  (lib (name TC2050-IDC-NL)(type Legacy)(uri /home/charlesportwoodii/Documents/KiCad/global-library/Libraries/TC2050-IDC-NL.lib)(options "")(descr ""))
+  (lib (name TC2030-IDC-NL)(type Legacy)(uri /home/charlesportwoodii/Documents/KiCad/global-library/Libraries/TC2030-IDC-NL.lib)(options "")(descr ""))
 )
