@@ -184,49 +184,26 @@ Wire Wire Line
 Connection ~ 9000 2800
 Wire Wire Line
 	9000 2800 9150 2800
-Text Label 4800 1800 3    50   ~ 0
+Text Label 4750 1250 3    50   ~ 0
 P0.18
 Text Label 6400 1700 2    50   ~ 0
 SWDCLK
-Text Label 4600 1800 3    50   ~ 0
+Text Label 4850 1250 3    50   ~ 0
 SWDCLK
-Text Label 4500 1800 3    50   ~ 0
+Text Label 4650 1250 3    50   ~ 0
 SWDIO
-$Comp
-L pbrick-rescue:3.3V-SparkFun-PowerSymbols #SUPPLY011
-U 1 1 5F10E31F
-P 5100 1150
-F 0 "#SUPPLY011" H 5150 1150 45  0001 L BNN
-F 1 "3.3V" H 5100 1320 45  0000 C CNN
-F 2 "XXX-00000" V 5058 1277 60  0001 L CNN
-F 3 "" H 5100 1150 60  0001 C CNN
-	1    5100 1150
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3900 1050 3900 1100
-NoConn ~ 4400 1650
-NoConn ~ 4300 1650
-Wire Wire Line
-	4800 1650 4800 1800
-Wire Wire Line
-	4600 1800 4600 1650
-Wire Wire Line
-	4500 1650 4500 1800
+NoConn ~ 5050 1250
 $Comp
 L power:Earth #PWR020
 U 1 1 5F110ED4
-P 3900 1100
-F 0 "#PWR020" H 3900 850 50  0001 C CNN
-F 1 "Earth" H 3900 950 50  0001 C CNN
-F 2 "" H 3900 1100 50  0001 C CNN
-F 3 "~" H 3900 1100 50  0001 C CNN
-	1    3900 1100
-	0    1    1    0   
+P 4950 1250
+F 0 "#PWR020" H 4950 1000 50  0001 C CNN
+F 1 "Earth" H 4950 1100 50  0001 C CNN
+F 2 "" H 4950 1250 50  0001 C CNN
+F 3 "~" H 4950 1250 50  0001 C CNN
+	1    4950 1250
+	1    0    0    -1  
 $EndComp
-Connection ~ 3900 1100
-Wire Wire Line
-	3900 1100 3900 1150
 $Comp
 L power:Earth #PWR022
 U 1 1 5F11F9F0
@@ -278,18 +255,6 @@ Connection ~ 6500 5350
 Wire Wire Line
 	6600 5350 6600 5250
 Connection ~ 6600 5350
-$Comp
-L Connector:Conn_ARM_JTAG_SWD_10 P1
-U 1 1 5F109E09
-P 4500 1150
-F 0 "P1" V 4200 1600 50  0001 R CNN
-F 1 "SWD" V 4000 1250 50  0000 R CNN
-F 2 "Connectors:SAMTECH_FTSH-105-01" H 4500 1150 50  0001 C CNN
-F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresight_components_trm.pdf" V 4150 -100 50  0001 C CNN
-F 4 "dnp" V 4500 1150 50  0001 C CNN "fit_field"
-	1    4500 1150
-	0    1    1    0   
-$EndComp
 $Comp
 L pbrick-rescue:150121M153000-150121M153000 LED1
 U 1 1 5F1A9C53
@@ -1733,10 +1698,10 @@ Connection ~ 3600 4050
 Wire Wire Line
 	3600 4050 3450 4050
 $Comp
-L Device:D_Schottky D?
+L Device:D_Schottky D5
 U 1 1 60193B83
 P 5400 5350
-F 0 "D?" V 5354 5429 50  0000 L CNN
+F 0 "D5" V 5354 5429 50  0000 L CNN
 F 1 "D_Schottky" V 5445 5429 50  0000 L CNN
 F 2 "Diode_SMD:D_0402_1005Metric" H 5400 5350 50  0001 C CNN
 F 3 "~" H 5400 5350 50  0001 C CNN
@@ -1817,10 +1782,10 @@ F 3 "" H 5400 5200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:D_Schottky D?
+L Device:D_Schottky D6
 U 1 1 601C167B
 P 2250 2500
-F 0 "D?" H 2250 2284 50  0000 C CNN
+F 0 "D6" H 2250 2284 50  0000 C CNN
 F 1 "D_Schottky" H 2250 2375 50  0000 C CNN
 F 2 "Diode_SMD:D_0402_1005Metric" H 2250 2500 50  0001 C CNN
 F 3 "~" H 2250 2500 50  0001 C CNN
@@ -1956,4 +1921,29 @@ Text Notes 3050 2850 0    50   ~ 0
 Greater of 2V7 from STUSB4500 or 3.3 LRO\n
 Text Notes 2850 2950 0    50   ~ 0
 STUSB4500 can power board via 2v7 rail pre flashing
+$Comp
+L TC2030-IDC-NL:TC2030-IDC-NL J6
+U 1 1 601985D5
+P 4850 950
+F 0 "J6" V 4839 620 50  0000 R CNN
+F 1 "TC2030-IDC-NL" V 4748 620 50  0000 R CNN
+F 2 "TAG_TC2030-IDC-NL" H 4850 950 50  0001 L BNN
+F 3 "" H 4850 950 50  0001 L BNN
+F 4 "MS" H 4850 950 50  0001 L BNN "PARTREV"
+F 5 "Tag-Connect" H 4850 950 50  0001 L BNN "MANUFACTURER"
+F 6 "Manufacturer recommendation" H 4850 950 50  0001 L BNN "STANDARD"
+	1    4850 950 
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VSS #PWR?
+U 1 1 601995E8
+P 4550 1250
+F 0 "#PWR?" H 4550 1100 50  0001 C CNN
+F 1 "VSS" H 4500 1450 50  0000 L CNN
+F 2 "" H 4550 1250 50  0001 C CNN
+F 3 "" H 4550 1250 50  0001 C CNN
+	1    4550 1250
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
