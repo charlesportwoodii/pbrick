@@ -27,6 +27,9 @@ extern "C" {
 #define PBRICK_PWM1_P1              NRF_GPIO_PIN_MAP(0,3)
 #define PBRICK_PWM1_P2              NRF_GPIO_PIN_MAP(0,7)
 
+#define PBRICK_SCL                          NRF_GPIO_PIN_MAP(0,1)
+#define PBRICK_SLA                          NRF_GPIO_PIN_MAP(0,0)
+
 #ifdef __cplusplus
 }
 #endif

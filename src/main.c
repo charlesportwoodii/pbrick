@@ -87,8 +87,11 @@
 #include "nrf_log_ctrl.h"
 #include "nrf_log_default_backends.h"
 #include "nrf_bootloader_info.h"
+#include "nrf_drv_twi.h"
 
+#include "pbrick_board.h"
 #include "ble_pbrick.h"
+#include "STUSB4500.h"
 
 #define DEVICE_NAME                     "PBRICK"                                    /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME               "NordicSemiconductor"                       /**< Manufacturer. Will be passed to Device Information Service. */
@@ -118,6 +121,7 @@
 
 #define DEAD_BEEF                       0xDEADBEEF                                  /**< Value used as error code on stack dump, can be used to identify stack location on stack unwind. */
 
+#define TWI_MASTER_INSTANCE     0
 BLE_PBRICK_DEF(m_pbrick);
 
 NRF_BLE_GATT_DEF(m_gatt);                                                           /**< GATT module instance. */
@@ -127,11 +131,19 @@ BLE_ADVERTISING_DEF(m_advertising);                                             
 static uint16_t m_conn_handle = BLE_CONN_HANDLE_INVALID;                            /**< Handle of the current connection. */
 static void advertising_start(bool erase_bonds);                                    /**< Forward declaration of advertising start function */
 
+
+/**
+ * @brief TWI master instance.
+ *
+ * Instance of TWI master driver that will be used for communication with simulated
+ * EEPROM memory.
+ */
+static const nrf_drv_twi_t m_twi_master = NRF_DRV_TWI_INSTANCE(TWI_MASTER_INSTANCE);
+
 // YOUR_JOB: Use UUIDs for service(s) used in your application.
 static ble_uuid_t m_adv_uuids[] = {
     {PBRICK_SERIVCE_UUID, BLE_UUID_TYPE_VENDOR_BEGIN}
 };
-
 
 void HardFault_Handler(void)
 {
@@ -142,6 +154,7 @@ void HardFault_Handler(void)
     while(1)
         ;
 }
+
 /**@brief Handler for shutdown preparation.
  *
  * @details During shutdown procedures, this function will be called at a 1 second interval
@@ -222,7 +235,6 @@ static void disconnect(uint16_t conn_handle, void * p_context)
         NRF_LOG_DEBUG("Disconnected connection handle %d", conn_handle);
     }
 }
-
 
 
 // YOUR_JOB: Update this code if you want to do anything given a DFU event (optional).
@@ -782,6 +794,34 @@ static void gatt_init(void)
     APP_ERROR_CHECK(err_code);
 }
 
+/**
+ * @brief Initialize the master TWI.
+ *
+ * Function used to initialize the master TWI interface that would communicate with simulated EEPROM.
+ *
+ * @return NRF_SUCCESS or the reason of failure.
+ */
+static ret_code_t twi_master_init(void)
+{
+    ret_code_t err_code;
+    const nrf_drv_twi_config_t config =
+    {
+        .scl = PBRICK_SCL,
+        .sda = PBRICK_SLA,
+        .frequency  = NRF_DRV_TWI_FREQ_400K,
+        .interrupt_priority = APP_IRQ_PRIORITY_HIGH,
+        .clear_bus_init  = false
+    };
+
+    err_code = nrf_drv_twi_init(&m_twi_master, &config, NULL, NULL);
+
+    if (NRF_SUCCESS == err_code) {
+            nrf_drv_twi_enable(&m_twi_master);
+    }
+
+    return err_code;
+}
+
 
 /**@brief Function for starting advertising.
  */
@@ -836,6 +876,11 @@ int main(void)
     // Initialize the async SVCI interface to bootloader before any interrupts are enabled.
     err_code = ble_dfu_buttonless_async_svci_init();
     APP_ERROR_CHECK(err_code);
+
+    err_code = twi_master_init();
+    APP_ERROR_CHECK(err_code);
+
+    STUSB4500_init(&m_twi_master, STUSB4500_DEFAULT_ADDRESS);
 
     timers_init();
     buttons_leds_init(&erase_bonds);

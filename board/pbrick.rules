@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 5926)
+    (start_pass_no 8397)
     (layer_rule F.Cu
       (active on)
       (preferred_direction vertical)
@@ -122,7 +122,7 @@
     /ANT "Net-(C3-Pad2)" "Net-(U2-Pad5)" "Net-(C10-Pad2)" "Net-(U3-Pad5)" "Net-(U3-Pad3)" "Net-(C14-Pad2)" "Net-(U1-Pad48)"
     "Net-(U1-Pad47)" "Net-(J1-PadMP2)" "Net-(J1-PadMP1)" "Net-(C20-Pad1)" "Net-(C22-Pad2)" "Net-(C23-Pad2)" "Net-(C24-Pad2)" "Net-(Q1-Pad3)"
     "Net-(R8-Pad2)" "/VBUS_EN_SNK" /DISCH "Net-(U4-Pad17)" "Net-(U4-Pad15)" "Net-(U4-Pad14)" "Net-(U4-Pad6)" "Net-(U4-Pad20)"
-    "Net-(U4-Pad19)" "Net-(U4-Pad11)" "Net-(C21-Pad2)" "Net-(C4-Pad1)" "Net-(J6-Pad6)"
+    "Net-(U4-Pad19)" "Net-(U4-Pad11)" "Net-(C21-Pad2)" "Net-(C4-Pad1)" "Net-(J6-Pad6)" GND "Net-(C15-Pad1)"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule

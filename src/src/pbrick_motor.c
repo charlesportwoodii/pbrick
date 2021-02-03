@@ -124,7 +124,6 @@ static void pbrick_motor_set_internal(uint8_t motor, uint8_t direction, uint8_t 
     NRF_LOG_DEBUG("Set Motor %d: Direction: %X Speed: %X", motorId, direction, speed);
 }
 
-
 void pbrick_motor_set(const uint8_t data[])
 {
     uint8_t motor = data[0];
