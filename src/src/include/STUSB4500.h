@@ -18,21 +18,19 @@ extern "C" {
 
 /**@brief Initializes a STUSB4500 instance for TWI/I2C on-demand reconfiguration
  *
- * @param[in] pbrick_twi*     instance        The PBrick TWI instance
  * @param[in] uint8_t           deviceAddress   Device Address of STUSB4500 (0x28 default)
  *
  * @return ret_code_t
  */
-ret_code_t STUSB4500_init(pbrick_twi *instance, uint8_t deviceAddress);
+ret_code_t STUSB4500_init(uint8_t deviceAddress);
 
 /**@brief Sends a reset to STUSB4500 to force a new PDO_SINK configuration with VBUS_SOURCE
  *
- * @param[in] pbrick_twi*     instance        The PBrick TWI instance
  * @param[in] uint8_t           deviceAddress   Device Address of STUSB4500 (0x28 default)
  *
  * @return ret_code_t
  */
-ret_code_t STUSB4500_soft_reset(pbrick_twi *instance, uint8_t deviceAddress);
+ret_code_t STUSB4500_soft_reset(uint8_t deviceAddress);
 
 #ifdef __cplusplus
 }

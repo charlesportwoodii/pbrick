@@ -10,23 +10,18 @@ extern "C" {
 
 #define TWI_MASTER_INSTANCE     0
 
-typedef struct pbrick_twi {
-    nrf_drv_twi_t  *master;
-    uint8_t instance;
-} pbrick_twi;
+extern nrf_drv_twi_t m_twi_master;
 
-void twi_handler(nrf_drv_twi_evt_t const *p_event, void *p_context);
+extern void twi_handler(nrf_drv_twi_evt_t const *p_event, void *p_context);
 
 /**@brief Creates a dedicated TWI/I2C instance for PBrick to use
  * 
- * @param[in] pbrick_twi*       twi     Global TWI instance
  * @return ret_code_t
  */
-ret_code_t pbrick_twi_init(pbrick_twi *twi);
+ret_code_t pbrick_twi_init();
 
 /**@brief TWI/I2C write
  *
- * @param[in] pbrick_twi*   instance        The PBrick TWI instance
  * @param[in] uint8_t       deviceAddress   The TWI device address
  * @param[in] uint8_t       registerAddress The Register address to write to
  * @param[in] uint8_t*      data            Data to write to the TWI Slave
@@ -34,11 +29,10 @@ ret_code_t pbrick_twi_init(pbrick_twi *twi);
  *
  * @return ret_code_t
  */
-ret_code_t twi_tx(pbrick_twi *instance, uint8_t deviceAddress, uint8_t registerAddress, uint8_t *data, uint16_t length);
+ret_code_t twi_tx(uint8_t deviceAddress, uint8_t registerAddress, uint8_t *data, uint16_t length);
 
 /**@brief TWI/I2C read
  *
- * @param[in]  pbrick_twi*   instance        The PBrick TWI instance
  * @param[in]  uint8_t       deviceAddress   The TWI device address
  * @param[in]  uint8_t       registerAddress The Register address to write to
  * @param[out] uint8_t*      data           Data buffer to be written to
@@ -46,7 +40,7 @@ ret_code_t twi_tx(pbrick_twi *instance, uint8_t deviceAddress, uint8_t registerA
  *
  * @return ret_code_t
  */
-ret_code_t twi_rx(pbrick_twi *instance, uint8_t deviceAddress, uint8_t registerAddress, uint8_t *data, uint16_t length);
+ret_code_t twi_rx(uint8_t deviceAddress, uint8_t registerAddress, uint8_t *data, uint16_t length);
 
 #ifdef __cplusplus
 }

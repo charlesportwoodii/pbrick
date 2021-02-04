@@ -93,6 +93,7 @@
 #include "ble_pbrick.h"
 #include "pbrick_twi.h"
 #include "STUSB4500.h"
+#include "nrf_drv_twi.h"
 
 #define DEVICE_NAME                     "PBRICK"                                    /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME               "NordicSemiconductor"                       /**< Manufacturer. Will be passed to Device Information Service. */
@@ -130,7 +131,6 @@ BLE_ADVERTISING_DEF(m_advertising);                                             
 
 static uint16_t m_conn_handle = BLE_CONN_HANDLE_INVALID;                            /**< Handle of the current connection. */
 static void advertising_start(bool erase_bonds);                                    /**< Forward declaration of advertising start function */
-
 
 // YOUR_JOB: Use UUIDs for service(s) used in your application.
 static ble_uuid_t m_adv_uuids[] = {
@@ -840,16 +840,12 @@ int main(void)
     err_code = ble_dfu_buttonless_async_svci_init();
     APP_ERROR_CHECK(err_code);
 
-    pbrick_twi twi_instance;
-
-    err_code = pbrick_twi_init(&twi_instance);
-    NRF_LOG_DEBUG("TWI Instance %x:", err_code);
-    APP_ERROR_CHECK(err_code);
-
-    err_code = STUSB4500_init(&twi_instance, STUSB4500_DEVICE_ADDRESS);
+    err_code = pbrick_twi_init();
+    NRF_LOG_INFO("TWI SETUP %x", err_code);
+    err_code = STUSB4500_init(STUSB4500_DEVICE_ADDRESS);
 
     NRF_LOG_DEBUG("STUISB4500 instance %x:", err_code);
-    APP_ERROR_CHECK(err_code);
+    //APP_ERROR_CHECK(err_code);
 
     timers_init();
     buttons_leds_init(&erase_bonds);
