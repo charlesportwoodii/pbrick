@@ -1,42 +1,38 @@
 #ifndef STUSB4500_H__
 #define STUSB4500_H__
 
-#include "nrf_drv_twi.h"
-
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-#define STUSB4500_DEFAULT_ADDRESS                        0x28
-#define STUSB4500_DEFAULT                                            0xFF
+#include "sdk_common.h"
+#include "pbrick_twi.h"
 
-#define STUSB4500_FTP_CUST_PASSWORD_REG       0x95
-#define STUSB4500_FTP_CUST_PASSWORD                 0x47
+#define STUSB4500_DEVICE_ADDRESS            0x28
+#define STUSB4500_REG_DEVICE_ID                 0x2F
+#define STUSB4500_INTERRUPT                         0x0B
+#define STUSB4500_ALERT_STATUS_MASK    0x0c
+#define STUSB4500_PORT_STATUS                   0x0E
+#define STUSB4500_TX_HEADER_LOW            0x51
+#define STUSB4500_PD_COMMAND_CTRL    0x1A
 
-#define STUSB4500_FTP_CTRL_0                                     0x96
-#define STUSB4500_FTP_CUST_PWR                              0x80 
-#define STUSB4500_FTP_CUST_RST_N                           0x40
-#define STUSB4500_FTP_CUST_REQ                               0x10
-#define STUSB4500_FTP_CUST_SECT                              0x07
-#define STUSB4500_FTP_CTRL_1                                     0x97
-#define STUSB4500_FTP_CUST_SER                                0xF8
-#define STUSB4500_FTP_CUST_OPCODE                      0x07
-#define STUSB4500_RW_BUFFER                                     0x53
+/**@brief Initializes a STUSB4500 instance for TWI/I2C on-demand reconfiguration
+ *
+ * @param[in] pbrick_twi*     instance        The PBrick TWI instance
+ * @param[in] uint8_t           deviceAddress   Device Address of STUSB4500 (0x28 default)
+ *
+ * @return ret_code_t
+ */
+ret_code_t STUSB4500_init(pbrick_twi *instance, uint8_t deviceAddress);
 
-#define STUSB4500_READ                                                  0x00
-#define STUSB4500_WRITE_PL                                         0x01
-#define STUSB4500_WRITE_SER                                      0x02
-#define STUSB4500_ERASE_SECTOR                              0x05
-#define STUSB4500_PROG_SECTOR                               0x06
-#define STUSB4500_SOFT_PROG_SECTOR                  0x07
-
-#define STUSB4500_SECTOR_0                                        0x01
-#define STUSB4500_SECTOR_1                                        0x02
-#define STUSB4500_SECTOR_2                                        0x04
-#define STUSB4500_SECTOR_3                                        0x08
-#define STUSB4500_SECTOR_4                                        0x10
-
-ret_code_t STUSB4500_init(const nrf_drv_twi_t *m_twi_master, uint8_t deviceAddress);
+/**@brief Sends a reset to STUSB4500 to force a new PDO_SINK configuration with VBUS_SOURCE
+ *
+ * @param[in] pbrick_twi*     instance        The PBrick TWI instance
+ * @param[in] uint8_t           deviceAddress   Device Address of STUSB4500 (0x28 default)
+ *
+ * @return ret_code_t
+ */
+ret_code_t STUSB4500_soft_reset(pbrick_twi *instance, uint8_t deviceAddress);
 
 #ifdef __cplusplus
 }
