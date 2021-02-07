@@ -827,6 +827,39 @@ static void idle_state_handle(void)
 }
 
 
+/**@brief This will initialize the STUSB4500 USB-PD Type-C port with the appropriate power profiles.
+ * 
+ * In the even this function fails, the application should still boot in 5V mode but without motor control support.
+ */
+static void pd_init()
+{
+    ret_code_t err_code;
+
+    err_code = pbrick_twi_init();
+    APP_ERROR_CHECK(err_code);
+
+    err_code = STUSB4500_init(STUSB4500_DEVICE_ADDRESS);
+    if (NRF_SUCCESS == err_code) {
+        err_code = STUSB4500_check_cable_attached(STUSB4500_DEVICE_ADDRESS);
+        if (NRF_SUCCESS == err_code) {
+            err_code = STUSB4500_update_pdo(STUSB4500_DEVICE_ADDRESS, 1, 5000, 500);
+            APP_ERROR_CHECK(err_code);
+            err_code = STUSB4500_update_pdo(STUSB4500_DEVICE_ADDRESS, 2, 9000, 2000);
+            APP_ERROR_CHECK(err_code);
+            err_code = STUSB4500_update_pdo(STUSB4500_DEVICE_ADDRESS, 3, 12000, 1500);
+            APP_ERROR_CHECK(err_code);
+            err_code = STUSB4500_update_pdo_number(STUSB4500_DEVICE_ADDRESS, 3);
+            APP_ERROR_CHECK(err_code);
+            err_code = STUSB4500_soft_reset(STUSB4500_DEVICE_ADDRESS);
+            APP_ERROR_CHECK(err_code);
+
+            NRF_LOG_DEBUG("New Capabilities");
+            err_code = STUSB4500_print_sink_pdo(STUSB4500_DEVICE_ADDRESS);
+            NRF_LOG_DEBUG("===================== %x", err_code);
+        }
+    }
+}
+
 /**@brief Function for application main entry.
  */
 int main(void)
@@ -840,12 +873,7 @@ int main(void)
     err_code = ble_dfu_buttonless_async_svci_init();
     APP_ERROR_CHECK(err_code);
 
-    err_code = pbrick_twi_init();
-    NRF_LOG_INFO("TWI SETUP %x", err_code);
-    err_code = STUSB4500_init(STUSB4500_DEVICE_ADDRESS);
-
-    NRF_LOG_DEBUG("STUISB4500 instance %x:", err_code);
-    //APP_ERROR_CHECK(err_code);
+    pd_init();
 
     timers_init();
     buttons_leds_init(&erase_bonds);

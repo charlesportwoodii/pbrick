@@ -17,7 +17,7 @@ ret_code_t pbrick_twi_init()
     {
         .scl = PBRICK_SCL,
         .sda = PBRICK_SLA,
-        .frequency  = NRF_DRV_TWI_FREQ_100K,
+        .frequency  = NRF_DRV_TWI_FREQ_400K,
         .interrupt_priority = APP_IRQ_PRIORITY_HIGH,
         .clear_bus_init  = false
     };
@@ -39,7 +39,6 @@ ret_code_t twi_tx(uint8_t deviceAddress, uint8_t registerAddress, uint8_t *data,
     rwData[0] = registerAddress;
     memcpy(&rwData[1], data, length);
 
-    //m_xfer_done = false;
     ret = nrf_drv_twi_tx(&m_twi_master, deviceAddress, rwData, sizeof(length), false);
 
     return ret;
@@ -48,13 +47,10 @@ ret_code_t twi_tx(uint8_t deviceAddress, uint8_t registerAddress, uint8_t *data,
 ret_code_t twi_rx(uint8_t deviceAddress, uint8_t registerAddress, uint8_t *data, uint16_t length)
 {
     ret_code_t ret;
-    //m_xfer_done = false;
-    
-    ret = twi_tx(deviceAddress, registerAddress, data, length);
-
-   // m_xfer_done = false;
-    ret = nrf_drv_twi_rx(&m_twi_master, deviceAddress, data, length);
-    //while (m_xfer_done == false);
+    ret = nrf_drv_twi_tx(&m_twi_master, deviceAddress, &registerAddress, sizeof(registerAddress), true);
+    if (NRF_SUCCESS == ret) {
+        ret = nrf_drv_twi_rx(&m_twi_master, deviceAddress, data, length);
+    }
 
     return ret;
 }
