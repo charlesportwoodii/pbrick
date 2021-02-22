@@ -1,4 +1,4 @@
-update=Sun 31 Jan 2021 04:57:25 PM CST
+update=Sun 21 Feb 2021 11:01:24 AM CST
 version=1
 last_client=kicad
 [general]
@@ -45,9 +45,9 @@ dPairWidth1=0.1524
 dPairGap1=0.1524
 dPairViaGap1=0.25
 SilkLineWidth=0.12
-SilkTextSizeV=1
-SilkTextSizeH=1
-SilkTextSizeThickness=0.15
+SilkTextSizeV=0.45
+SilkTextSizeH=0.45
+SilkTextSizeThickness=0.1125
 SilkTextItalic=0
 SilkTextUpright=1
 CopperLineWidth=0.2
@@ -294,6 +294,17 @@ dPairViaGap=0.25
 Name=VDD
 Clearance=0.1778
 TrackWidth=0.7
+ViaDiameter=0.6096
+ViaDrill=0.3048
+uViaDiameter=0.6096
+uViaDrill=0.3048
+dPairWidth=0.1524
+dPairGap=0.1524
+dPairViaGap=0.25
+[pcbnew/Netclasses/6]
+Name=VTRACE
+Clearance=0.1778
+TrackWidth=0.5
 ViaDiameter=0.6096
 ViaDrill=0.3048
 uViaDiameter=0.6096

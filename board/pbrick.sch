@@ -1,7 +1,7 @@
 EESchema Schematic File Version 4
 EELAYER 30 0
 EELAYER END
-$Descr A4 11693 8268
+$Descr USLegal 14000 8500
 encoding utf-8
 Sheet 1 1
 Title ""
@@ -16,223 +16,168 @@ $EndDescr
 $Comp
 L pbrick-rescue:PROTEUS-III-WIRL-BLTE_PROTEUS-III PROTEUS-III1
 U 1 1 5F0B4C78
-P 7200 1750
-F 0 "PROTEUS-III1" H 8000 1350 50  0000 C CNN
-F 1 "PROTEUS-III" H 4600 1400 50  0001 C CNN
-F 2 "Common:WIRL-BLTE_Proteus-III" H 4650 500 50  0001 C CNN
-F 3 "https://www.we-online.de/katalog/manual/2611011024000_Proteus-III%202611011024000%20Manual_rev1.pdf" H 7150 1250 50  0001 C CNN
-F 4 "WIRL-BTLE PROTEUS-III BLUETOOTH" H 4650 1100 50  0001 C CNN "Description"
-F 5 "1917-2611011024000CT-ND" H 4650 950 50  0001 C CNN "Digi-Key_PN"
-F 6 "2611011024000" H 4650 800 50  0001 C CNN "MPN"
-F 7 "Würth Elektronik" H 4650 1250 50  0001 C CNN "Manufacturer"
-F 8 "https://www.we-online.de/katalog/datasheet/2611011024000.pdf" H 4750 650 50  0001 C CNN "Footprint_Reference"
-F 9 "Charles R. Portwood II (charlesportwoodii@erianna.com)" H 4800 350 50  0001 C CNN "Author"
-	1    7200 1750
-	0    1    1    0   
+P 11250 4000
+F 0 "PROTEUS-III1" H 12050 3600 50  0000 C CNN
+F 1 "PROTEUS-III" H 8650 3650 50  0001 C CNN
+F 2 "Common:WIRL-BLTE_Proteus-III" H 8700 2750 50  0001 C CNN
+F 3 "https://www.we-online.de/katalog/manual/2611011024000_Proteus-III%202611011024000%20Manual_rev1.pdf" H 11200 3500 50  0001 C CNN
+F 4 "WIRL-BTLE PROTEUS-III BLUETOOTH" H 8700 3350 50  0001 C CNN "Description"
+F 5 "1917-2611011024000CT-ND" H 8700 3200 50  0001 C CNN "Digi-Key_PN"
+F 6 "2611011024000" H 8700 3050 50  0001 C CNN "MPN"
+F 7 "Würth Elektronik" H 8700 3500 50  0001 C CNN "Manufacturer"
+F 8 "https://www.we-online.de/katalog/datasheet/2611011024000.pdf" H 8800 2900 50  0001 C CNN "Footprint_Reference"
+F 9 "Charles R. Portwood II (charlesportwoodii@erianna.com)" H 8850 2600 50  0001 C CNN "Author"
+	1    11250 4000
+	1    0    0    -1  
 $EndComp
 $Comp
 L pbrick-rescue:KMR621NGLFS-KMR621NGLFS S1
 U 1 1 5F0E3EAF
-P 8600 2800
-F 0 "S1" H 8600 3000 50  0000 C CNN
-F 1 "KMR621NGLFS" H 8600 2976 50  0001 C CNN
-F 2 "SW_KMR621NGLFS" H 8600 2800 50  0001 L BNN
-F 3 "N/A" H 8600 2800 50  0001 L BNN
-F 4 "1.9mm" H 8600 2800 50  0001 L BNN "Field4"
-F 5 "C&K SWITCHES" H 8600 2800 50  0001 L BNN "Field5"
-F 6 "Manufacturer Recommendations" H 8600 2800 50  0001 L BNN "Field6"
-F 7 "dnp" H 8600 2800 50  0001 C CNN "fit_field"
-	1    8600 2800
+P 4250 1750
+F 0 "S1" H 4250 1950 50  0000 C CNN
+F 1 "KMR621NGLFS" H 4250 1926 50  0001 C CNN
+F 2 "SW_KMR621NGLFS" H 4250 1750 50  0001 L BNN
+F 3 "N/A" H 4250 1750 50  0001 L BNN
+F 4 "1.9mm" H 4250 1750 50  0001 L BNN "Field4"
+F 5 "C&K SWITCHES" H 4250 1750 50  0001 L BNN "Field5"
+F 6 "Manufacturer Recommendations" H 4250 1750 50  0001 L BNN "Field6"
+F 7 "dnp" H 4250 1750 50  0001 C CNN "fit_field"
+	1    4250 1750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8200 2800 8300 2800
-Text Label 6400 1800 2    50   ~ 0
+	3850 1750 3950 1750
+Text Label 11300 4800 3    50   ~ 0
 SWDIO
-Text Label 6400 1900 2    50   ~ 0
+Text Label 11400 4800 3    50   ~ 0
 P0.18
-Text Label 6400 2000 2    50   ~ 0
+Text Label 11500 4800 3    50   ~ 0
 P0.02
-Text Label 6400 1500 2    50   ~ 0
+Text Label 11000 4800 3    50   ~ 0
 RF
-Text Label 6400 1400 2    50   ~ 0
+Text Label 10900 4800 3    50   ~ 0
 ANT
-Text Label 6950 850  1    50   ~ 0
+Text Label 10350 4250 2    50   ~ 0
 P0.09
-Text Label 7050 850  1    50   ~ 0
+Text Label 10350 4150 2    50   ~ 0
 P0.10
-Text Label 7150 850  1    50   ~ 0
+Text Label 10350 4050 2    50   ~ 0
 P0.23
-Text Label 7250 850  1    50   ~ 0
+Text Label 10350 3950 2    50   ~ 0
 P1.00
-Text Label 7350 850  1    50   ~ 0
+Text Label 10350 3850 2    50   ~ 0
 P0.21
-Text Label 7450 850  1    50   ~ 0
+Text Label 10350 3750 2    50   ~ 0
 P0.07
-Text Label 7950 1700 0    50   ~ 0
+Text Label 11200 3250 1    50   ~ 0
 P0.03
-Text Label 7950 1800 0    50   ~ 0
+Text Label 11300 3250 1    50   ~ 0
 P0.12
-Text Label 7950 1900 0    50   ~ 0
+Text Label 11400 3250 1    50   ~ 0
 P0.11
-Text Label 7950 2000 0    50   ~ 0
+Text Label 11500 3250 1    50   ~ 0
 P1.09
-Text Label 7950 2100 0    50   ~ 0
-P1.08
-Text Label 7050 3100 3    50   ~ 0
+Text Label 12600 4150 0    50   ~ 0
 P0.19
-Text Label 7150 3100 3    50   ~ 0
-P0.22
-$Comp
-L power:Earth #PWR024
-U 1 1 5F0F03E6
-P 7800 1600
-F 0 "#PWR024" H 7800 1350 50  0001 C CNN
-F 1 "Earth" H 7800 1450 50  0001 C CNN
-F 2 "" H 7800 1600 50  0001 C CNN
-F 3 "~" H 7800 1600 50  0001 C CNN
-	1    7800 1600
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
-	6400 2000 6500 2000
+	11500 4800 11500 4700
 Wire Wire Line
-	6400 1900 6500 1900
+	11400 4800 11400 4700
 Wire Wire Line
-	6400 1800 6500 1800
+	11300 4800 11300 4700
 Wire Wire Line
-	6400 1700 6500 1700
+	11200 4800 11200 4700
 Wire Wire Line
-	6400 1500 6500 1500
+	11000 4800 11000 4700
 Wire Wire Line
-	6400 1400 6500 1400
+	10900 4800 10900 4700
 Wire Wire Line
-	7050 3100 7050 3000
+	12600 4150 12500 4150
 Wire Wire Line
-	7150 3000 7150 3100
+	12500 4050 12600 4050
 Wire Wire Line
-	7250 3100 7250 3000
+	12600 3950 12500 3950
 Wire Wire Line
-	7350 3000 7350 3100
+	12500 3850 12600 3850
 Wire Wire Line
-	7800 2100 7950 2100
+	11600 3400 11600 3250
 Wire Wire Line
-	7950 2000 7800 2000
+	11500 3250 11500 3400
 Wire Wire Line
-	7800 1900 7950 1900
+	11400 3400 11400 3250
 Wire Wire Line
-	7950 1800 7800 1800
+	11300 3250 11300 3400
 Wire Wire Line
-	7800 1700 7950 1700
+	11200 3400 11200 3250
 Wire Wire Line
-	7450 950  7450 850 
+	10450 3750 10350 3750
 Wire Wire Line
-	7350 950  7350 850 
+	10450 3850 10350 3850
 Wire Wire Line
-	7250 950  7250 850 
+	10450 3950 10350 3950
 Wire Wire Line
-	7150 950  7150 850 
+	10450 4050 10350 4050
 Wire Wire Line
-	7050 950  7050 850 
+	10450 4150 10350 4150
 Wire Wire Line
-	6950 950  6950 850 
-Text Label 9150 2800 0    50   ~ 0
+	10450 4250 10350 4250
+Text Label 4800 1750 0    50   ~ 0
 P0.18
 Wire Wire Line
-	8900 2800 9000 2800
+	4550 1750 4650 1750
 $Comp
-L pbrick-rescue:RESISTOR_0603-MF_Passives R6
+L pbrick-rescue:RESISTOR_0603-MF_Passives R7
 U 1 1 5F1004DF
-P 9000 2550
-F 0 "R6" H 9068 2592 45  0000 L CNN
-F 1 "10K 0603" H 9068 2508 45  0000 L CNN
-F 2 "Resistors:0603" H 9250 2460 20  0001 C CNN
-F 3 "https://d1d2qsbl8m0m72.cloudfront.net/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf" H 9000 2550 60  0001 C CNN
-F 4 "RHM10KDCT-ND" H 9000 2550 50  0001 C CNN "Digi-Key_PN"
-F 5 "Rohm Semiconductor" H 9000 2550 50  0001 C CNN "Manufacturer"
-F 6 "ESR03EZPJ103" H 9000 2550 50  0001 C CNN "MPN"
-F 7 "RES SMD 10K OHM 5% 1/4W 0603" H 9000 2550 50  0001 C CNN "Description"
-	1    9000 2550
+P 4650 1500
+F 0 "R7" H 4718 1542 45  0000 L CNN
+F 1 "10K 0402" H 4718 1458 45  0000 L CNN
+F 2 "Resistors:0402" H 4900 1410 20  0001 C CNN
+F 3 "https://d1d2qsbl8m0m72.cloudfront.net/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf" H 4650 1500 60  0001 C CNN
+F 4 "RHM10KDCT-ND" H 4650 1500 50  0001 C CNN "Digi-Key_PN"
+F 5 "Rohm Semiconductor" H 4650 1500 50  0001 C CNN "Manufacturer"
+F 6 "ESR03EZPJ103" H 4650 1500 50  0001 C CNN "MPN"
+F 7 "RES SMD 10K OHM 5% 1/4W 0603" H 4650 1500 50  0001 C CNN "Description"
+	1    4650 1500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9000 2300 9000 2350
+	4650 1250 4650 1300
 Wire Wire Line
-	9000 2750 9000 2800
-Connection ~ 9000 2800
+	4650 1700 4650 1750
+Connection ~ 4650 1750
 Wire Wire Line
-	9000 2800 9150 2800
-Text Label 4750 1250 3    50   ~ 0
+	4650 1750 4800 1750
+Text Label 3850 1050 3    50   ~ 0
 P0.18
-Text Label 6400 1700 2    50   ~ 0
+Text Label 11200 4800 3    50   ~ 0
 SWDCLK
-Text Label 4850 1250 3    50   ~ 0
+Text Label 3950 1050 3    50   ~ 0
 SWDCLK
-Text Label 4650 1250 3    50   ~ 0
+Text Label 3750 1050 3    50   ~ 0
 SWDIO
-NoConn ~ 5050 1250
-$Comp
-L pbrick-rescue:RESISTOR_0603-MF_Passives R4
-U 1 1 5F125DEC
-P 6300 5350
-F 0 "R4" H 6368 5392 45  0000 L CNN
-F 1 "2.2K Ω 0603" H 6368 5308 45  0000 L CNN
-F 2 "Resistors:0603" H 6550 5260 20  0001 C CNN
-F 3 "https://d1d2qsbl8m0m72.cloudfront.net/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf" H 6300 5350 60  0001 C CNN
-F 4 "RES SMD 2.2K OHM 5% 1/4W 0603" H 6300 5350 50  0001 C CNN "Description"
-F 5 "ESR03EZPJ222" H 6300 5350 50  0001 C CNN "MPN"
-F 6 "Rohm Semiconductor" H 6300 5350 50  0001 C CNN "Manufacturer"
-F 7 "RHM2.2KDCT-ND" H 6300 5350 50  0001 C CNN "Digi-Key_PN"
-	1    6300 5350
-	0    -1   -1   0   
-$EndComp
-$Comp
-L pbrick-rescue:RESISTOR_0603-MF_Passives R5
-U 1 1 5F1266C1
-P 6800 5350
-F 0 "R5" H 6868 5392 45  0000 L CNN
-F 1 "2.2K Ω 0603" H 6868 5308 45  0000 L CNN
-F 2 "Resistors:0603" H 7050 5260 20  0001 C CNN
-F 3 "https://d1d2qsbl8m0m72.cloudfront.net/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf" H 6800 5350 60  0001 C CNN
-F 4 "RHM2.2KDCT-ND" H 6800 5350 50  0001 C CNN "Digi-Key_PN"
-F 5 "Rohm Semiconductor" H 6800 5350 50  0001 C CNN "Manufacturer"
-F 6 "ESR03EZPJ222" H 6800 5350 50  0001 C CNN "MPN"
-F 7 "RES SMD 2.2K OHM 5% 1/4W 0603" H 6800 5350 50  0001 C CNN "Description"
-	1    6800 5350
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	6500 6000 6500 5350
-Wire Wire Line
-	6600 6000 6600 5350
-Wire Wire Line
-	6500 5350 6500 5250
-Connection ~ 6500 5350
-Wire Wire Line
-	6600 5350 6600 5250
-Connection ~ 6600 5350
+NoConn ~ 4150 1050
 $Comp
 L pbrick-rescue:150121M153000-150121M153000 LED1
 U 1 1 5F1A9C53
-P 9950 2700
-F 0 "LED1" H 9800 3150 50  0000 L CNN
-F 1 "150121M153000" H 10700 2700 50  0001 C CNN
-F 2 "Common:150121M153000" H 10400 2500 60  0001 L CNN
-F 3 "https://www.we-online.de/katalog/datasheet/150121M153000.pdf" H 10150 3000 60  0001 L CNN
-F 4 "LED RGB DIFFUSED SMD" H 10400 2800 60  0001 L CNN "Description"
-F 5 "Würth Elektronik" H 10400 2900 60  0001 L CNN "Manufacturer"
-F 6 "150121M153000" H 10700 2600 50  0001 C CNN "MPN"
-F 7 "732-11394-1-ND" H 9950 2700 50  0001 C CNN "DigiKey_PN"
-	1    9950 2700
+P 4700 2800
+F 0 "LED1" H 4550 3250 50  0000 L CNN
+F 1 "150121M153000" H 5450 2800 50  0001 C CNN
+F 2 "Common:150121M153000" H 5150 2600 60  0001 L CNN
+F 3 "https://www.we-online.de/katalog/datasheet/150121M153000.pdf" H 4900 3100 60  0001 L CNN
+F 4 "LED RGB DIFFUSED SMD" H 5150 2900 60  0001 L CNN "Description"
+F 5 "Würth Elektronik" H 5150 3000 60  0001 L CNN "Manufacturer"
+F 6 "150121M153000" H 5450 2700 50  0001 C CNN "MPN"
+F 7 "732-11394-1-ND" H 4700 2800 50  0001 C CNN "DigiKey_PN"
+	1    4700 2800
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	850  850  850  1050
 $Comp
-L power:VDD #PWR03
+L power:VDD #PWR01
 U 1 1 5F17EDE8
 P 850 850
-F 0 "#PWR03" H 850 700 50  0001 C CNN
+F 0 "#PWR01" H 850 700 50  0001 C CNN
 F 1 "VDD" H 865 1023 50  0000 C CNN
 F 2 "" H 850 850 50  0001 C CNN
 F 3 "" H 850 850 50  0001 C CNN
@@ -251,8 +196,8 @@ L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C6
 U 1 1 5F177E00
 P 2950 1450
 F 0 "C6" H 3050 1500 45  0000 L CNN
-F 1 "470nF 0603" H 3050 1400 45  0000 L CNN
-F 2 "Capacitors:0603" H 3200 1360 20  0001 C CNN
+F 1 "470nF 0402" H 3050 1400 45  0000 L CNN
+F 2 "Capacitors:0402" H 3200 1360 20  0001 C CNN
 F 3 "https://www.we-online.de/katalog/datasheet/885012106015.pdf" H 2950 1450 60  0001 C CNN
 F 4 "732-7993-1-ND" H 2950 1450 50  0001 C CNN "Digi-Key_PN"
 F 5 "Würth Elektronik" H 2950 1450 50  0001 C CNN "Manufacturer"
@@ -276,10 +221,10 @@ Wire Wire Line
 NoConn ~ 2850 1050
 NoConn ~ 1450 1250
 $Comp
-L pbrick-rescue:5V-SparkFun-PowerSymbols #SUPPLY05
+L pbrick-rescue:5V-SparkFun-PowerSymbols #SUPPLY03
 U 1 1 5F2286D7
 P 3100 1250
-F 0 "#SUPPLY05" H 3150 1250 45  0001 L BNN
+F 0 "#SUPPLY03" H 3150 1250 45  0001 L BNN
 F 1 "5V" V 3100 1378 45  0000 L CNN
 F 2 "XXX-00000" V 3142 1378 60  0001 L CNN
 F 3 "" H 3100 1250 60  0001 C CNN
@@ -287,552 +232,508 @@ F 3 "" H 3100 1250 60  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L pbrick-rescue:5V-SparkFun-PowerSymbols #SUPPLY02
+L pbrick-rescue:5V-SparkFun-PowerSymbols #SUPPLY05
 U 1 1 5F22A686
-P 9800 2700
-F 0 "#SUPPLY02" H 9850 2700 45  0001 L BNN
-F 1 "5V" V 9800 2870 45  0000 C CNN
-F 2 "XXX-00000" V 9842 2828 60  0001 L CNN
-F 3 "" H 9800 2700 60  0001 C CNN
-	1    9800 2700
+P 4550 2800
+F 0 "#SUPPLY05" H 4600 2800 45  0001 L BNN
+F 1 "5V" V 4550 2970 45  0000 C CNN
+F 2 "XXX-00000" V 4592 2928 60  0001 L CNN
+F 3 "" H 4550 2800 60  0001 C CNN
+	1    4550 2800
 	0    -1   -1   0   
 $EndComp
 $Comp
-L pbrick-rescue:RESISTOR_0603-MF_Passives R1
+L pbrick-rescue:RESISTOR_0603-MF_Passives R8
 U 1 1 5F2549E3
-P 10300 2300
-F 0 "R1" H 10250 2100 45  0000 R CNN
-F 1 "85 Ω 0603" H 10150 2100 45  0000 R CNN
-F 2 "Resistors:0603" H 10550 2210 20  0001 C CNN
-F 3 "https://d1d2qsbl8m0m72.cloudfront.net/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf" H 10300 2300 60  0001 C CNN
-F 4 "RHM82DCT-ND" H 10300 2300 50  0001 C CNN "Digi-Key_PN"
-F 5 "Rohm Semiconductor" H 10300 2300 50  0001 C CNN "Manufacturer"
-F 6 "ESR03EZPJ820" H 10300 2300 50  0001 C CNN "MPN"
-F 7 "RES SMD 82 OHM 5% 1/4W 0603" H 10300 2300 50  0001 C CNN "Description"
-	1    10300 2300
+P 5050 2400
+F 0 "R8" H 5000 2200 45  0000 R CNN
+F 1 "85 Ω 0402" H 4900 2200 45  0000 R CNN
+F 2 "Resistors:0402" H 5300 2310 20  0001 C CNN
+F 3 "https://d1d2qsbl8m0m72.cloudfront.net/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf" H 5050 2400 60  0001 C CNN
+F 4 "RHM82DCT-ND" H 5050 2400 50  0001 C CNN "Digi-Key_PN"
+F 5 "Rohm Semiconductor" H 5050 2400 50  0001 C CNN "Manufacturer"
+F 6 "ESR03EZPJ820" H 5050 2400 50  0001 C CNN "MPN"
+F 7 "RES SMD 82 OHM 5% 1/4W 0603" H 5050 2400 50  0001 C CNN "Description"
+	1    5050 2400
 	-1   0    0    1   
 $EndComp
 $Comp
-L pbrick-rescue:RESISTOR_0603-MF_Passives R2
+L pbrick-rescue:RESISTOR_0603-MF_Passives R9
 U 1 1 5F2566BD
-P 10450 2500
-F 0 "R2" H 10350 2350 45  0000 R CNN
-F 1 "85 Ω 0603" H 10250 2350 45  0000 R CNN
-F 2 "Resistors:0603" H 10700 2410 20  0001 C CNN
-F 3 "https://d1d2qsbl8m0m72.cloudfront.net/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf" H 10450 2500 60  0001 C CNN
-F 4 "RHM82DCT-ND" H 10450 2500 50  0001 C CNN "Digi-Key_PN"
-F 5 "RES SMD 82 OHM 5% 1/4W 0603" H 10450 2500 50  0001 C CNN "Description"
-F 6 "ESR03EZPJ820" H 10450 2500 50  0001 C CNN "MPN"
-F 7 "Rohm Semiconductor" H 10450 2500 50  0001 C CNN "Manufacturer"
-	1    10450 2500
+P 5200 2600
+F 0 "R9" H 5100 2450 45  0000 R CNN
+F 1 "85 Ω 0402" H 5000 2450 45  0000 R CNN
+F 2 "Resistors:0402" H 5450 2510 20  0001 C CNN
+F 3 "https://d1d2qsbl8m0m72.cloudfront.net/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf" H 5200 2600 60  0001 C CNN
+F 4 "RHM82DCT-ND" H 5200 2600 50  0001 C CNN "Digi-Key_PN"
+F 5 "RES SMD 82 OHM 5% 1/4W 0603" H 5200 2600 50  0001 C CNN "Description"
+F 6 "ESR03EZPJ820" H 5200 2600 50  0001 C CNN "MPN"
+F 7 "Rohm Semiconductor" H 5200 2600 50  0001 C CNN "Manufacturer"
+	1    5200 2600
 	-1   0    0    1   
 $EndComp
 $Comp
-L pbrick-rescue:RESISTOR_0603-MF_Passives R3
+L pbrick-rescue:RESISTOR_0603-MF_Passives R10
 U 1 1 5F262595
-P 10600 2700
-F 0 "R3" H 10550 2550 45  0000 R CNN
-F 1 "140 Ω 0603" H 10450 2550 45  0000 R CNN
-F 2 "Resistors:0603" H 10850 2610 20  0001 C CNN
-F 3 "https://www.vishay.com/docs/20043/crcwhpe3.pdf" H 10600 2700 60  0001 C CNN
-F 4 "541-143SCT-ND" H 10600 2700 50  0001 C CNN "Digi-Key_PN"
-F 5 "Vishay Dale" H 10600 2700 50  0001 C CNN "Manufacturer"
-F 6 "CRCW0603143RFKEAHP" H 10600 2700 50  0001 C CNN "MPN"
-F 7 "RES SMD 143 OHM 1% 1/4W 0603" H 10600 2700 50  0001 C CNN "Description"
-	1    10600 2700
+P 5350 2800
+F 0 "R10" H 5300 2650 45  0000 R CNN
+F 1 "140 Ω 0402" H 5200 2650 45  0000 R CNN
+F 2 "Resistors:0402" H 5600 2710 20  0001 C CNN
+F 3 "https://www.vishay.com/docs/20043/crcwhpe3.pdf" H 5350 2800 60  0001 C CNN
+F 4 "541-143SCT-ND" H 5350 2800 50  0001 C CNN "Digi-Key_PN"
+F 5 "Vishay Dale" H 5350 2800 50  0001 C CNN "Manufacturer"
+F 6 "CRCW0603143RFKEAHP" H 5350 2800 50  0001 C CNN "MPN"
+F 7 "RES SMD 143 OHM 1% 1/4W 0603" H 5350 2800 50  0001 C CNN "Description"
+	1    5350 2800
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	10150 2500 10300 2500
+	4900 2600 5050 2600
 Wire Wire Line
-	10150 2700 10450 2700
+	4900 2800 5200 2800
 Wire Wire Line
-	10150 2900 10600 2900
-Text Label 10300 2100 2    50   ~ 0
-P0.02
-Text Label 10450 2300 0    50   ~ 0
-P0.19
-Text Label 10600 2500 0    50   ~ 0
-P0.22
+	4900 3000 5350 3000
+Text Label 5050 2200 2    50   ~ 0
+P0.09
+Text Label 5200 2400 0    50   ~ 0
+P0.10
+Text Label 5350 2600 0    50   ~ 0
+P0.23
 $Comp
-L pbrick-rescue:3.3V-SparkFun-PowerSymbols #SUPPLY04
+L pbrick-rescue:3.3V-SparkFun-PowerSymbols #SUPPLY02
 U 1 1 5F226DE7
-P 2400 2500
-F 0 "#SUPPLY04" H 2450 2500 45  0001 L BNN
-F 1 "3.3V" V 2400 2628 45  0000 L CNN
-F 2 "XXX-00000" V 2358 2627 60  0001 L CNN
-F 3 "" H 2400 2500 60  0001 C CNN
-	1    2400 2500
+P 2000 2800
+F 0 "#SUPPLY02" H 2050 2800 45  0001 L BNN
+F 1 "3.3V" V 2000 2928 45  0000 L CNN
+F 2 "XXX-00000" V 1958 2927 60  0001 L CNN
+F 3 "" H 2000 2800 60  0001 C CNN
+	1    2000 2800
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2100 2500 1900 2500
+	2000 2800 1800 2800
 Wire Wire Line
-	1750 2500 1900 2500
-Connection ~ 1900 2500
+	1650 2800 1800 2800
+Connection ~ 1800 2800
 $Comp
 L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C4
 U 1 1 5F226DD8
-P 1900 2600
-F 0 "C4" H 1998 2642 45  0000 L CNN
-F 1 "2.2uF" H 1998 2558 45  0000 L CNN
-F 2 "Capacitors:0603" H 2150 2510 20  0001 C CNN
-F 3 "https://katalog.we-online.de/pbs/datasheet/885012106018.pdf" H 1900 2600 60  0001 C CNN
-F 4 "732-7915-1-ND" H 1900 2600 50  0001 C CNN "Digi-Key_PN"
-F 5 "Würth Elektronik" H 1900 2600 50  0001 C CNN "Manufacturer"
-F 6 "885012106018" H 1900 2600 50  0001 C CNN "MPN"
-F 7 "CAP CER 2.2UF 16V X5R 0603" H 1900 2600 50  0001 C CNN "Description"
-	1    1900 2600
+P 1800 2900
+F 0 "C4" H 1898 2942 45  0000 L CNN
+F 1 "2.2uF" H 1898 2858 45  0000 L CNN
+F 2 "Capacitors:0402" H 2050 2810 20  0001 C CNN
+F 3 "https://katalog.we-online.de/pbs/datasheet/885012106018.pdf" H 1800 2900 60  0001 C CNN
+F 4 "732-7915-1-ND" H 1800 2900 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" H 1800 2900 50  0001 C CNN "Manufacturer"
+F 6 "885012106018" H 1800 2900 50  0001 C CNN "MPN"
+F 7 "CAP CER 2.2UF 16V X5R 0603" H 1800 2900 50  0001 C CNN "Description"
+	1    1800 2900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1750 2300 1900 2300
+	1650 2600 1800 2600
 $Comp
 L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C3
 U 1 1 5F226DCB
-P 1900 2200
-F 0 "C3" H 1998 2242 45  0000 L CNN
-F 1 "470pF" H 1998 2158 45  0000 L CNN
-F 2 "Capacitors:0603" H 2150 2110 20  0001 C CNN
-F 3 "CAP CER 2.2UF 16V X5R 0603" H 1900 2200 60  0001 C CNN
-F 4 "732-7770-1-ND" H 1900 2200 50  0001 C CNN "Digi-Key_PN"
-F 5 "Würth Elektronik" H 1900 2200 50  0001 C CNN "Manufacturer"
-F 6 "885012006027" H 1900 2200 50  0001 C CNN "MPN"
-F 7 "CAP CER 470PF 16V C0G/NP0 0603" H 1900 2200 50  0001 C CNN "Description"
-	1    1900 2200
+P 1800 2500
+F 0 "C3" H 1898 2542 45  0000 L CNN
+F 1 "470pF" H 1898 2458 45  0000 L CNN
+F 2 "Capacitors:0402" H 2050 2410 20  0001 C CNN
+F 3 "CAP CER 2.2UF 16V X5R 0603" H 1800 2500 60  0001 C CNN
+F 4 "732-7770-1-ND" H 1800 2500 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" H 1800 2500 50  0001 C CNN "Manufacturer"
+F 6 "885012006027" H 1800 2500 50  0001 C CNN "MPN"
+F 7 "CAP CER 470PF 16V C0G/NP0 0603" H 1800 2500 50  0001 C CNN "Description"
+	1    1800 2500
 	1    0    0    -1  
 $EndComp
-NoConn ~ 1750 2400
+NoConn ~ 1650 2700
 Wire Wire Line
-	950  2500 1150 2500
+	850  2800 1050 2800
 Wire Wire Line
-	1150 2300 950  2300
+	1050 2600 850  2600
 $Comp
-L pbrick-rescue:MIC5219-x.xYML-mic5219-x.xyml U2
+L pbrick-rescue:MIC5219-x.xYML-mic5219-x.xyml U1
 U 1 1 5F226DB3
-P 1350 2150
-F 0 "U2" H 1450 2225 50  0000 C CNN
-F 1 "MIC5219-3.3YML-TR" H 1450 2134 50  0001 C CNN
-F 2 "Common:QFN6_THERMAL_PAD" H 2900 2150 50  0001 C CNN
-F 3 "https://www.mouser.com/datasheet/2/268/mic5219-1082354.pdf" H 1350 2150 50  0001 C CNN
-F 4 "MIC5219-3.3YML-TR " H 2800 2050 50  0001 C CNN "MPN"
-F 5 "Microchip Technology / Micrel " H 2950 1950 50  0001 C CNN "Manufacturer"
-F 6 "576-2768-1-ND" H 1350 2150 50  0001 C CNN "Digi-Key_PN"
-	1    1350 2150
+P 1250 2450
+F 0 "U1" H 1350 2525 50  0000 C CNN
+F 1 "MIC5219-3.3YML-TR" H 1350 2434 50  0001 C CNN
+F 2 "Common:QFN6_THERMAL_PAD" H 2800 2450 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/268/mic5219-1082354.pdf" H 1250 2450 50  0001 C CNN
+F 4 "MIC5219-3.3YML-TR " H 2700 2350 50  0001 C CNN "MPN"
+F 5 "Microchip Technology / Micrel " H 2850 2250 50  0001 C CNN "Manufacturer"
+F 6 "576-2768-1-ND" H 1250 2450 50  0001 C CNN "Digi-Key_PN"
+	1    1250 2450
 	1    0    0    -1  
 $EndComp
-Text Label 7350 3100 3    50   ~ 0
-P0.01
-Text Label 7250 3100 3    50   ~ 0
-P0.00
-Text Label 6500 5250 1    50   ~ 0
-P0.01
-Text Label 6600 5250 1    50   ~ 0
-P0.00
 $Comp
-L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C12
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C14
 U 1 1 5F1FECBD
-P 10450 1150
-F 0 "C12" H 10500 1250 45  0000 L CNN
-F 1 "22pF 0603" H 10700 1250 45  0000 L CNN
-F 2 "Capacitors:0603" H 10700 1060 20  0001 C CNN
-F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 10450 1150 60  0001 C CNN
-F 4 "732-7762-1-ND" H 10450 1150 50  0001 C CNN "Digi-Key_PN"
-F 5 "Würth Elektronik" H 10450 1150 50  0001 C CNN "Manufacturer"
-F 6 "885012006019" H 10450 1150 50  0001 C CNN "MPN"
-F 7 "CAP CER 22PF 16V C0G/NP0 0603" H 10450 1150 50  0001 C CNN "Description"
-F 8 "dnp" H 10450 1150 50  0001 C CNN "fit_field"
-	1    10450 1150
+P 6600 1100
+F 0 "C14" H 6650 1200 45  0000 L CNN
+F 1 "22pF 0402" H 6850 1200 45  0000 L CNN
+F 2 "Capacitors:0402" H 6850 1010 20  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 6600 1100 60  0001 C CNN
+F 4 "732-7762-1-ND" H 6600 1100 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" H 6600 1100 50  0001 C CNN "Manufacturer"
+F 6 "885012006019" H 6600 1100 50  0001 C CNN "MPN"
+F 7 "CAP CER 22PF 16V C0G/NP0 0603" H 6600 1100 50  0001 C CNN "Description"
+F 8 "dnp" H 6600 1100 50  0001 C CNN "fit_field"
+	1    6600 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C15
+U 1 1 5F203760
+P 6600 1450
+F 0 "C15" H 6650 1550 45  0000 L CNN
+F 1 "22pF 0402" H 6800 1550 45  0000 L CNN
+F 2 "Capacitors:0402" H 6850 1360 20  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 6600 1450 60  0001 C CNN
+F 4 "732-7762-1-ND" H 6600 1450 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" H 6600 1450 50  0001 C CNN "Manufacturer"
+F 6 "885012006019" H 6600 1450 50  0001 C CNN "MPN"
+F 7 "CAP CER 22PF 16V C0G/NP0 0603" H 6600 1450 50  0001 C CNN "Description"
+F 8 "dnp" H 6600 1450 50  0001 C CNN "fit_field"
+	1    6600 1450
 	1    0    0    -1  
 $EndComp
 $Comp
 L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C13
-U 1 1 5F203760
-P 10450 1500
-F 0 "C13" H 10500 1600 45  0000 L CNN
-F 1 "22pF 0603" H 10650 1600 45  0000 L CNN
-F 2 "Capacitors:0603" H 10700 1410 20  0001 C CNN
-F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 10450 1500 60  0001 C CNN
-F 4 "732-7762-1-ND" H 10450 1500 50  0001 C CNN "Digi-Key_PN"
-F 5 "Würth Elektronik" H 10450 1500 50  0001 C CNN "Manufacturer"
-F 6 "885012006019" H 10450 1500 50  0001 C CNN "MPN"
-F 7 "CAP CER 22PF 16V C0G/NP0 0603" H 10450 1500 50  0001 C CNN "Description"
-F 8 "dnp" H 10450 1500 50  0001 C CNN "fit_field"
-	1    10450 1500
-	1    0    0    -1  
+U 1 1 5F203D38
+P 6350 1550
+F 0 "C13" V 6500 1150 45  0000 C CNN
+F 1 "22pF 0402" V 6500 1450 45  0000 C CNN
+F 2 "Capacitors:0402" H 6600 1460 20  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 6350 1550 60  0001 C CNN
+F 4 "732-7762-1-ND" V 6350 1550 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" V 6350 1550 50  0001 C CNN "Manufacturer"
+F 6 "885012006019" V 6350 1550 50  0001 C CNN "MPN"
+F 7 "CAP CER 22PF 16V C0G/NP0 0603" V 6350 1550 50  0001 C CNN "Description"
+	1    6350 1550
+	0    1    1    0   
+$EndComp
+$Comp
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C12
+U 1 1 5F20459A
+P 6100 1350
+F 0 "C12" H 5950 1350 45  0000 C CNN
+F 1 "22pF 0402" H 5850 1450 45  0000 C CNN
+F 2 "Capacitors:0402" H 6350 1260 20  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 6100 1350 60  0001 C CNN
+F 4 "732-7762-1-ND" H 6100 1350 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" H 6100 1350 50  0001 C CNN "Manufacturer"
+F 6 "885012006019" H 6100 1350 50  0001 C CNN "MPN"
+F 7 "CAP CER 22PF 16V C0G/NP0 0603" H 6100 1350 50  0001 C CNN "Description"
+	1    6100 1350
+	0    1    1    0   
 $EndComp
 $Comp
 L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C11
-U 1 1 5F203D38
-P 10200 1600
-F 0 "C11" V 10350 1200 45  0000 C CNN
-F 1 "22pF 0603" V 10350 1500 45  0000 C CNN
-F 2 "Capacitors:0603" H 10450 1510 20  0001 C CNN
-F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 10200 1600 60  0001 C CNN
-F 4 "732-7762-1-ND" V 10200 1600 50  0001 C CNN "Digi-Key_PN"
-F 5 "Würth Elektronik" V 10200 1600 50  0001 C CNN "Manufacturer"
-F 6 "885012006019" V 10200 1600 50  0001 C CNN "MPN"
-F 7 "CAP CER 22PF 16V C0G/NP0 0603" V 10200 1600 50  0001 C CNN "Description"
-	1    10200 1600
-	0    1    1    0   
-$EndComp
-$Comp
-L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C10
-U 1 1 5F20459A
-P 9950 1400
-F 0 "C10" H 9800 1400 45  0000 C CNN
-F 1 "22pF 0603" H 9700 1500 45  0000 C CNN
-F 2 "Capacitors:0603" H 10200 1310 20  0001 C CNN
-F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 9950 1400 60  0001 C CNN
-F 4 "732-7762-1-ND" H 9950 1400 50  0001 C CNN "Digi-Key_PN"
-F 5 "Würth Elektronik" H 9950 1400 50  0001 C CNN "Manufacturer"
-F 6 "885012006019" H 9950 1400 50  0001 C CNN "MPN"
-F 7 "CAP CER 22PF 16V C0G/NP0 0603" H 9950 1400 50  0001 C CNN "Description"
-	1    9950 1400
-	0    1    1    0   
-$EndComp
-$Comp
-L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C9
 U 1 1 5F205059
-P 9700 1300
-F 0 "C9" H 9350 1600 45  0000 L CNN
-F 1 "22pF 0603" H 9550 1600 45  0000 L CNN
-F 2 "Capacitors:0603" H 9950 1210 20  0001 C CNN
-F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 9700 1300 60  0001 C CNN
-F 4 "732-7762-1-ND" H 9700 1300 50  0001 C CNN "Digi-Key_PN"
-F 5 "Würth Elektronik" H 9700 1300 50  0001 C CNN "Manufacturer"
-F 6 "885012006019" H 9700 1300 50  0001 C CNN "MPN"
-F 7 "CAP CER 22PF 16V C0G/NP0 0603" H 9700 1300 50  0001 C CNN "Description"
-	1    9700 1300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:Earth #PWR026
-U 1 1 5F2073DE
-P 9100 1600
-F 0 "#PWR026" H 9100 1350 50  0001 C CNN
-F 1 "Earth" H 9100 1450 50  0001 C CNN
-F 2 "" H 9100 1600 50  0001 C CNN
-F 3 "~" H 9100 1600 50  0001 C CNN
-	1    9100 1600
+P 5850 1250
+F 0 "C11" H 5500 1550 45  0000 L CNN
+F 1 "22pF 0402" H 5700 1550 45  0000 L CNN
+F 2 "Capacitors:0402" H 6100 1160 20  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 5850 1250 60  0001 C CNN
+F 4 "732-7762-1-ND" H 5850 1250 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" H 5850 1250 50  0001 C CNN "Manufacturer"
+F 6 "885012006019" H 5850 1250 50  0001 C CNN "MPN"
+F 7 "CAP CER 22PF 16V C0G/NP0 0603" H 5850 1250 50  0001 C CNN "Description"
+	1    5850 1250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9300 1400 9700 1400
-Connection ~ 9700 1400
+	5450 1350 5850 1350
+Connection ~ 5850 1350
 Wire Wire Line
-	9700 1400 9850 1400
+	5850 1350 6000 1350
 Wire Wire Line
-	10050 1400 10300 1400
+	6200 1350 6450 1350
 Wire Wire Line
-	10300 1400 10300 1600
+	6450 1350 6450 1550
 Wire Wire Line
-	10450 1250 10450 1350
-Text Label 10950 1350 0    50   ~ 0
+	6600 1200 6600 1300
+Text Label 7100 1300 0    50   ~ 0
 ANT
-Text Label 10950 1600 0    50   ~ 0
+Text Label 7100 1550 0    50   ~ 0
 RF
 Wire Wire Line
-	10300 1600 10450 1600
-Connection ~ 10300 1600
+	6450 1550 6600 1550
+Connection ~ 6450 1550
 Wire Wire Line
-	10950 1350 10450 1350
-Connection ~ 10450 1350
+	7100 1300 6600 1300
+Connection ~ 6600 1300
 Wire Wire Line
-	10450 1350 10450 1400
+	6600 1300 6600 1350
 Wire Wire Line
-	10450 1600 10950 1600
-Connection ~ 10450 1600
+	6600 1550 7100 1550
+Connection ~ 6600 1550
 Wire Notes Line
-	10350 900  10350 1650
+	6500 850  6500 1600
 Wire Notes Line
-	10350 1650 10600 1650
+	6500 1600 6750 1600
 Wire Notes Line
-	10600 1650 10600 900 
+	6750 1600 6750 850 
 Wire Notes Line
-	10600 900  10350 900 
-Text Notes 9300 850  0    50   ~ 0
-Onboard Antenna: DNP C6, C21 C26, J4\n\nExternal Antenna: DNP  C27, C28\n
+	6750 850  6500 850 
+Text Notes 5100 800  0    50   ~ 0
+Onboard Antenna: DNP C11 C12 C13, J3\n\nExternal Antenna: DNP  C14, C15\n
 $Comp
-L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C7
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C23
 U 1 1 5F248942
-P 5950 2200
-F 0 "C7" V 5850 1750 45  0000 L CNN
-F 1 "100nF 0603" V 5850 1850 45  0000 L CNN
-F 2 "Capacitors:0603" H 6200 2110 20  0001 C CNN
-F 3 "https://www.we-online.de/katalog/datasheet/885012106015.pdf" H 5950 2200 60  0001 C CNN
-F 4 "732-7965-1-ND" V 5950 2200 50  0001 C CNN "Digi-Key_PN"
-F 5 "Würth Elektronik" V 5950 2200 50  0001 C CNN "Manufacturer"
-F 6 "885012206046" V 5950 2200 50  0001 C CNN "MPN"
-F 7 "CAP CER 0.1UF 16V X7R 0603" V 5950 2200 50  0001 C CNN "Description"
-	1    5950 2200
-	1    0    0    -1  
+P 11700 5250
+F 0 "C23" V 11600 4800 45  0000 L CNN
+F 1 "100nF 0402" V 11600 4900 45  0000 L CNN
+F 2 "Capacitors:0402" H 11950 5160 20  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/885012106015.pdf" H 11700 5250 60  0001 C CNN
+F 4 "732-7965-1-ND" V 11700 5250 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" V 11700 5250 50  0001 C CNN "Manufacturer"
+F 6 "885012206046" V 11700 5250 50  0001 C CNN "MPN"
+F 7 "CAP CER 0.1UF 16V X7R 0603" V 11700 5250 50  0001 C CNN "Description"
+	1    11700 5250
+	0    -1   -1   0   
 $EndComp
 $Comp
-L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C8
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C22
 U 1 1 5F24CFB9
-P 6200 2200
-F 0 "C8" V 6350 1850 45  0000 L CNN
-F 1 "1uF 0603" V 6350 1950 45  0000 L CNN
-F 2 "Capacitors:0603" H 6450 2110 20  0001 C CNN
-F 3 "https://www.we-online.de/katalog/datasheet/885012206052.pdf" H 6200 2200 60  0001 C CNN
-F 4 "732-7971-1-ND" V 6200 2200 50  0001 C CNN "Digi-Key_PN"
-F 5 "Würth Elektronik" V 6200 2200 50  0001 C CNN "Manufacturer"
-F 6 "885012206052" V 6200 2200 50  0001 C CNN "MPN"
-F 7 "CAP CER 1UF 16V X7R 0603" V 6200 2200 50  0001 C CNN "Description"
-	1    6200 2200
-	1    0    0    -1  
+P 11700 5000
+F 0 "C22" V 11850 4650 45  0000 L CNN
+F 1 "1uF 0402" V 11850 4750 45  0000 L CNN
+F 2 "Capacitors:0402" H 11950 4910 20  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/885012206052.pdf" H 11700 5000 60  0001 C CNN
+F 4 "732-7971-1-ND" V 11700 5000 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" V 11700 5000 50  0001 C CNN "Manufacturer"
+F 6 "885012206052" V 11700 5000 50  0001 C CNN "MPN"
+F 7 "CAP CER 1UF 16V X7R 0603" V 11700 5000 50  0001 C CNN "Description"
+	1    11700 5000
+	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	5750 2100 5950 2100
+	11600 5450 11600 5250
 Wire Wire Line
-	6200 2100 5950 2100
-Connection ~ 5950 2100
+	11600 5000 11600 5250
+Connection ~ 11600 5250
 Wire Wire Line
-	6200 2100 6500 2100
-Connection ~ 6200 2100
+	11600 5000 11600 4700
+Connection ~ 11600 5000
 Wire Notes Line
-	8950 900  8950 1850
+	5100 850  5100 1800
 Wire Notes Line
-	8950 1850 10300 1850
+	5100 1800 6450 1800
 Wire Notes Line
-	10300 1850 10300 900 
+	6450 1800 6450 850 
 Wire Notes Line
-	8950 900  10300 900 
+	5100 850  6450 850 
 $Comp
-L pbrick-rescue:5V-SparkFun-PowerSymbols #SUPPLY03
+L pbrick-rescue:5V-SparkFun-PowerSymbols #SUPPLY01
 U 1 1 5F72C6F2
-P 950 2400
-F 0 "#SUPPLY03" H 1000 2400 45  0001 L BNN
-F 1 "5V" V 950 2528 45  0000 L CNN
-F 2 "XXX-00000" V 992 2528 60  0001 L CNN
-F 3 "" H 950 2400 60  0001 C CNN
-	1    950  2400
+P 850 2700
+F 0 "#SUPPLY01" H 900 2700 45  0001 L BNN
+F 1 "5V" V 850 2828 45  0000 L CNN
+F 2 "XXX-00000" V 892 2828 60  0001 L CNN
+F 3 "" H 850 2700 60  0001 C CNN
+	1    850  2700
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	950  2300 950  2400
-Connection ~ 950  2400
+	850  2600 850  2700
+Connection ~ 850  2700
 Wire Wire Line
-	950  2400 950  2500
+	850  2700 850  2800
 $Comp
-L pbrick-rescue:U.FL2PIN-SparkFun-Connectors J5
+L pbrick-rescue:U.FL2PIN-SparkFun-Connectors J3
 U 1 1 5F205E4A
-P 9100 1400
-F 0 "J5" H 9158 1654 45  0000 C CNN
-F 1 "U.FL2PIN" H 9158 1570 45  0000 C CNN
-F 2 "U.FL" H 9100 1650 20  0001 C CNN
-F 3 "" H 9100 1400 50  0001 C CNN
-F 4 "CONN-09193" H 9158 1581 60  0001 C CNN "Field4"
-	1    9100 1400
+P 5250 1350
+F 0 "J3" H 5308 1604 45  0000 C CNN
+F 1 "U.FL2PIN" H 5308 1520 45  0000 C CNN
+F 2 "U.FL" H 5250 1600 20  0001 C CNN
+F 3 "" H 5250 1350 50  0001 C CNN
+F 4 "CONN-09193" H 5308 1531 60  0001 C CNN "Field4"
+	1    5250 1350
 	1    0    0    -1  
 $EndComp
 $Comp
-L pbrick-rescue:I2C_STANDARDQWIIC-SparkFun-Connectors J3
-U 1 1 5F11DB2A
-P 6800 6100
-F 0 "J3" V 6450 6250 45  0000 C CNN
-F 1 "QWIIC" V 6550 6250 45  0000 C CNN
-F 2 "1X04_1MM_RA" H 6800 6600 20  0001 C CNN
-F 3 "" H 6800 6100 50  0001 C CNN
-F 4 "CONN-13729" H 6758 6531 60  0001 C CNN "Field4"
-F 5 "dnp" V 6800 6100 50  0001 C CNN "fit_field"
-	1    6800 6100
-	0    -1   -1   0   
-$EndComp
-$Comp
-L TB67H420FTG_O_EL_:TB67H420FTG(O,EL) U1
+L TB67H420FTG_O_EL_:TB67H420FTG(O,EL) U5
 U 1 1 5FE32989
-P 8750 5250
-F 0 "U1" H 8750 6517 50  0000 C CNN
-F 1 "TB67H420FTG(O,EL)" H 8750 6426 50  0000 C CNN
-F 2 "IC_TB67H420FTG(O,EL)" H 8750 5250 50  0001 L BNN
-F 3 "https://www.pololu.com/file/0J1510/TB67H420FTG_datasheet_en_20170818.pdf" H 8750 5250 50  0001 L BNN
-F 4 "Toshiba Semiconductor and Storage" H 8750 5250 50  0001 L BNN "Manufacturer"
-F 5 "TB67H420FTGELCT-ND" H 8750 5250 50  0001 C CNN "DigiKey_PN"
-F 6 "TB67H420FTG,EL" H 8750 5250 50  0001 C CNN "MPN"
-	1    8750 5250
+P 7150 6800
+F 0 "U5" H 7150 8067 50  0000 C CNN
+F 1 "TB67H420FTG(O,EL)" H 7150 7976 50  0000 C CNN
+F 2 "IC_TB67H420FTG(O,EL)" H 7150 6800 50  0001 L BNN
+F 3 "https://www.pololu.com/file/0J1510/TB67H420FTG_datasheet_en_20170818.pdf" H 7150 6800 50  0001 L BNN
+F 4 "Toshiba Semiconductor and Storage" H 7150 6800 50  0001 L BNN "Manufacturer"
+F 5 "TB67H420FTGELCT-ND" H 7150 6800 50  0001 C CNN "DigiKey_PN"
+F 6 "TB67H420FTG,EL" H 7150 6800 50  0001 C CNN "MPN"
+	1    7150 6800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9650 6050 9700 6050
+	8050 7600 8100 7600
 Wire Wire Line
-	9700 6050 9700 6150
+	8100 7600 8100 7700
 Wire Wire Line
-	9650 6150 9700 6150
-Connection ~ 9700 6150
+	8050 7700 8100 7700
+Connection ~ 8100 7700
 Wire Wire Line
-	9700 6150 9700 6250
+	8100 7700 8100 7800
 Wire Wire Line
-	9650 6250 9700 6250
+	8050 7800 8100 7800
 $Comp
-L pbrick-rescue:5V-SparkFun-PowerSymbols #SUPPLY0101
+L pbrick-rescue:5V-SparkFun-PowerSymbols #SUPPLY08
 U 1 1 5FE50219
-P 9800 4250
-F 0 "#SUPPLY0101" H 9850 4250 45  0001 L BNN
-F 1 "5V" V 9800 4378 45  0000 L CNN
-F 2 "XXX-00000" V 9842 4378 60  0001 L CNN
-F 3 "" H 9800 4250 60  0001 C CNN
-	1    9800 4250
+P 8200 5800
+F 0 "#SUPPLY08" H 8250 5800 45  0001 L BNN
+F 1 "5V" V 8200 5928 45  0000 L CNN
+F 2 "XXX-00000" V 8242 5928 60  0001 L CNN
+F 3 "" H 8200 5800 60  0001 C CNN
+	1    8200 5800
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	7850 4750 7700 4750
+	6250 6300 6100 6300
 Wire Wire Line
-	7700 4650 7850 4650
+	6100 6200 6250 6200
 Wire Wire Line
-	9800 4250 9650 4250
-Text Label 9800 5250 0    50   ~ 0
+	8200 5800 8050 5800
+Text Label 8200 6800 0    50   ~ 0
 M1_1
-Text Label 9800 5350 0    50   ~ 0
+Text Label 8200 6900 0    50   ~ 0
 M1_0
-Text Label 9800 5450 0    50   ~ 0
+Text Label 8200 7000 0    50   ~ 0
 M0_1
-Text Label 9800 5550 0    50   ~ 0
+Text Label 8200 7100 0    50   ~ 0
 M0_0
 Wire Wire Line
-	9650 5550 9800 5550
+	8050 7100 8200 7100
 Wire Wire Line
-	9650 5450 9800 5450
+	8050 7000 8200 7000
 Wire Wire Line
-	9650 5350 9800 5350
+	8050 6900 8200 6900
 Wire Wire Line
-	9650 5250 9800 5250
-Text Label 7850 4950 2    50   ~ 0
-P1.08
-Text Label 7850 5050 2    50   ~ 0
-P1.09
-Text Label 7850 5250 2    50   ~ 0
-P0.11
-Text Label 7850 5350 2    50   ~ 0
-P0.12
-Text Label 7850 5450 2    50   ~ 0
-P0.03
-Text Label 7850 5550 2    50   ~ 0
-P0.07
+	8050 6800 8200 6800
 $Comp
-L power:VDD #PWR0103
+L power:VDD #PWR048
 U 1 1 5FE7E66D
-P 10800 4150
-F 0 "#PWR0103" H 10800 4000 50  0001 C CNN
-F 1 "VDD" H 10815 4323 50  0000 C CNN
-F 2 "" H 10800 4150 50  0001 C CNN
-F 3 "" H 10800 4150 50  0001 C CNN
-	1    10800 4150
+P 9200 5700
+F 0 "#PWR048" H 9200 5550 50  0001 C CNN
+F 1 "VDD" H 9215 5873 50  0000 C CNN
+F 2 "" H 9200 5700 50  0001 C CNN
+F 3 "" H 9200 5700 50  0001 C CNN
+	1    9200 5700
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	9650 4350 9800 4350
+	8050 5900 8200 5900
 Wire Wire Line
-	9800 4350 9800 4400
+	8200 5900 8200 5950
 Wire Wire Line
-	9800 4400 9800 4450
+	8200 5950 8200 6000
 Wire Wire Line
-	9800 4450 9650 4450
-Connection ~ 9800 4400
+	8200 6000 8050 6000
+Connection ~ 8200 5950
 $Comp
-L pbrick-rescue:RESISTOR_0603-MF_Passives R9
+L pbrick-rescue:RESISTOR_0603-MF_Passives R11
 U 1 1 5FEBC853
-P 10350 4750
-F 0 "R9" V 10450 4900 45  0000 L CNN
-F 1 "5.1K" V 10450 5000 45  0000 L CNN
-F 2 "Resistors:0603" H 10600 4660 20  0001 C CNN
-F 3 "https://d1d2qsbl8m0m72.cloudfront.net/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf" H 10350 4750 60  0001 C CNN
-F 4 "RHM10KDCT-ND" H 10350 4750 50  0001 C CNN "DigiKey_PN"
-F 5 "Rohm Semiconductor" H 10350 4750 50  0001 C CNN "Manufacturer"
-F 6 "ESR03EZPJ103" H 10350 4750 50  0001 C CNN "MPN"
-F 7 "RES SMD 10K OHM 5% 1/4W 0603" H 10350 4750 50  0001 C CNN "Description"
-	1    10350 4750
+P 8750 6300
+F 0 "R11" V 8850 6450 45  0000 L CNN
+F 1 "5.1K" V 8850 6650 45  0000 L CNN
+F 2 "Resistors:0402" H 9000 6210 20  0001 C CNN
+F 3 "https://d1d2qsbl8m0m72.cloudfront.net/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf" H 8750 6300 60  0001 C CNN
+F 4 "RHM10KDCT-ND" H 8750 6300 50  0001 C CNN "DigiKey_PN"
+F 5 "Rohm Semiconductor" H 8750 6300 50  0001 C CNN "Manufacturer"
+F 6 "ESR03EZPJ103" H 8750 6300 50  0001 C CNN "MPN"
+F 7 "RES SMD 10K OHM 5% 1/4W 0603" H 8750 6300 50  0001 C CNN "Description"
+	1    8750 6300
 	0    1    1    0   
 $EndComp
 $Comp
-L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C14
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C17
 U 1 1 5FEC1666
-P 10150 4650
-F 0 "C14" H 10250 4800 45  0000 L CNN
-F 1 "270pF 0603" H 10250 4700 45  0000 L CNN
-F 2 "Capacitors:0603" H 10400 4560 20  0001 C CNN
-F 3 "https://www.we-online.de/katalog/datasheet/885012106015.pdf" H 10150 4650 60  0001 C CNN
-F 4 "732-7989-1-ND" V 10150 4650 50  0001 C CNN "Digi-Key_PN"
-F 5 "Würth Elektronik" V 10150 4650 50  0001 C CNN "Manufacturer"
-F 6 "885012206071" V 10150 4650 50  0001 C CNN "MPN"
-F 7 "CAP CER 0.1UF 16V X7R 0603" V 10150 4650 50  0001 C CNN "Description"
-	1    10150 4650
+P 8550 6200
+F 0 "C17" H 8650 6350 45  0000 L CNN
+F 1 "270pF 0402" H 8650 6250 45  0000 L CNN
+F 2 "Capacitors:0402" H 8800 6110 20  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/885012106015.pdf" H 8550 6200 60  0001 C CNN
+F 4 "732-7989-1-ND" V 8550 6200 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" V 8550 6200 50  0001 C CNN "Manufacturer"
+F 6 "885012206071" V 8550 6200 50  0001 C CNN "MPN"
+F 7 "CAP CER 0.1UF 16V X7R 0603" V 8550 6200 50  0001 C CNN "Description"
+	1    8550 6200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10150 4750 9650 4750
-Connection ~ 10150 4750
+	8550 6300 8050 6300
+Connection ~ 8550 6300
 $Comp
-L pbrick-rescue:5V-SparkFun-PowerSymbols #SUPPLY0103
+L pbrick-rescue:5V-SparkFun-PowerSymbols #SUPPLY010
 U 1 1 5FECC27D
-P 10550 4750
-F 0 "#SUPPLY0103" H 10600 4750 45  0001 L BNN
-F 1 "5V" V 10550 4878 45  0000 L CNN
-F 2 "XXX-00000" V 10592 4878 60  0001 L CNN
-F 3 "" H 10550 4750 60  0001 C CNN
-	1    10550 4750
+P 8950 6300
+F 0 "#SUPPLY010" H 9000 6300 45  0001 L BNN
+F 1 "5V" V 8950 6428 45  0000 L CNN
+F 2 "XXX-00000" V 8992 6428 60  0001 L CNN
+F 3 "" H 8950 6300 60  0001 C CNN
+	1    8950 6300
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	7850 5850 7700 5850
+	6250 7400 6100 7400
 Wire Wire Line
-	7850 5750 7700 5750
+	6250 7300 6100 7300
 $Comp
-L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C15
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C18
 U 1 1 5FEE476C
-P 10350 4050
-F 0 "C15" H 10100 4200 45  0000 L CNN
-F 1 "100nF 0603" H 9800 4100 45  0000 L CNN
-F 2 "Capacitors:0603" H 10600 3960 20  0001 C CNN
-F 3 "https://www.we-online.de/katalog/datasheet/885012106015.pdf" H 10350 4050 60  0001 C CNN
-F 4 "732-7989-1-ND" V 10350 4050 50  0001 C CNN "Digi-Key_PN"
-F 5 "Würth Elektronik" V 10350 4050 50  0001 C CNN "Manufacturer"
-F 6 "885012206071" V 10350 4050 50  0001 C CNN "MPN"
-F 7 "CAP CER 0.1UF 25V X7R 0603" V 10350 4050 50  0001 C CNN "Description"
-	1    10350 4050
+P 8750 5600
+F 0 "C18" H 8500 5750 45  0000 L CNN
+F 1 "100nF 0402" H 8200 5650 45  0000 L CNN
+F 2 "Capacitors:0402" H 9000 5510 20  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/885012106015.pdf" H 8750 5600 60  0001 C CNN
+F 4 "732-7989-1-ND" V 8750 5600 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" V 8750 5600 50  0001 C CNN "Manufacturer"
+F 6 "885012206071" V 8750 5600 50  0001 C CNN "MPN"
+F 7 "CAP CER 0.1UF 25V X7R 0603" V 8750 5600 50  0001 C CNN "Description"
+	1    8750 5600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9800 4400 10150 4400
+	8200 5950 8550 5950
 Wire Wire Line
-	10150 4400 10150 4150
+	8550 5950 8550 5700
 Wire Wire Line
-	10150 4150 10350 4150
+	8550 5700 8750 5700
 Wire Wire Line
-	10350 4150 10550 4150
-Connection ~ 10350 4150
+	8750 5700 8950 5700
+Connection ~ 8750 5700
 Wire Wire Line
-	10350 3950 10350 3800
+	8750 5500 8750 5350
 $Comp
-L Device:CP1 C16
+L Device:CP1 C19
 U 1 1 5FF01C99
-P 10550 4000
-F 0 "C16" H 10435 3954 50  0000 R CNN
-F 1 "22UF 10% 25V" H 10435 4045 50  0000 R CNN
-F 2 "Capacitor_Tantalum_SMD:CP_EIA-6032-15_Kemet-U_Pad2.25x2.35mm_HandSolder" H 10550 4000 50  0001 C CNN
-F 3 "~" H 10550 4000 50  0001 C CNN
-F 4 "Vishay Sprague" H 10550 4000 50  0001 C CNN "Manufacturer"
-F 5 "TR3C226K025C0400" H 10550 4000 50  0001 C CNN "MPN"
-F 6 "718-1511-1-ND" H 10550 4000 50  0001 C CNN "Digi-Key_PN"
-F 7 "CAP TANT 22UF 10% 25V 2312" H 10550 4000 50  0001 C CNN "Description"
-	1    10550 4000
+P 8950 5550
+F 0 "C19" H 8835 5504 50  0000 R CNN
+F 1 "22UF 10% 25V" H 8835 5595 50  0000 R CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-6032-15_Kemet-U_Pad2.25x2.35mm_HandSolder" H 8950 5550 50  0001 C CNN
+F 3 "~" H 8950 5550 50  0001 C CNN
+F 4 "Vishay Sprague" H 8950 5550 50  0001 C CNN "Manufacturer"
+F 5 "TR3C226K025C0400" H 8950 5550 50  0001 C CNN "MPN"
+F 6 "718-1511-1-ND" H 8950 5550 50  0001 C CNN "Digi-Key_PN"
+F 7 "CAP TANT 22UF 10% 25V 2312" H 8950 5550 50  0001 C CNN "Description"
+	1    8950 5550
 	-1   0    0    1   
 $EndComp
-Connection ~ 10550 4150
+Connection ~ 8950 5700
 Wire Wire Line
-	10550 4150 10800 4150
+	8950 5700 9200 5700
 Wire Wire Line
-	10550 3800 10550 3850
-NoConn ~ 9650 4950
-NoConn ~ 9650 5050
+	8950 5350 8950 5400
+NoConn ~ 8050 6500
+NoConn ~ 8050 6600
 $Comp
 L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C1
 U 1 1 5F17448E
 P 1050 1150
 F 0 "C1" H 850 1200 45  0000 L CNN
-F 1 "470nF 0603" H 550 1100 45  0000 L CNN
-F 2 "Capacitors:0603" H 1300 1060 20  0001 C CNN
+F 1 "470nF 0402" H 550 1100 45  0000 L CNN
+F 2 "Capacitors:0402" H 1300 1060 20  0001 C CNN
 F 3 "https://www.we-online.de/katalog/datasheet/885012106015.pdf" H 1050 1150 60  0001 C CNN
 F 4 "732-7993-1-ND" H 1050 1150 50  0001 C CNN "Digi-Key_PN"
 F 5 "Würth Elektronik" H 1050 1150 50  0001 C CNN "Manufacturer"
@@ -841,927 +742,667 @@ F 7 "CAP CER 0.47UF 25V X7R 0603" H 1050 1150 50  0001 C CNN "Description"
 	1    1050 1150
 	1    0    0    -1  
 $EndComp
-NoConn ~ 6150 7750
-Text Label 6050 6850 1    50   ~ 0
-M0_0
-Text Label 6150 6850 1    50   ~ 0
-M1_0
-Text Label 6250 6850 1    50   ~ 0
-M1_1
 $Comp
-L power:VDD #PWR013
-U 1 1 5F919418
-P 5550 6850
-F 0 "#PWR013" H 5550 6700 50  0001 C CNN
-F 1 "VDD" V 5550 7100 50  0000 C CNN
-F 2 "" H 5550 6850 50  0001 C CNN
-F 3 "" H 5550 6850 50  0001 C CNN
-	1    5550 6850
-	1    0    0    -1  
-$EndComp
-$Comp
-L S8B-PH-SM4-TB_LF__SN_:S8B-PH-SM4-TB_LF__SN_ J1
-U 1 1 5FF1A68D
-P 6250 6850
-F 0 "J1" V 6800 6400 50  0000 L CNN
-F 1 "S8B-PH-SM4-TB_LF__SN_" V 6700 6000 50  0000 L CNN
-F 2 "S8BPHSM4TBLFSN" H 7000 6950 50  0001 L CNN
-F 3 "https://www.digikey.com/product-detail/en/jst-sales-america-inc/S8B-PH-SM4-TB-LF-SN/455-1755-1-ND/926852" H 7000 6850 50  0001 L CNN
-F 4 "Conn Shrouded Header (4 Sides) HDR 8 POS 2mm Solder RA Side Entry SMD T/R" H 7000 6750 50  0001 L CNN "Description"
-F 5 "5.5" H 7000 6650 50  0001 L CNN "Height"
-F 6 "JST (JAPAN SOLDERLESS TERMINALS)" H 7000 6550 50  0001 L CNN "Manufacturer_Name"
-F 7 "S8B-PH-SM4-TB(LF)(SN)" H 7000 6450 50  0001 L CNN "Manufacturer_Part_Number"
-F 8 "" H 7000 6350 50  0001 L CNN "Mouser Part Number"
-F 9 "" H 7000 6250 50  0001 L CNN "Mouser Price/Stock"
-F 10 "S8B-PH-SM4-TB(LF)(SN)" H 7000 6150 50  0001 L CNN "Arrow Part Number"
-F 11 "https://www.arrow.com/en/products/s8b-ph-sm4-tb-lf-sn/jst-manufacturing" H 7000 6050 50  0001 L CNN "Arrow Price/Stock"
-	1    6250 6850
-	0    1    1    0   
-$EndComp
-NoConn ~ 6250 7750
-Text Label 5750 6850 1    50   ~ 0
-P0.21
-Text Label 5850 6850 1    50   ~ 0
-P1.00
-$Comp
-L ESDA25W:ESDA25W D1
+L ESDA25W:ESDA25W D2
 U 1 1 601D420B
-P 2000 6050
-F 0 "D1" V 1954 5820 50  0000 R CNN
-F 1 "ESDA25W" V 2045 5820 50  0000 R CNN
-F 2 "Common:SOT65P210X110-3N" H 2000 6050 50  0001 L BNN
-F 3 "https://www.st.com/content/ccc/resource/technical/document/datasheet/cd/9b/8d/39/1f/d4/43/ba/CD00064033.pdf/files/CD00064033.pdf/jcr:content/translations/en.CD00064033.pdf" H 2000 6050 50  0001 L BNN
-F 4 "497-6689-1-ND" V 2000 6050 50  0001 C CNN "Digi-Key_PN"
-F 5 "ESDA25W" V 2000 6050 50  0001 C CNN "MPN"
-F 6 "STMicroelectronics" V 2000 6050 50  0001 C CNN "Manufacturer"
-F 7 "TVS DIODE 24V SOT323" V 2000 6050 50  0001 C CNN "Description"
-	1    2000 6050
+P 1750 6450
+F 0 "D2" V 1704 6220 50  0000 R CNN
+F 1 "ESDA25W" V 1795 6220 50  0000 R CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 1750 6450 50  0001 L BNN
+F 3 "http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/documents/data%20sheets/sp05xxba.pdf" H 1750 6450 50  0001 L BNN
+F 4 "497-6689-1-ND" V 1750 6450 50  0001 C CNN "Digi-Key_PN"
+F 5 "ESDA25W" V 1750 6450 50  0001 C CNN "MPN"
+F 6 "STMicroelectronics" V 1750 6450 50  0001 C CNN "Manufacturer"
+F 7 "TVS DIODE 24V SOT323" V 1750 6450 50  0001 C CNN "Description"
+	1    1750 6450
 	0    -1   1    0   
 $EndComp
-Wire Wire Line
-	2100 5600 2100 5750
-Wire Wire Line
-	1650 5500 1900 5500
-Wire Wire Line
-	1900 5500 1900 5750
 $Comp
 L Device:D_Schottky D3
 U 1 1 6020127B
-P 2100 4700
-F 0 "D3" H 2050 4550 50  0000 L CNN
-F 1 "D_Schottky" V 2145 4779 50  0001 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 2100 4700 50  0001 C CNN
-F 3 "https://www.comchiptech.com/admin/files/product/CDBQR0130L-HF-RevD.pdf" H 2100 4700 50  0001 C CNN
-F 4 "CD0603-B0240RCT-ND" H 2100 4700 50  0001 C CNN "Digi-Key_PN"
-F 5 "Bourns Inc." H 2100 4700 50  0001 C CNN "Manufacturer"
-F 6 "CD0603-B0240R" H 2100 4700 50  0001 C CNN "MPN"
-F 7 "Diode Schottky 40V 200mA Surface Mount 0603 (1608 Metric)" H 2100 4700 50  0001 C CNN "Description"
-	1    2100 4700
+P 1850 5100
+F 0 "D3" H 1800 4950 50  0000 L CNN
+F 1 "D_Schottky" V 1895 5179 50  0001 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 1850 5100 50  0001 C CNN
+F 3 "https://www.comchiptech.com/admin/files/product/CDBQR0130L-HF-RevD.pdf" H 1850 5100 50  0001 C CNN
+F 4 "CD0603-B0240RCT-ND" H 1850 5100 50  0001 C CNN "Digi-Key_PN"
+F 5 "Bourns Inc." H 1850 5100 50  0001 C CNN "Manufacturer"
+F 6 "CD0603-B0240R" H 1850 5100 50  0001 C CNN "MPN"
+F 7 "Diode Schottky 40V 200mA Surface Mount 0603 (1608 Metric)" H 1850 5100 50  0001 C CNN "Description"
+	1    1850 5100
 	0    -1   -1   0   
 $EndComp
 $Comp
-L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C19
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C2
 U 1 1 601F724E
-P 1400 4650
-F 0 "C19" V 1250 4400 45  0000 L CNN
-F 1 "4.7uF 0603" V 1250 4550 45  0000 L CNN
-F 2 "Capacitors:0603" H 1650 4560 20  0001 C CNN
-F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL10A475MA8NQNC.jsp" H 1400 4650 60  0001 C CNN
-F 4 "1276-1903-1-ND" H 1400 4650 50  0001 C CNN "Digi-Key_PN"
-F 5 "Samsung Electro-Mechanics" H 1400 4650 50  0001 C CNN "Manufacturer"
-F 6 "CL10A475MA8NQNC" H 1400 4650 50  0001 C CNN "MPN"
-F 7 "CAP CER 4.7UF 25V X5R 0603" H 1400 4650 50  0001 C CNN "Description"
-	1    1400 4650
+P 1150 5050
+F 0 "C2" V 1000 4800 45  0000 L CNN
+F 1 "4.7uF 0402" V 1000 4950 45  0000 L CNN
+F 2 "Capacitors:0402" H 1400 4960 20  0001 C CNN
+F 3 "http://www.samsungsem.com/kr/support/product-search/mlcc/CL10A475MA8NQNC.jsp" H 1150 5050 60  0001 C CNN
+F 4 "1276-1903-1-ND" H 1150 5050 50  0001 C CNN "Digi-Key_PN"
+F 5 "Samsung Electro-Mechanics" H 1150 5050 50  0001 C CNN "Manufacturer"
+F 6 "CL10A475MA8NQNC" H 1150 5050 50  0001 C CNN "MPN"
+F 7 "CAP CER 4.7UF 25V X5R 0603" H 1150 5050 50  0001 C CNN "Description"
+	1    1150 5050
 	1    0    0    -1  
 $EndComp
 $Comp
-L STUSB4500QTR:STUSB4500QTR U4
+L STUSB4500QTR:STUSB4500QTR U3
 U 1 1 601AAEE2
-P 3900 6300
-F 0 "U4" H 3900 7667 50  0000 C CNN
-F 1 "STUSB4500QTR" H 3900 7576 50  0000 C CNN
-F 2 "QFN50P400X400X90-25N" H 3900 6300 50  0001 L BNN
-F 3 "https://www.st.com/resource/en/datasheet/stusb4500.pdf" H 3900 6300 50  0001 L BNN
-F 4 "497-18060-1-ND" H 3900 6300 50  0001 C CNN "Digi-Key_PN"
-F 5 "STMicroelectronics" H 3900 6300 50  0001 C CNN "Manufacturer"
-F 6 "STUSB4500QTR" H 3900 6300 50  0001 C CNN "MPN"
-F 7 "USB-PD I2C Controller" H 3900 6300 50  0001 C CNN "Description"
-	1    3900 6300
+P 3650 6700
+F 0 "U3" H 3650 8067 50  0000 C CNN
+F 1 "STUSB4500QTR" H 3650 7976 50  0000 C CNN
+F 2 "QFN50P400X400X90-25N" H 3650 6700 50  0001 L BNN
+F 3 "https://www.st.com/resource/en/datasheet/stusb4500.pdf" H 3650 6700 50  0001 L BNN
+F 4 "497-18060-1-ND" H 3650 6700 50  0001 C CNN "Digi-Key_PN"
+F 5 "STMicroelectronics" H 3650 6700 50  0001 C CNN "Manufacturer"
+F 6 "STUSB4500QTR" H 3650 6700 50  0001 C CNN "MPN"
+F 7 "USB-PD I2C Controller" H 3650 6700 50  0001 C CNN "Description"
+	1    3650 6700
 	1    0    0    -1  
 $EndComp
 $Comp
-L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C20
-U 1 1 6020F934
-P 2100 5050
-F 0 "C20" V 1950 4800 45  0000 L CNN
-F 1 "1uF 0603" V 1950 4950 45  0000 L CNN
-F 2 "Capacitors:0603" H 2350 4960 20  0001 C CNN
-F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 2100 5050 60  0001 C CNN
-F 4 "732-7994-1-ND" H 2100 5050 50  0001 C CNN "Digi-Key_PN"
-F 5 "Würth Elektronik" H 2100 5050 50  0001 C CNN "Manufacturer"
-F 6 "885012206076" H 2100 5050 50  0001 C CNN "MPN"
-F 7 "CAP CER 1UF 25V X7R 0603" H 2100 5050 50  0001 C CNN "Description"
-	1    2100 5050
-	1    0    0    -1  
-$EndComp
-$Comp
-L pbrick-rescue:RESISTOR_0603-MF_Passives R7
+L pbrick-rescue:RESISTOR_0603-MF_Passives R1
 U 1 1 60222859
-P 2500 4750
-F 0 "R7" V 2400 4600 45  0000 R CNN
-F 1 "470 Ω 0603" V 2400 4500 45  0000 R CNN
-F 2 "Resistors:0603" H 2750 4660 20  0001 C CNN
-F 3 "https://www.rohm.com/datasheet/SDR03EZPJ/sdr-e" H 2500 4750 60  0001 C CNN
-F 4 "511-1775-1-ND" H 2500 4750 50  0001 C CNN "Digi-Key_PN"
-F 5 "Rohm Semiconductor" H 2500 4750 50  0001 C CNN "Manufacturer"
-F 6 "SDR03EZPJ471" H 2500 4750 50  0001 C CNN "MPN"
-F 7 "RES SMD 470 OHM 5% 0.3W 0603" H 2500 4750 50  0001 C CNN "Description"
-	1    2500 4750
+P 2250 5150
+F 0 "R1" V 2150 5000 45  0000 R CNN
+F 1 "470 Ω 0402" V 2150 4900 45  0000 R CNN
+F 2 "Resistors:0402" H 2500 5060 20  0001 C CNN
+F 3 "https://www.rohm.com/datasheet/SDR03EZPJ/sdr-e" H 2250 5150 60  0001 C CNN
+F 4 "511-1775-1-ND" H 2250 5150 50  0001 C CNN "Digi-Key_PN"
+F 5 "Rohm Semiconductor" H 2250 5150 50  0001 C CNN "Manufacturer"
+F 6 "SDR03EZPJ471" H 2250 5150 50  0001 C CNN "MPN"
+F 7 "RES SMD 470 OHM 5% 0.3W 0603" H 2250 5150 50  0001 C CNN "Description"
+	1    2250 5150
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	3000 5700 2600 5700
+	2750 6100 2350 6100
 Wire Wire Line
-	3000 6800 2900 6800
+	2750 7200 2650 7200
 Wire Wire Line
-	2900 6800 2900 6750
+	2650 7200 2650 7150
 Wire Wire Line
-	2900 6700 3000 6700
+	2650 7100 2750 7100
 Wire Wire Line
-	3000 7100 2900 7100
+	2750 7500 2650 7500
 Wire Wire Line
-	2900 7100 2900 7050
+	2650 7500 2650 7450
 Wire Wire Line
-	2900 7000 3000 7000
+	2650 7400 2750 7400
 Wire Wire Line
-	1900 5500 2500 5500
+	2250 5900 2250 7150
 Wire Wire Line
-	2500 5500 2500 6750
+	2250 7150 2650 7150
+Connection ~ 2650 7150
 Wire Wire Line
-	2500 6750 2900 6750
-Connection ~ 1900 5500
-Connection ~ 2900 6750
+	2650 7150 2650 7100
 Wire Wire Line
-	2900 6750 2900 6700
+	2650 7450 2150 7450
 Wire Wire Line
-	2900 7050 2400 7050
+	2150 7450 2150 6000
+Connection ~ 2650 7450
 Wire Wire Line
-	2400 7050 2400 5600
+	2650 7450 2650 7400
 Wire Wire Line
-	2400 5600 2100 5600
-Connection ~ 2900 7050
+	2750 6300 2650 6300
 Wire Wire Line
-	2900 7050 2900 7000
-Connection ~ 2100 5600
+	2650 6300 2650 6350
 Wire Wire Line
-	3000 5900 2900 5900
-Wire Wire Line
-	2900 5900 2900 5950
-Wire Wire Line
-	2900 6000 3000 6000
+	2650 6400 2750 6400
 $Comp
-L power:Earth #PWR0111
+L power:Earth #PWR014
 U 1 1 60249C39
-P 2900 5950
-F 0 "#PWR0111" H 2900 5700 50  0001 C CNN
-F 1 "Earth" H 2900 5800 50  0001 C CNN
-F 2 "" H 2900 5950 50  0001 C CNN
-F 3 "~" H 2900 5950 50  0001 C CNN
-	1    2900 5950
+P 2650 6350
+F 0 "#PWR014" H 2650 6100 50  0001 C CNN
+F 1 "Earth" H 2650 6200 50  0001 C CNN
+F 2 "" H 2650 6350 50  0001 C CNN
+F 3 "~" H 2650 6350 50  0001 C CNN
+	1    2650 6350
 	0    1    1    0   
 $EndComp
-Connection ~ 2900 5950
+Connection ~ 2650 6350
 Wire Wire Line
-	2900 5950 2900 6000
-NoConn ~ 3000 6300
-NoConn ~ 3000 5500
-NoConn ~ 4800 5800
-NoConn ~ 4800 5900
-NoConn ~ 4800 6000
-NoConn ~ 4800 6200
-NoConn ~ 4800 6400
+	2650 6350 2650 6400
+NoConn ~ 2750 6700
+NoConn ~ 2750 5900
+NoConn ~ 4550 6200
+NoConn ~ 4550 6300
+NoConn ~ 4550 6400
+NoConn ~ 4550 6600
+NoConn ~ 4550 6800
 Wire Wire Line
-	4800 7300 4850 7300
+	4550 7700 4600 7700
 Wire Wire Line
-	4850 7300 4850 7350
-Wire Wire Line
-	4850 7400 4800 7400
+	4600 7800 4550 7800
 $Comp
-L power:Earth #PWR0112
-U 1 1 6027083B
-P 4850 7350
-F 0 "#PWR0112" H 4850 7100 50  0001 C CNN
-F 1 "Earth" H 4850 7200 50  0001 C CNN
-F 2 "" H 4850 7350 50  0001 C CNN
-F 3 "~" H 4850 7350 50  0001 C CNN
-	1    4850 7350
-	0    -1   -1   0   
-$EndComp
-Connection ~ 4850 7350
-Wire Wire Line
-	4850 7350 4850 7400
-$Comp
-L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C21
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C8
 U 1 1 6027246D
-P 4950 5050
-F 0 "C21" V 4800 5000 45  0000 L CNN
-F 1 "1uF 0603" V 4800 5150 45  0000 L CNN
-F 2 "Capacitors:0603" H 5200 4960 20  0001 C CNN
-F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 4950 5050 60  0001 C CNN
-F 4 "732-7994-1-ND" H 4950 5050 50  0001 C CNN "Digi-Key_PN"
-F 5 "Würth Elektronik" H 4950 5050 50  0001 C CNN "Manufacturer"
-F 6 "885012206076" H 4950 5050 50  0001 C CNN "MPN"
-F 7 "CAP CER 1UF 25V X7R 0603" H 4950 5050 50  0001 C CNN "Description"
-	1    4950 5050
+P 4700 5450
+F 0 "C8" V 4550 5400 45  0000 L CNN
+F 1 "1uF 0402" V 4550 5550 45  0000 L CNN
+F 2 "Capacitors:0402" H 4950 5360 20  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 4700 5450 60  0001 C CNN
+F 4 "732-7994-1-ND" H 4700 5450 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" H 4700 5450 50  0001 C CNN "Manufacturer"
+F 6 "885012206076" H 4700 5450 50  0001 C CNN "MPN"
+F 7 "CAP CER 1UF 25V X7R 0603" H 4700 5450 50  0001 C CNN "Description"
+	1    4700 5450
 	0    1    1    0   
 $EndComp
 $Comp
-L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C23
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C9
 U 1 1 6028C5EF
-P 5050 5600
-F 0 "C23" V 5200 5550 45  0000 L CNN
-F 1 "1uF 0603" V 5200 5750 45  0000 L CNN
-F 2 "Capacitors:0603" H 5300 5510 20  0001 C CNN
-F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 5050 5600 60  0001 C CNN
-F 4 "732-7994-1-ND" H 5050 5600 50  0001 C CNN "Digi-Key_PN"
-F 5 "Würth Elektronik" H 5050 5600 50  0001 C CNN "Manufacturer"
-F 6 "885012206076" H 5050 5600 50  0001 C CNN "MPN"
-F 7 "CAP CER 1UF 25V X7R 0603" H 5050 5600 50  0001 C CNN "Description"
-	1    5050 5600
-	0    1    1    0   
+P 4700 6100
+F 0 "C9" V 4700 6250 45  0000 L CNN
+F 1 "1uF 0402" V 4600 6250 45  0000 L CNN
+F 2 "Capacitors:0402" H 4950 6010 20  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 4700 6100 60  0001 C CNN
+F 4 "732-7994-1-ND" H 4700 6100 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" H 4700 6100 50  0001 C CNN "Manufacturer"
+F 6 "885012206076" H 4700 6100 50  0001 C CNN "MPN"
+F 7 "CAP CER 1UF 25V X7R 0603" H 4700 6100 50  0001 C CNN "Description"
+	1    4700 6100
+	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	4800 5200 4850 5200
-Text Label 3000 6500 2    50   ~ 0
+	4550 5600 4600 5600
+Text Label 2750 6900 2    50   ~ 0
 DISCH
-Text Label 4500 4450 3    50   ~ 0
+Text Label 4250 4850 3    50   ~ 0
 DISCH
 $Comp
-L power:VBUS #PWR0115
+L power:VBUS #PWR05
 U 1 1 602E1AB2
-P 1650 4550
-F 0 "#PWR0115" H 1650 4400 50  0001 C CNN
-F 1 "VBUS" V 1650 4800 50  0000 C CNN
-F 2 "" H 1650 4550 50  0001 C CNN
-F 3 "" H 1650 4550 50  0001 C CNN
-	1    1650 4550
+P 1400 4950
+F 0 "#PWR05" H 1400 4800 50  0001 C CNN
+F 1 "VBUS" V 1400 5200 50  0000 C CNN
+F 2 "" H 1400 4950 50  0001 C CNN
+F 3 "" H 1400 4950 50  0001 C CNN
+	1    1400 4950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1650 4550 1800 4550
-Connection ~ 1650 4550
+	1400 4950 1550 4950
+Connection ~ 1400 4950
 Wire Wire Line
-	1800 4550 2100 4550
-Connection ~ 1800 4550
+	1550 4950 1850 4950
+Connection ~ 1550 4950
 Wire Wire Line
-	2500 4550 2100 4550
-Connection ~ 2100 4550
+	2250 4950 1850 4950
+Connection ~ 1850 4950
 Wire Wire Line
-	2500 4950 2100 4950
+	2250 5350 1850 5350
 Wire Wire Line
-	2100 4850 2100 4950
-Connection ~ 2100 4950
+	1850 5250 1850 5350
+Connection ~ 1850 5350
 $Comp
-L pbrick-rescue:RESISTOR_0603-MF_Passives R8
+L pbrick-rescue:RESISTOR_0603-MF_Passives R2
 U 1 1 6022C296
-P 2600 5500
-F 0 "R8" V 2700 5350 45  0000 L CNN
-F 1 "1K Ω 0603" V 2700 5500 45  0000 L CNN
-F 2 "Resistors:0603" H 2850 5410 20  0001 C CNN
-F 3 "https://www.rohm.com/datasheet/ESR01MZPF/esr-e" H 2600 5500 60  0001 C CNN
-F 4 "RES SMD 1K OHM 5% 1/4W 0603" H 2600 5500 50  0001 C CNN "Description"
-F 5 "ESR03EZPJ102" H 2600 5500 50  0001 C CNN "MPN"
-F 6 "Rohm Semiconductor" H 2600 5500 50  0001 C CNN "Manufacturer"
-F 7 "RHM1.0KDCT-ND" H 2600 5500 50  0001 C CNN "Digi-Key_PN"
-	1    2600 5500
+P 2350 5900
+F 0 "R2" V 2450 5750 45  0000 L CNN
+F 1 "1K Ω 0402" V 2450 5900 45  0000 L CNN
+F 2 "Resistors:0402" H 2600 5810 20  0001 C CNN
+F 3 "https://www.rohm.com/datasheet/ESR01MZPF/esr-e" H 2350 5900 60  0001 C CNN
+F 4 "RES SMD 1K OHM 5% 1/4W 0603" H 2350 5900 50  0001 C CNN "Description"
+F 5 "ESR03EZPJ102" H 2350 5900 50  0001 C CNN "MPN"
+F 6 "Rohm Semiconductor" H 2350 5900 50  0001 C CNN "Manufacturer"
+F 7 "RHM1.0KDCT-ND" H 2350 5900 50  0001 C CNN "Digi-Key_PN"
+	1    2350 5900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2600 5300 2600 4950
+	2350 5700 2350 5350
 Wire Wire Line
-	2600 4950 2500 4950
-Connection ~ 2500 4950
+	2350 5350 2250 5350
+Connection ~ 2250 5350
 $Comp
-L power:VBUS #PWR0116
+L power:VBUS #PWR013
 U 1 1 6033B479
-P 2800 4050
-F 0 "#PWR0116" H 2800 3900 50  0001 C CNN
-F 1 "VBUS" H 2750 4200 50  0000 C CNN
-F 2 "" H 2800 4050 50  0001 C CNN
-F 3 "" H 2800 4050 50  0001 C CNN
-	1    2800 4050
+P 2550 4450
+F 0 "#PWR013" H 2550 4300 50  0001 C CNN
+F 1 "VBUS" H 2500 4600 50  0000 C CNN
+F 2 "" H 2550 4450 50  0001 C CNN
+F 3 "" H 2550 4450 50  0001 C CNN
+	1    2550 4450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2800 4050 2950 4050
+	2550 4450 2700 4450
 $Comp
-L pbrick-rescue:RESISTOR_0603-MF_Passives R10
+L pbrick-rescue:RESISTOR_0603-MF_Passives R3
 U 1 1 60342F76
-P 3250 4650
-F 0 "R10" V 3150 4300 45  0000 L CNN
-F 1 "22K Ω 0603" V 3150 4450 45  0000 L CNN
-F 2 "Resistors:0603" H 3500 4560 20  0001 C CNN
-F 3 "https://www.rohm.com/datasheet/ESR01MZPF/esr-e" H 3250 4650 60  0001 C CNN
-F 4 "RES SMD 22K OHM 5% 1/4W 0603" H 3250 4650 50  0001 C CNN "Description"
-F 5 "ESR03EZPJ223" H 3250 4650 50  0001 C CNN "MPN"
-F 6 "Rohm Semiconductor" H 3250 4650 50  0001 C CNN "Manufacturer"
-F 7 "RHM22KDCT-ND" H 3250 4650 50  0001 C CNN "Digi-Key_PN"
-	1    3250 4650
+P 3000 5050
+F 0 "R3" V 2900 4700 45  0000 L CNN
+F 1 "22K Ω 0402" V 2900 4850 45  0000 L CNN
+F 2 "Resistors:0402" H 3250 4960 20  0001 C CNN
+F 3 "https://www.rohm.com/datasheet/ESR01MZPF/esr-e" H 3000 5050 60  0001 C CNN
+F 4 "RES SMD 22K OHM 5% 1/4W 0603" H 3000 5050 50  0001 C CNN "Description"
+F 5 "ESR03EZPJ223" H 3000 5050 50  0001 C CNN "MPN"
+F 6 "Rohm Semiconductor" H 3000 5050 50  0001 C CNN "Manufacturer"
+F 7 "RHM22KDCT-ND" H 3000 5050 50  0001 C CNN "Digi-Key_PN"
+	1    3000 5050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3350 4050 3450 4050
+	3100 4450 3200 4450
 Wire Wire Line
-	3450 4450 3250 4450
+	3200 4850 3000 4850
 Wire Wire Line
-	3250 4450 3250 4250
+	3000 4850 3000 4650
 Wire Wire Line
-	3450 4450 3750 4450
+	3200 4850 3500 4850
 Wire Wire Line
-	3750 4450 3750 4250
-Connection ~ 3450 4450
+	3500 4850 3500 4650
+Connection ~ 3200 4850
 $Comp
-L pbrick-rescue:RESISTOR_0603-MF_Passives R12
+L pbrick-rescue:RESISTOR_0603-MF_Passives R5
 U 1 1 6037E6E3
-P 3950 4450
-F 0 "R12" V 4050 4300 45  0000 L CNN
-F 1 "100 Ω 0603" V 4050 4450 45  0000 L CNN
-F 2 "Resistors:0603" H 4200 4360 20  0001 C CNN
-F 3 "https://www.rohm.com/datasheet/ESR01MZPF/esr-e" H 3950 4450 60  0001 C CNN
-F 4 "RES SMD 100 OHM 5% 1/4W 0603" H 3950 4450 50  0001 C CNN "Description"
-F 5 "ESR03EZPJ101" H 3950 4450 50  0001 C CNN "MPN"
-F 6 "Rohm Semiconductor" H 3950 4450 50  0001 C CNN "Manufacturer"
-F 7 "RHM100DCT-ND" H 3950 4450 50  0001 C CNN "Digi-Key_PN"
-	1    3950 4450
+P 3700 4850
+F 0 "R5" V 3800 4700 45  0000 L CNN
+F 1 "100 Ω 0402" V 3800 4850 45  0000 L CNN
+F 2 "Resistors:0402" H 3950 4760 20  0001 C CNN
+F 3 "https://www.rohm.com/datasheet/ESR01MZPF/esr-e" H 3700 4850 60  0001 C CNN
+F 4 "RES SMD 100 OHM 5% 1/4W 0603" H 3700 4850 50  0001 C CNN "Description"
+F 5 "ESR03EZPJ101" H 3700 4850 50  0001 C CNN "MPN"
+F 6 "Rohm Semiconductor" H 3700 4850 50  0001 C CNN "Manufacturer"
+F 7 "RHM100DCT-ND" H 3700 4850 50  0001 C CNN "Digi-Key_PN"
+	1    3700 4850
 	0    1    1    0   
 $EndComp
-Connection ~ 3750 4450
+Connection ~ 3500 4850
 $Comp
-L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C24
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C7
 U 1 1 6037FCD0
-P 4150 4150
-F 0 "C24" V 4150 4300 45  0000 L CNN
-F 1 "100nF 0603" V 4150 4500 45  0000 L CNN
-F 2 "Capacitors:0603" H 4400 4060 20  0001 C CNN
-F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 4150 4150 60  0001 C CNN
-F 4 "732-7989-1-ND" H 4150 4150 50  0001 C CNN "Digi-Key_PN"
-F 5 "Würth Elektronik" H 4150 4150 50  0001 C CNN "Manufacturer"
-F 6 "885012206071" H 4150 4150 50  0001 C CNN "MPN"
-F 7 "CAP CER 0.1UF 25V X7R 0603" H 4150 4150 50  0001 C CNN "Description"
-	1    4150 4150
+P 3900 4550
+F 0 "C7" V 3900 4700 45  0000 L CNN
+F 1 "100nF 0402" V 3900 4900 45  0000 L CNN
+F 2 "Capacitors:0402" H 4150 4460 20  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 3900 4550 60  0001 C CNN
+F 4 "732-7989-1-ND" H 3900 4550 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" H 3900 4550 50  0001 C CNN "Manufacturer"
+F 6 "885012206071" H 3900 4550 50  0001 C CNN "MPN"
+F 7 "CAP CER 0.1UF 25V X7R 0603" H 3900 4550 50  0001 C CNN "Description"
+	1    3900 4550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4150 4450 4150 4250
+	3900 4850 3900 4650
 Wire Wire Line
-	4050 4050 4150 4050
-Connection ~ 3450 4050
-Connection ~ 4150 4050
+	3800 4450 3900 4450
+Connection ~ 3200 4450
+Connection ~ 3900 4450
 $Comp
-L power:VDD #PWR0117
+L power:VDD #PWR023
 U 1 1 603ACD57
-P 4850 4050
-F 0 "#PWR0117" H 4850 3900 50  0001 C CNN
-F 1 "VDD" H 4865 4223 50  0000 C CNN
-F 2 "" H 4850 4050 50  0001 C CNN
-F 3 "" H 4850 4050 50  0001 C CNN
-	1    4850 4050
+P 4600 4450
+F 0 "#PWR023" H 4600 4300 50  0001 C CNN
+F 1 "VDD" H 4615 4623 50  0000 C CNN
+F 2 "" H 4600 4450 50  0001 C CNN
+F 3 "" H 4600 4450 50  0001 C CNN
+	1    4600 4450
 	0    1    1    0   
 $EndComp
-Connection ~ 3250 4450
-Text Label 4800 6600 0    50   ~ 0
+Connection ~ 3000 4850
+Text Label 4550 7000 0    50   ~ 0
 VBUS_EN_SNK
-Text Label 3250 4850 0    50   ~ 0
+Text Label 3000 5250 0    50   ~ 0
 VBUS_EN_SNK
 $Comp
-L ESDA25P35-1U1M:ESDA25P35-1U1M D4
+L ESDA25P35-1U1M:ESDA25P35-1U1M D5
 U 1 1 604E3B57
-P 4700 4250
-F 0 "D4" H 4750 4350 50  0000 R CNN
-F 1 "ESDA25P35-1U1M" H 4400 4250 50  0000 R CNN
-F 2 "TVS_ESDA25P35-1U1M" H 4700 4250 50  0001 L BNN
-F 3 "https://www.st.com/content/ccc/resource/technical/document/datasheet/group3/e4/43/53/b9/4e/8a/40/bb/DM00312034/files/DM00312034.pdf/jcr:content/translations/en.DM00312034.pdf" H 4700 4250 50  0001 L BNN
-F 4 "497-16913-1-ND" H 4700 4250 50  0001 C CNN "Digi-Key_PN"
-F 5 "STMicroelectronics" H 4700 4250 50  0001 C CNN "Manufacturer"
-F 6 "ESDA25P35-1U1M" H 4700 4250 50  0001 C CNN "MPN"
-F 7 "TVS DIODE 22V 41V 1610" H 4700 4250 50  0001 C CNN "Description"
-	1    4700 4250
+P 4450 4650
+F 0 "D5" H 4500 4750 50  0000 R CNN
+F 1 "ESDA25P35-1U1M" H 4150 4650 50  0000 R CNN
+F 2 "TVS_ESDA25P35-1U1M" H 4450 4650 50  0001 L BNN
+F 3 "https://www.st.com/content/ccc/resource/technical/document/datasheet/group3/e4/43/53/b9/4e/8a/40/bb/DM00312034/files/DM00312034.pdf/jcr:content/translations/en.DM00312034.pdf" H 4450 4650 50  0001 L BNN
+F 4 "497-16913-1-ND" H 4450 4650 50  0001 C CNN "Digi-Key_PN"
+F 5 "STMicroelectronics" H 4450 4650 50  0001 C CNN "Manufacturer"
+F 6 "ESDA25P35-1U1M" H 4450 4650 50  0001 C CNN "MPN"
+F 7 "TVS DIODE 22V 41V 1610" H 4450 4650 50  0001 C CNN "Description"
+	1    4450 4650
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	4700 4050 4850 4050
-Connection ~ 4700 4050
+	4450 4450 4600 4450
+Connection ~ 4450 4450
 $Comp
 L SSM6J507NU_LF:SSM6J507NU,LF Q1
 U 1 1 604F0950
-P 3150 4150
-F 0 "Q1" H 3450 4150 50  0000 C CNN
-F 1 "SSM6J507NU" H 3800 4150 50  0000 C CNN
-F 2 "TRANS_SSM6J507NU,LF" H 3150 4150 50  0001 L BNN
-F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=30372&prodName=SSM6J507NU" H 3150 4150 50  0001 L BNN
-F 4 "SSM6J507NULFCT-ND" V 3150 4150 50  0001 C CNN "Digi-Key_PN"
-F 5 "Toshiba Semiconductor and Storage" V 3150 4150 50  0001 C CNN "Manufacturer"
-F 6 "SSM6J507NU,LF" V 3150 4150 50  0001 C CNN "MPN"
-F 7 "MOSFET P-CH 30V 10A 6UDFNB" V 3150 4150 50  0001 C CNN "Description"
-	1    3150 4150
+P 2900 4550
+F 0 "Q1" H 3200 4550 50  0000 C CNN
+F 1 "SSM6J507NU" H 3550 4550 50  0000 C CNN
+F 2 "TRANS_SSM6J507NU,LF" H 2900 4550 50  0001 L BNN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=30372&prodName=SSM6J507NU" H 2900 4550 50  0001 L BNN
+F 4 "SSM6J507NULFCT-ND" V 2900 4550 50  0001 C CNN "Digi-Key_PN"
+F 5 "Toshiba Semiconductor and Storage" V 2900 4550 50  0001 C CNN "Manufacturer"
+F 6 "SSM6J507NU,LF" V 2900 4550 50  0001 C CNN "MPN"
+F 7 "MOSFET P-CH 30V 10A 6UDFNB" V 2900 4550 50  0001 C CNN "Description"
+	1    2900 4550
 	0    1    -1   0   
 $EndComp
 $Comp
 L SSM6J507NU_LF:SSM6J507NU,LF Q2
 U 1 1 604FAA8B
-P 3850 4150
-F 0 "Q2" H 4150 4150 50  0000 C CNN
-F 1 "SSM6J507NU" H 4500 4150 50  0000 C CNN
-F 2 "TRANS_SSM6J507NU,LF" H 3850 4150 50  0001 L BNN
-F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=30372&prodName=SSM6J507NU" H 3850 4150 50  0001 L BNN
-F 4 "SSM6J507NULFCT-ND" V 3850 4150 50  0001 C CNN "Digi-Key_PN"
-F 5 "Toshiba Semiconductor and Storage" V 3850 4150 50  0001 C CNN "Manufacturer"
-F 6 "SSM6J507NU,LF" V 3850 4150 50  0001 C CNN "MPN"
-F 7 "MOSFET P-CH 30V 10A 6UDFNB" V 3850 4150 50  0001 C CNN "Description"
-	1    3850 4150
+P 3600 4550
+F 0 "Q2" H 3900 4550 50  0000 C CNN
+F 1 "SSM6J507NU" H 4250 4550 50  0000 C CNN
+F 2 "TRANS_SSM6J507NU,LF" H 3600 4550 50  0001 L BNN
+F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=30372&prodName=SSM6J507NU" H 3600 4550 50  0001 L BNN
+F 4 "SSM6J507NULFCT-ND" V 3600 4550 50  0001 C CNN "Digi-Key_PN"
+F 5 "Toshiba Semiconductor and Storage" V 3600 4550 50  0001 C CNN "Manufacturer"
+F 6 "SSM6J507NU,LF" V 3600 4550 50  0001 C CNN "MPN"
+F 7 "MOSFET P-CH 30V 10A 6UDFNB" V 3600 4550 50  0001 C CNN "Description"
+	1    3600 4550
 	0    -1   -1   0   
 $EndComp
-Text Label 3000 6200 2    50   ~ 0
-P0.00
-Text Label 3000 6100 2    50   ~ 0
-P0.01
 Wire Wire Line
-	4150 4050 4500 4050
+	3900 4450 4250 4450
 $Comp
-L pbrick-rescue:RESISTOR_0603-MF_Passives R13
+L pbrick-rescue:RESISTOR_0603-MF_Passives R6
 U 1 1 605AC828
-P 4500 4250
-F 0 "R13" V 4500 4550 45  0000 L CNN
-F 1 "1K Ω 0603" V 4500 4700 45  0000 L CNN
-F 2 "Resistors:0603" H 4750 4160 20  0001 C CNN
-F 3 "https://www.rohm.com/datasheet/ESR01MZPF/esr-e" H 4500 4250 60  0001 C CNN
-F 4 "RES SMD 1K OHM 5% 1/4W 0603" H 4500 4250 50  0001 C CNN "Description"
-F 5 "ESR03EZPJ102" H 4500 4250 50  0001 C CNN "MPN"
-F 6 "Rohm Semiconductor" H 4500 4250 50  0001 C CNN "Manufacturer"
-F 7 "RHM1.0KDCT-ND" H 4500 4250 50  0001 C CNN "Digi-Key_PN"
-	1    4500 4250
+P 4250 4650
+F 0 "R6" V 4250 4950 45  0000 L CNN
+F 1 "1K Ω 0402" V 4250 5100 45  0000 L CNN
+F 2 "Resistors:0402" H 4500 4560 20  0001 C CNN
+F 3 "https://www.rohm.com/datasheet/ESR01MZPF/esr-e" H 4250 4650 60  0001 C CNN
+F 4 "RES SMD 1K OHM 5% 1/4W 0603" H 4250 4650 50  0001 C CNN "Description"
+F 5 "ESR03EZPJ102" H 4250 4650 50  0001 C CNN "MPN"
+F 6 "Rohm Semiconductor" H 4250 4650 50  0001 C CNN "Manufacturer"
+F 7 "RHM1.0KDCT-ND" H 4250 4650 50  0001 C CNN "Digi-Key_PN"
+	1    4250 4650
 	1    0    0    -1  
 $EndComp
-Connection ~ 4500 4050
+Connection ~ 4250 4450
 Wire Wire Line
-	4500 4050 4700 4050
+	4250 4450 4450 4450
 $Comp
-L pbrick-rescue:RESISTOR_0603-MF_Passives R11
+L pbrick-rescue:RESISTOR_0603-MF_Passives R4
 U 1 1 6034519C
-P 3450 4250
-F 0 "R11" V 3450 4550 45  0000 L CNN
-F 1 "100K Ω 0603" V 3450 4700 45  0000 L CNN
-F 2 "Resistors:0603" H 3700 4160 20  0001 C CNN
-F 3 "https://d1d2qsbl8m0m72.cloudfront.net/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf" H 3450 4250 60  0001 C CNN
-F 4 "RES SMD 100K OHM 5% 1/4W 0603" H 3450 4250 50  0001 C CNN "Description"
-F 5 "ESR03EZPJ104" H 3450 4250 50  0001 C CNN "MPN"
-F 6 "Rohm Semiconductor" H 3450 4250 50  0001 C CNN "Manufacturer"
-F 7 "RHM100KDCT-ND" H 3450 4250 50  0001 C CNN "Digi-Key_PN"
-	1    3450 4250
+P 3200 4650
+F 0 "R4" V 3200 4950 45  0000 L CNN
+F 1 "100K Ω 0402" V 3200 5100 45  0000 L CNN
+F 2 "Resistors:0402" H 3450 4560 20  0001 C CNN
+F 3 "https://d1d2qsbl8m0m72.cloudfront.net/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf" H 3200 4650 60  0001 C CNN
+F 4 "RES SMD 100K OHM 5% 1/4W 0603" H 3200 4650 50  0001 C CNN "Description"
+F 5 "ESR03EZPJ104" H 3200 4650 50  0001 C CNN "MPN"
+F 6 "Rohm Semiconductor" H 3200 4650 50  0001 C CNN "Manufacturer"
+F 7 "RHM100KDCT-ND" H 3200 4650 50  0001 C CNN "Digi-Key_PN"
+	1    3200 4650
 	1    0    0    -1  
 $EndComp
-Text Label 5950 6850 1    50   ~ 0
-M0_1
 Wire Wire Line
-	1650 5600 2100 5600
+	1400 4950 1150 4950
 Wire Wire Line
-	1650 4550 1400 4550
+	1400 4950 1400 5850
 Wire Wire Line
-	1650 4550 1650 5450
+	1400 5850 1450 5850
 Wire Wire Line
-	1650 5450 1700 5450
+	1450 5850 1450 6100
 Wire Wire Line
-	1700 5450 1700 5700
-Wire Wire Line
-	1700 5700 1650 5700
+	1450 6100 1400 6100
 $Comp
-L UJC-HP-3-SMT-TR:UJC-HP-3-SMT-TR J2
+L UJC-HP-3-SMT-TR:UJC-HP-3-SMT-TR J1
 U 1 1 607EA99B
-P 1150 5700
-F 0 "J2" H 1043 6167 50  0000 C CNN
-F 1 "UJC-HP-3-SMT-TR" H 1043 6076 50  0000 C CNN
-F 2 "CUI_UJC-HP-3-SMT-TR" H 1150 5700 50  0001 L BNN
-F 3 "" H 1150 5700 50  0001 L BNN
-F 4 "2223-UJC-HP-3-SMT-CT-ND" H 1150 5700 50  0001 C CNN "Digi-Key_PN"
-F 5 "CUI Devices" H 1150 5700 50  0001 C CNN "Manufacturer"
-F 6 "UJC-HP-3-SMT-TR" H 1150 5700 50  0001 C CNN "MPN"
-F 7 "USB JACK, C TYPE, POWER ONLY, 6" H 1150 5700 50  0001 C CNN "Description"
-	1    1150 5700
+P 900 6100
+F 0 "J1" H 793 6567 50  0000 C CNN
+F 1 "UJC-HP-3-SMT-TR" H 793 6476 50  0000 C CNN
+F 2 "CUI_UJC-HP-3-SMT-TR" H 900 6100 50  0001 L BNN
+F 3 "" H 900 6100 50  0001 L BNN
+F 4 "2223-UJC-HP-3-SMT-CT-ND" H 900 6100 50  0001 C CNN "Digi-Key_PN"
+F 5 "CUI Devices" H 900 6100 50  0001 C CNN "Manufacturer"
+F 6 "UJC-HP-3-SMT-TR" H 900 6100 50  0001 C CNN "MPN"
+F 7 "USB JACK, C TYPE, POWER ONLY, 6" H 900 6100 50  0001 C CNN "Description"
+	1    900  6100
 	-1   0    0    -1  
 $EndComp
-NoConn ~ 1650 6000
+NoConn ~ 1400 6400
 $Comp
-L ESDA25P35-1U1M:ESDA25P35-1U1M D2
+L ESDA25P35-1U1M:ESDA25P35-1U1M D1
 U 1 1 601AF6D3
-P 1800 4750
-F 0 "D2" H 1850 4650 50  0000 R CNN
-F 1 "ESDA25P35-1U1M" H 1500 4750 50  0000 R CNN
-F 2 "TVS_ESDA25P35-1U1M" H 1800 4750 50  0001 L BNN
-F 3 "https://www.st.com/content/ccc/resource/technical/document/datasheet/group3/e4/43/53/b9/4e/8a/40/bb/DM00312034/files/DM00312034.pdf/jcr:content/translations/en.DM00312034.pdf" H 1800 4750 50  0001 L BNN
-F 4 "497-16913-1-ND" H 1800 4750 50  0001 C CNN "Digi-Key_PN"
-F 5 "STMicroelectronics" H 1800 4750 50  0001 C CNN "Manufacturer"
-F 6 "ESDA25P35-1U1M" H 1800 4750 50  0001 C CNN "MPN"
-F 7 "TVS DIODE 22V 41V 1610" H 1800 4750 50  0001 C CNN "Description"
-	1    1800 4750
+P 1550 5150
+F 0 "D1" H 1600 5050 50  0000 R CNN
+F 1 "ESDA25P35-1U1M" H 1250 5150 50  0000 R CNN
+F 2 "TVS_ESDA25P35-1U1M" H 1550 5150 50  0001 L BNN
+F 3 "https://www.st.com/content/ccc/resource/technical/document/datasheet/group3/e4/43/53/b9/4e/8a/40/bb/DM00312034/files/DM00312034.pdf/jcr:content/translations/en.DM00312034.pdf" H 1550 5150 50  0001 L BNN
+F 4 "497-16913-1-ND" H 1550 5150 50  0001 C CNN "Digi-Key_PN"
+F 5 "STMicroelectronics" H 1550 5150 50  0001 C CNN "Manufacturer"
+F 6 "ESDA25P35-1U1M" H 1550 5150 50  0001 C CNN "MPN"
+F 7 "TVS DIODE 22V 41V 1610" H 1550 5150 50  0001 C CNN "Description"
+	1    1550 5150
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3650 4050 3600 4050
+	3400 4450 3350 4450
 Wire Wire Line
-	3600 4050 3600 4700
+	3350 4450 3350 5100
 Wire Wire Line
-	3600 4700 4850 4700
+	3350 5100 4600 5100
 Wire Wire Line
-	4850 4700 4850 5050
-Connection ~ 3600 4050
+	4600 5100 4600 5450
+Connection ~ 3350 4450
 Wire Wire Line
-	3600 4050 3450 4050
-$Comp
-L Device:D_Schottky D5
-U 1 1 60193B83
-P 5400 5350
-F 0 "D5" V 5354 5429 50  0000 L CNN
-F 1 "D_Schottky" V 5445 5429 50  0000 L CNN
-F 2 "Diode_SMD:D_0402_1005Metric" H 5400 5350 50  0001 C CNN
-F 3 "~" H 5400 5350 50  0001 C CNN
-F 4 "641-1675-1-ND" V 5400 5350 50  0001 C CNN "Digi-Key_PN"
-F 5 "Comchip Technology" V 5400 5350 50  0001 C CNN "Manufacturer"
-F 6 "CDBQR0130L-HF" V 5400 5350 50  0001 C CNN "MPN"
-F 7 "DIODE SCHOTTKY 30V 100MA 0402" V 5400 5350 50  0001 C CNN "Description"
-	1    5400 5350
-	0    1    1    0   
-$EndComp
-$Comp
-L power:Earth #PWR0101
-U 1 1 6019521E
-P 4800 5300
-F 0 "#PWR0101" H 4800 5050 50  0001 C CNN
-F 1 "Earth" H 4800 5150 50  0001 C CNN
-F 2 "" H 4800 5300 50  0001 C CNN
-F 3 "~" H 4800 5300 50  0001 C CNN
-	1    4800 5300
-	0    -1   -1   0   
-$EndComp
-$Comp
-L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C22
-U 1 1 6028C11A
-P 5200 5400
-F 0 "C22" V 5050 5350 45  0000 L CNN
-F 1 "1uF 0603" V 5250 5500 45  0000 L CNN
-F 2 "Capacitors:0603" H 5450 5310 20  0001 C CNN
-F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 5200 5400 60  0001 C CNN
-F 4 "732-7994-1-ND" H 5200 5400 50  0001 C CNN "Digi-Key_PN"
-F 5 "Würth Elektronik" H 5200 5400 50  0001 C CNN "Manufacturer"
-F 6 "885012206076" H 5200 5400 50  0001 C CNN "MPN"
-F 7 "CAP CER 1UF 25V X7R 0603" H 5200 5400 50  0001 C CNN "Description"
-	1    5200 5400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4950 5600 4800 5600
-Connection ~ 4850 5050
-Wire Wire Line
-	4850 5050 4850 5200
-Wire Wire Line
-	4800 5500 5200 5500
-Wire Wire Line
-	5400 5500 5200 5500
-Connection ~ 5200 5500
-$Comp
-L power:VS #PWR0102
-U 1 1 601C10D6
-P 5400 5200
-F 0 "#PWR0102" H 5200 5050 50  0001 C CNN
-F 1 "VS" H 5417 5373 50  0000 C CNN
-F 2 "" H 5400 5200 50  0001 C CNN
-F 3 "" H 5400 5200 50  0001 C CNN
-	1    5400 5200
-	1    0    0    -1  
-$EndComp
+	3350 4450 3200 4450
 $Comp
 L Device:D_Schottky D6
-U 1 1 601C167B
-P 2250 2500
-F 0 "D6" H 2250 2284 50  0000 C CNN
-F 1 "D_Schottky" H 2250 2375 50  0000 C CNN
-F 2 "Diode_SMD:D_0402_1005Metric" H 2250 2500 50  0001 C CNN
-F 3 "~" H 2250 2500 50  0001 C CNN
-F 4 "641-1675-1-ND" V 2250 2500 50  0001 C CNN "Digi-Key_PN"
-F 5 "Comchip Technology" V 2250 2500 50  0001 C CNN "Manufacturer"
-F 6 "CDBQR0130L-HF" V 2250 2500 50  0001 C CNN "MPN"
-F 7 "DIODE SCHOTTKY 30V 100MA 0402" V 2250 2500 50  0001 C CNN "Description"
-	1    2250 2500
+U 1 1 60193B83
+P 3150 2850
+F 0 "D6" V 3104 2929 50  0000 L CNN
+F 1 "D_Schottky" V 3050 2950 50  0000 L CNN
+F 2 "Diode_SMD:D_0402_1005Metric" H 3150 2850 50  0001 C CNN
+F 3 "~" H 3150 2850 50  0001 C CNN
+F 4 "641-1675-1-ND" V 3150 2850 50  0001 C CNN "Digi-Key_PN"
+F 5 "Comchip Technology" V 3150 2850 50  0001 C CNN "Manufacturer"
+F 6 "CDBQR0130L-HF" V 3150 2850 50  0001 C CNN "MPN"
+F 7 "DIODE SCHOTTKY 30V 100MA 0402" V 3150 2850 50  0001 C CNN "Description"
+	1    3150 2850
 	-1   0    0    1   
 $EndComp
 $Comp
-L pbrick-rescue:3.3V-SparkFun-PowerSymbols #SUPPLY0102
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C10
+U 1 1 6028C11A
+P 4950 5800
+F 0 "C10" V 4800 5750 45  0000 L CNN
+F 1 "1uF 0402" V 5000 5900 45  0000 L CNN
+F 2 "Capacitors:0402" H 5200 5710 20  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 4950 5800 60  0001 C CNN
+F 4 "732-7994-1-ND" H 4950 5800 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" H 4950 5800 50  0001 C CNN "Manufacturer"
+F 6 "885012206076" H 4950 5800 50  0001 C CNN "MPN"
+F 7 "CAP CER 1UF 25V X7R 0603" H 4950 5800 50  0001 C CNN "Description"
+	1    4950 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 6000 4550 6000
+Connection ~ 4600 5450
+Wire Wire Line
+	4600 5450 4600 5600
+Wire Wire Line
+	4550 5900 4950 5900
+$Comp
+L Device:D_Schottky D4
+U 1 1 601C167B
+P 3150 2650
+F 0 "D4" H 3150 2434 50  0000 C CNN
+F 1 "D_Schottky" H 3150 2525 50  0000 C CNN
+F 2 "Diode_SMD:D_0402_1005Metric" H 3150 2650 50  0001 C CNN
+F 3 "~" H 3150 2650 50  0001 C CNN
+F 4 "641-1675-1-ND" V 3150 2650 50  0001 C CNN "Digi-Key_PN"
+F 5 "Comchip Technology" V 3150 2650 50  0001 C CNN "Manufacturer"
+F 6 "CDBQR0130L-HF" V 3150 2650 50  0001 C CNN "MPN"
+F 7 "DIODE SCHOTTKY 30V 100MA 0402" V 3150 2650 50  0001 C CNN "Description"
+	1    3150 2650
+	-1   0    0    1   
+$EndComp
+$Comp
+L pbrick-rescue:3.3V-SparkFun-PowerSymbols #SUPPLY04
 U 1 1 601C2C68
-P 3800 2350
-F 0 "#SUPPLY0102" H 3850 2350 45  0001 L BNN
-F 1 "3.3V" V 3800 2478 45  0000 L CNN
-F 2 "XXX-00000" V 3758 2477 60  0001 L CNN
-F 3 "" H 3800 2350 60  0001 C CNN
-	1    3800 2350
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:VS #PWR0104
-U 1 1 601C3287
-P 3800 2550
-F 0 "#PWR0104" H 3600 2400 50  0001 C CNN
-F 1 "VS" V 3818 2678 50  0000 L CNN
-F 2 "" H 3800 2550 50  0001 C CNN
-F 3 "" H 3800 2550 50  0001 C CNN
-	1    3800 2550
+P 3000 2650
+F 0 "#SUPPLY04" H 3050 2650 45  0001 L BNN
+F 1 "3.3V" V 3000 2778 45  0000 L CNN
+F 2 "XXX-00000" V 2958 2777 60  0001 L CNN
+F 3 "" H 3000 2650 60  0001 C CNN
+	1    3000 2650
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	3850 2550 3800 2550
-$Comp
-L power:VSS #PWR0105
-U 1 1 601CCF91
-P 3850 2450
-F 0 "#PWR0105" H 3850 2300 50  0001 C CNN
-F 1 "VSS" V 3867 2578 50  0000 L CNN
-F 2 "" H 3850 2450 50  0001 C CNN
-F 3 "" H 3850 2450 50  0001 C CNN
-	1    3850 2450
-	0    1    1    0   
-$EndComp
-Connection ~ 3850 2450
+	3350 2850 3300 2850
 Wire Wire Line
-	3850 2450 3850 2550
-Wire Wire Line
-	3800 2350 3850 2350
-Wire Wire Line
-	3850 2350 3850 2450
-$Comp
-L power:VSS #PWR0106
-U 1 1 601D5FE6
-P 5750 2100
-F 0 "#PWR0106" H 5750 1950 50  0001 C CNN
-F 1 "VSS" V 5768 2228 50  0000 L CNN
-F 2 "" H 5750 2100 50  0001 C CNN
-F 3 "" H 5750 2100 50  0001 C CNN
-	1    5750 2100
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:VSS #PWR0107
-U 1 1 601D6986
-P 9000 2300
-F 0 "#PWR0107" H 9000 2150 50  0001 C CNN
-F 1 "VSS" H 9017 2473 50  0000 C CNN
-F 2 "" H 9000 2300 50  0001 C CNN
-F 3 "" H 9000 2300 50  0001 C CNN
-	1    9000 2300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VSS #PWR0108
-U 1 1 601D7BE9
-P 6700 6000
-F 0 "#PWR0108" H 6700 5850 50  0001 C CNN
-F 1 "VSS" H 6717 6173 50  0000 C CNN
-F 2 "" H 6700 6000 50  0001 C CNN
-F 3 "" H 6700 6000 50  0001 C CNN
-	1    6700 6000
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VSS #PWR0109
-U 1 1 601D9014
-P 7000 5350
-F 0 "#PWR0109" H 7000 5200 50  0001 C CNN
-F 1 "VSS" V 7017 5478 50  0000 L CNN
-F 2 "" H 7000 5350 50  0001 C CNN
-F 3 "" H 7000 5350 50  0001 C CNN
-	1    7000 5350
-	0    1    1    0   
-$EndComp
-$Comp
-L power:VSS #PWR0110
-U 1 1 601D968F
-P 6100 5350
-F 0 "#PWR0110" H 6100 5200 50  0001 C CNN
-F 1 "VSS" V 6118 5478 50  0000 L CNN
-F 2 "" H 6100 5350 50  0001 C CNN
-F 3 "" H 6100 5350 50  0001 C CNN
-	1    6100 5350
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	7700 4650 7700 4700
-$Comp
-L power:VSS #PWR0113
-U 1 1 601D9E0F
-P 7700 4700
-F 0 "#PWR0113" H 7700 4550 50  0001 C CNN
-F 1 "VSS" V 7718 4828 50  0000 L CNN
-F 2 "" H 7700 4700 50  0001 C CNN
-F 3 "" H 7700 4700 50  0001 C CNN
-	1    7700 4700
-	0    -1   -1   0   
-$EndComp
-Connection ~ 7700 4700
-Wire Wire Line
-	7700 4700 7700 4750
+	3300 2650 3350 2650
 Wire Notes Line
-	3350 2150 4250 2150
+	2850 2450 3750 2450
 Wire Notes Line
-	4250 2150 4250 2700
+	3750 2450 3750 3000
 Wire Notes Line
-	4250 2700 3350 2700
+	3750 3000 2850 3000
 Wire Notes Line
-	3350 2700 3350 2150
-Text Notes 3050 2850 0    50   ~ 0
+	2850 3000 2850 2450
+Text Notes 2550 3150 0    50   ~ 0
 Greater of 2V7 from STUSB4500 or 3.3 LRO\n
-Text Notes 2850 2950 0    50   ~ 0
+Text Notes 2350 3250 0    50   ~ 0
 STUSB4500 can power board via 2v7 rail pre flashing
 $Comp
-L TC2030-IDC-NL:TC2030-IDC-NL J6
+L TC2030-IDC-NL:TC2030-IDC-NL J2
 U 1 1 601985D5
-P 4850 950
-F 0 "J6" V 4839 620 50  0000 R CNN
-F 1 "TC2030-IDC-NL" V 4748 620 50  0000 R CNN
-F 2 "TAG_TC2030-IDC-NL" H 4850 950 50  0001 L BNN
-F 3 "" H 4850 950 50  0001 L BNN
-F 4 "MS" H 4850 950 50  0001 L BNN "PARTREV"
-F 5 "Tag-Connect" H 4850 950 50  0001 L BNN "MANUFACTURER"
-F 6 "Manufacturer recommendation" H 4850 950 50  0001 L BNN "STANDARD"
-	1    4850 950 
+P 3950 750
+F 0 "J2" V 3939 420 50  0000 R CNN
+F 1 "TC2030-IDC-NL" V 3848 420 50  0000 R CNN
+F 2 "TAG_TC2030-IDC-NL" H 3950 750 50  0001 L BNN
+F 3 "" H 3950 750 50  0001 L BNN
+F 4 "MS" H 3950 750 50  0001 L BNN "PARTREV"
+F 5 "Tag-Connect" H 3950 750 50  0001 L BNN "MANUFACTURER"
+F 6 "Manufacturer recommendation" H 3950 750 50  0001 L BNN "STANDARD"
+	1    3950 750 
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:VSS #PWR0114
-U 1 1 601995E8
-P 4550 1250
-F 0 "#PWR0114" H 4550 1100 50  0001 C CNN
-F 1 "VSS" H 4500 1450 50  0000 L CNN
-F 2 "" H 4550 1250 50  0001 C CNN
-F 3 "" H 4550 1250 50  0001 C CNN
-	1    4550 1250
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR0118
-U 1 1 601C975B
-P 5650 6850
-F 0 "#PWR0118" H 5650 6600 50  0001 C CNN
-F 1 "GND" V 5650 6600 50  0000 C CNN
-F 2 "" H 5650 6850 50  0001 C CNN
-F 3 "" H 5650 6850 50  0001 C CNN
-	1    5650 6850
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:GND #PWR0119
-U 1 1 601D90D0
-P 5150 5600
-F 0 "#PWR0119" H 5150 5350 50  0001 C CNN
-F 1 "GND" V 5155 5472 50  0000 R CNN
-F 2 "" H 5150 5600 50  0001 C CNN
-F 3 "" H 5150 5600 50  0001 C CNN
-	1    5150 5600
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0120
-U 1 1 601D9900
-P 6800 6000
-F 0 "#PWR0120" H 6800 5750 50  0001 C CNN
-F 1 "GND" V 6805 5872 50  0000 R CNN
-F 2 "" H 6800 6000 50  0001 C CNN
-F 3 "" H 6800 6000 50  0001 C CNN
-	1    6800 6000
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0121
+L power:GND #PWR026
 U 1 1 601D9D5C
-P 5050 5050
-F 0 "#PWR0121" H 5050 4800 50  0001 C CNN
-F 1 "GND" V 5050 5050 50  0000 R CNN
-F 2 "" H 5050 5050 50  0001 C CNN
-F 3 "" H 5050 5050 50  0001 C CNN
-	1    5050 5050
+P 4800 5450
+F 0 "#PWR026" H 4800 5200 50  0001 C CNN
+F 1 "GND" V 4800 5450 50  0000 R CNN
+F 2 "" H 4800 5450 50  0001 C CNN
+F 3 "" H 4800 5450 50  0001 C CNN
+	1    4800 5450
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR0122
+L power:GND #PWR028
 U 1 1 601DA948
-P 5200 5300
-F 0 "#PWR0122" H 5200 5050 50  0001 C CNN
-F 1 "GND" H 5350 5250 50  0000 C CNN
-F 2 "" H 5200 5300 50  0001 C CNN
-F 3 "" H 5200 5300 50  0001 C CNN
-	1    5200 5300
+P 4950 5700
+F 0 "#PWR028" H 4950 5450 50  0001 C CNN
+F 1 "GND" H 5100 5650 50  0000 C CNN
+F 2 "" H 4950 5700 50  0001 C CNN
+F 3 "" H 4950 5700 50  0001 C CNN
+	1    4950 5700
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR0123
+L power:GND #PWR021
 U 1 1 601DAFD8
-P 4700 4450
-F 0 "#PWR0123" H 4700 4200 50  0001 C CNN
-F 1 "GND" H 4705 4277 50  0000 C CNN
-F 2 "" H 4700 4450 50  0001 C CNN
-F 3 "" H 4700 4450 50  0001 C CNN
-	1    4700 4450
+P 4450 4850
+F 0 "#PWR021" H 4450 4600 50  0001 C CNN
+F 1 "GND" H 4455 4677 50  0000 C CNN
+F 2 "" H 4450 4850 50  0001 C CNN
+F 3 "" H 4450 4850 50  0001 C CNN
+	1    4450 4850
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0124
+L power:GND #PWR06
 U 1 1 601DB8C2
-P 1650 5800
-F 0 "#PWR0124" H 1650 5550 50  0001 C CNN
-F 1 "GND" H 1650 5700 50  0000 C CNN
-F 2 "" H 1650 5800 50  0001 C CNN
-F 3 "" H 1650 5800 50  0001 C CNN
-	1    1650 5800
+P 1400 6200
+F 0 "#PWR06" H 1400 5950 50  0001 C CNN
+F 1 "GND" H 1400 6100 50  0000 C CNN
+F 2 "" H 1400 6200 50  0001 C CNN
+F 3 "" H 1400 6200 50  0001 C CNN
+	1    1400 6200
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0125
+L power:GND #PWR04
 U 1 1 601DC52D
-P 1400 4750
-F 0 "#PWR0125" H 1400 4500 50  0001 C CNN
-F 1 "GND" H 1405 4577 50  0000 C CNN
-F 2 "" H 1400 4750 50  0001 C CNN
-F 3 "" H 1400 4750 50  0001 C CNN
-	1    1400 4750
+P 1150 5150
+F 0 "#PWR04" H 1150 4900 50  0001 C CNN
+F 1 "GND" H 1155 4977 50  0000 C CNN
+F 2 "" H 1150 5150 50  0001 C CNN
+F 3 "" H 1150 5150 50  0001 C CNN
+	1    1150 5150
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0126
+L power:GND #PWR08
 U 1 1 601DC890
-P 1800 4950
-F 0 "#PWR0126" H 1800 4700 50  0001 C CNN
-F 1 "GND" H 1805 4777 50  0000 C CNN
-F 2 "" H 1800 4950 50  0001 C CNN
-F 3 "" H 1800 4950 50  0001 C CNN
-	1    1800 4950
+P 1550 5350
+F 0 "#PWR08" H 1550 5100 50  0001 C CNN
+F 1 "GND" H 1555 5177 50  0000 C CNN
+F 2 "" H 1550 5350 50  0001 C CNN
+F 3 "" H 1550 5350 50  0001 C CNN
+	1    1550 5350
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0127
+L power:GND #PWR012
 U 1 1 601DCAF0
-P 2100 5150
-F 0 "#PWR0127" H 2100 4900 50  0001 C CNN
-F 1 "GND" H 2105 4977 50  0000 C CNN
-F 2 "" H 2100 5150 50  0001 C CNN
-F 3 "" H 2100 5150 50  0001 C CNN
-	1    2100 5150
+P 1850 5550
+F 0 "#PWR012" H 1850 5300 50  0001 C CNN
+F 1 "GND" H 1855 5377 50  0000 C CNN
+F 2 "" H 1850 5550 50  0001 C CNN
+F 3 "" H 1850 5550 50  0001 C CNN
+	1    1850 5550
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0128
+L power:GND #PWR09
 U 1 1 601DCDF4
-P 2000 6350
-F 0 "#PWR0128" H 2000 6100 50  0001 C CNN
-F 1 "GND" H 2005 6177 50  0000 C CNN
-F 2 "" H 2000 6350 50  0001 C CNN
-F 3 "" H 2000 6350 50  0001 C CNN
-	1    2000 6350
+P 1750 6750
+F 0 "#PWR09" H 1750 6500 50  0001 C CNN
+F 1 "GND" H 1755 6577 50  0000 C CNN
+F 2 "" H 1750 6750 50  0001 C CNN
+F 3 "" H 1750 6750 50  0001 C CNN
+	1    1750 6750
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0129
+L power:GND #PWR011
 U 1 1 601DD2D2
-P 1900 2700
-F 0 "#PWR0129" H 1900 2450 50  0001 C CNN
-F 1 "GND" H 1905 2527 50  0000 C CNN
-F 2 "" H 1900 2700 50  0001 C CNN
-F 3 "" H 1900 2700 50  0001 C CNN
-	1    1900 2700
+P 1800 3000
+F 0 "#PWR011" H 1800 2750 50  0001 C CNN
+F 1 "GND" H 1805 2827 50  0000 C CNN
+F 2 "" H 1800 3000 50  0001 C CNN
+F 3 "" H 1800 3000 50  0001 C CNN
+	1    1800 3000
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0130
+L power:GND #PWR010
 U 1 1 601DDA3B
-P 1900 2100
-F 0 "#PWR0130" H 1900 1850 50  0001 C CNN
-F 1 "GND" H 1905 1927 50  0000 C CNN
-F 2 "" H 1900 2100 50  0001 C CNN
-F 3 "" H 1900 2100 50  0001 C CNN
-	1    1900 2100
+P 1800 2400
+F 0 "#PWR010" H 1800 2150 50  0001 C CNN
+F 1 "GND" H 1805 2227 50  0000 C CNN
+F 2 "" H 1800 2400 50  0001 C CNN
+F 3 "" H 1800 2400 50  0001 C CNN
+	1    1800 2400
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR0131
+L power:GND #PWR03
 U 1 1 601DE010
-P 1150 2400
-F 0 "#PWR0131" H 1150 2150 50  0001 C CNN
-F 1 "GND" V 1150 2400 50  0000 R CNN
-F 2 "" H 1150 2400 50  0001 C CNN
-F 3 "" H 1150 2400 50  0001 C CNN
-	1    1150 2400
+P 1050 2700
+F 0 "#PWR03" H 1050 2450 50  0001 C CNN
+F 1 "GND" V 1050 2700 50  0000 R CNN
+F 2 "" H 1050 2700 50  0001 C CNN
+F 3 "" H 1050 2700 50  0001 C CNN
+	1    1050 2700
 	0    1    1    0   
 $EndComp
 $Comp
-L pbrick-rescue:ADP3330ARTZ-5-RL7-ADP3330ARTZ-5-RL7 U3
+L pbrick-rescue:ADP3330ARTZ-5-RL7-ADP3330ARTZ-5-RL7 U2
 U 1 1 5F16D626
 P 2150 1250
-F 0 "U3" H 2150 1820 50  0000 C CNN
+F 0 "U2" H 2150 1820 50  0000 C CNN
 F 1 "ADP3330ARTZ-5-RL7" H 2150 1729 50  0000 C CNN
 F 2 "SOT95P280X145-6N" H 2150 1250 50  0001 L BNN
 F 3 "https://www.digikey.com/htmldatasheets/production/184601/0/0/1/adp3330.html" H 2150 1250 50  0001 L BNN
@@ -1773,10 +1414,10 @@ F 7 "IC REG LINEAR 5V 200MA SOT23-6" H 2150 1250 50  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0132
+L power:GND #PWR07
 U 1 1 601DEF78
 P 1450 1650
-F 0 "#PWR0132" H 1450 1400 50  0001 C CNN
+F 0 "#PWR07" H 1450 1400 50  0001 C CNN
 F 1 "GND" V 1455 1522 50  0000 R CNN
 F 2 "" H 1450 1650 50  0001 C CNN
 F 3 "" H 1450 1650 50  0001 C CNN
@@ -1784,10 +1425,10 @@ F 3 "" H 1450 1650 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR0133
+L power:GND #PWR02
 U 1 1 601DF3E6
 P 1050 1250
-F 0 "#PWR0133" H 1050 1000 50  0001 C CNN
+F 0 "#PWR02" H 1050 1000 50  0001 C CNN
 F 1 "GND" H 1055 1077 50  0000 C CNN
 F 2 "" H 1050 1250 50  0001 C CNN
 F 3 "" H 1050 1250 50  0001 C CNN
@@ -1795,10 +1436,10 @@ F 3 "" H 1050 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0134
+L power:GND #PWR015
 U 1 1 601DFB64
 P 2950 1550
-F 0 "#PWR0134" H 2950 1300 50  0001 C CNN
+F 0 "#PWR015" H 2950 1300 50  0001 C CNN
 F 1 "GND" H 2955 1377 50  0000 C CNN
 F 2 "" H 2950 1550 50  0001 C CNN
 F 3 "" H 2950 1550 50  0001 C CNN
@@ -1806,135 +1447,886 @@ F 3 "" H 2950 1550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0135
+L power:GND #PWR020
 U 1 1 601DFEBC
-P 4950 1250
-F 0 "#PWR0135" H 4950 1000 50  0001 C CNN
-F 1 "GND" H 4955 1077 50  0000 C CNN
-F 2 "" H 4950 1250 50  0001 C CNN
-F 3 "" H 4950 1250 50  0001 C CNN
-	1    4950 1250
+P 4050 1050
+F 0 "#PWR020" H 4050 800 50  0001 C CNN
+F 1 "GND" H 4055 877 50  0000 C CNN
+F 2 "" H 4050 1050 50  0001 C CNN
+F 3 "" H 4050 1050 50  0001 C CNN
+	1    4050 1050
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0136
+L power:GND #PWR057
 U 1 1 601E0314
-P 6500 1600
-F 0 "#PWR0136" H 6500 1350 50  0001 C CNN
-F 1 "GND" V 6505 1472 50  0000 R CNN
-F 2 "" H 6500 1600 50  0001 C CNN
-F 3 "" H 6500 1600 50  0001 C CNN
-	1    6500 1600
-	0    1    1    0   
+P 11100 4700
+F 0 "#PWR057" H 11100 4450 50  0001 C CNN
+F 1 "GND" V 11105 4572 50  0000 R CNN
+F 2 "" H 11100 4700 50  0001 C CNN
+F 3 "" H 11100 4700 50  0001 C CNN
+	1    11100 4700
+	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0137
+L power:GND #PWR060
 U 1 1 601E0A04
-P 5950 2300
-F 0 "#PWR0137" H 5950 2050 50  0001 C CNN
-F 1 "GND" H 5955 2127 50  0000 C CNN
-F 2 "" H 5950 2300 50  0001 C CNN
-F 3 "" H 5950 2300 50  0001 C CNN
-	1    5950 2300
-	1    0    0    -1  
+P 11800 5250
+F 0 "#PWR060" H 11800 5000 50  0001 C CNN
+F 1 "GND" H 11805 5077 50  0000 C CNN
+F 2 "" H 11800 5250 50  0001 C CNN
+F 3 "" H 11800 5250 50  0001 C CNN
+	1    11800 5250
+	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR0138
+L power:GND #PWR059
 U 1 1 601E0FF9
-P 6200 2300
-F 0 "#PWR0138" H 6200 2050 50  0001 C CNN
-F 1 "GND" H 6205 2127 50  0000 C CNN
-F 2 "" H 6200 2300 50  0001 C CNN
-F 3 "" H 6200 2300 50  0001 C CNN
-	1    6200 2300
-	1    0    0    -1  
+P 11800 5000
+F 0 "#PWR059" H 11800 4750 50  0001 C CNN
+F 1 "GND" H 11805 4827 50  0000 C CNN
+F 2 "" H 11800 5000 50  0001 C CNN
+F 3 "" H 11800 5000 50  0001 C CNN
+	1    11800 5000
+	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	7700 5750 7700 5800
 $Comp
-L power:GND #PWR0139
+L power:GND #PWR035
 U 1 1 601E122E
-P 7700 5800
-F 0 "#PWR0139" H 7700 5550 50  0001 C CNN
-F 1 "GND" V 7705 5672 50  0000 R CNN
-F 2 "" H 7700 5800 50  0001 C CNN
-F 3 "" H 7700 5800 50  0001 C CNN
-	1    7700 5800
+P 6100 7350
+F 0 "#PWR035" H 6100 7100 50  0001 C CNN
+F 1 "GND" V 6105 7222 50  0000 R CNN
+F 2 "" H 6100 7350 50  0001 C CNN
+F 3 "" H 6100 7350 50  0001 C CNN
+	1    6100 7350
 	0    1    1    0   
 $EndComp
-Connection ~ 7700 5800
-Wire Wire Line
-	7700 5800 7700 5850
 $Comp
-L power:GND #PWR0140
+L power:GND #PWR043
 U 1 1 601E77C9
-P 10150 4550
-F 0 "#PWR0140" H 10150 4300 50  0001 C CNN
-F 1 "GND" H 10155 4377 50  0000 C CNN
-F 2 "" H 10150 4550 50  0001 C CNN
-F 3 "" H 10150 4550 50  0001 C CNN
-	1    10150 4550
+P 8550 6100
+F 0 "#PWR043" H 8550 5850 50  0001 C CNN
+F 1 "GND" H 8555 5927 50  0000 C CNN
+F 2 "" H 8550 6100 50  0001 C CNN
+F 3 "" H 8550 6100 50  0001 C CNN
+	1    8550 6100
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	10350 3800 10450 3800
-Connection ~ 10450 3800
-Wire Wire Line
-	10450 3800 10550 3800
 $Comp
-L power:GND #PWR0141
+L power:GND #PWR041
 U 1 1 601E8300
-P 9700 6250
-F 0 "#PWR0141" H 9700 6000 50  0001 C CNN
-F 1 "GND" H 9705 6077 50  0000 C CNN
-F 2 "" H 9700 6250 50  0001 C CNN
-F 3 "" H 9700 6250 50  0001 C CNN
-	1    9700 6250
+P 8100 7800
+F 0 "#PWR041" H 8100 7550 50  0001 C CNN
+F 1 "GND" H 8105 7627 50  0000 C CNN
+F 2 "" H 8100 7800 50  0001 C CNN
+F 3 "" H 8100 7800 50  0001 C CNN
+	1    8100 7800
 	1    0    0    -1  
 $EndComp
-Connection ~ 9700 6250
+Connection ~ 8100 7800
 $Comp
-L power:GND #PWR0142
+L power:GND #PWR037
 U 1 1 601E87C8
-P 10450 1050
-F 0 "#PWR0142" H 10450 800 50  0001 C CNN
-F 1 "GND" H 10455 877 50  0000 C CNN
-F 2 "" H 10450 1050 50  0001 C CNN
-F 3 "" H 10450 1050 50  0001 C CNN
-	1    10450 1050
+P 6600 1000
+F 0 "#PWR037" H 6600 750 50  0001 C CNN
+F 1 "GND" H 6605 827 50  0000 C CNN
+F 2 "" H 6600 1000 50  0001 C CNN
+F 3 "" H 6600 1000 50  0001 C CNN
+	1    6600 1000
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR0143
+L power:GND #PWR036
 U 1 1 601E9008
-P 10100 1600
-F 0 "#PWR0143" H 10100 1350 50  0001 C CNN
-F 1 "GND" V 10105 1472 50  0000 R CNN
-F 2 "" H 10100 1600 50  0001 C CNN
-F 3 "" H 10100 1600 50  0001 C CNN
-	1    10100 1600
+P 6250 1550
+F 0 "#PWR036" H 6250 1300 50  0001 C CNN
+F 1 "GND" V 6255 1422 50  0000 R CNN
+F 2 "" H 6250 1550 50  0001 C CNN
+F 3 "" H 6250 1550 50  0001 C CNN
+	1    6250 1550
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR0144
+L power:GND #PWR031
 U 1 1 601E9570
-P 9700 1200
-F 0 "#PWR0144" H 9700 950 50  0001 C CNN
-F 1 "GND" H 9705 1027 50  0000 C CNN
-F 2 "" H 9700 1200 50  0001 C CNN
-F 3 "" H 9700 1200 50  0001 C CNN
-	1    9700 1200
+P 5850 1150
+F 0 "#PWR031" H 5850 900 50  0001 C CNN
+F 1 "GND" H 5855 977 50  0000 C CNN
+F 2 "" H 5850 1150 50  0001 C CNN
+F 3 "" H 5850 1150 50  0001 C CNN
+	1    5850 1150
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR0145
+L power:GND #PWR019
 U 1 1 601E9B3F
-P 8200 2800
-F 0 "#PWR0145" H 8200 2550 50  0001 C CNN
-F 1 "GND" H 8205 2627 50  0000 C CNN
-F 2 "" H 8200 2800 50  0001 C CNN
-F 3 "" H 8200 2800 50  0001 C CNN
-	1    8200 2800
+P 3850 1750
+F 0 "#PWR019" H 3850 1500 50  0001 C CNN
+F 1 "GND" H 3855 1577 50  0000 C CNN
+F 2 "" H 3850 1750 50  0001 C CNN
+F 3 "" H 3850 1750 50  0001 C CNN
+	1    3850 1750
+	1    0    0    -1  
+$EndComp
+Text Label 12850 2050 2    50   ~ 0
+P0.11
+Text Label 12850 2150 2    50   ~ 0
+P0.12
+Text Label 12850 2250 2    50   ~ 0
+P0.03
+Text Label 12850 2350 2    50   ~ 0
+P0.07
+Wire Notes Line
+	450  3450 5700 3450
+Wire Notes Line
+	5700 3450 5700 8050
+Wire Notes Line
+	5700 8050 450  8050
+Wire Notes Line
+	450  8050 450  3450
+Wire Wire Line
+	6100 7300 6100 7350
+Connection ~ 6100 7350
+Wire Wire Line
+	6100 7350 6100 7400
+Text Label 11600 3250 1    50   ~ 0
+P1.08
+Text Label 11350 1050 1    50   ~ 0
+P0.19
+Text Label 11450 1050 1    50   ~ 0
+P0.22
+$Comp
+L power:GND #PWR051
+U 1 1 6056D0AD
+P 11400 2500
+F 0 "#PWR051" H 11400 2250 50  0001 C CNN
+F 1 "GND" V 11405 2372 50  0000 R CNN
+F 2 "" H 11400 2500 50  0001 C CNN
+F 3 "" H 11400 2500 50  0001 C CNN
+	1    11400 2500
+	1    0    0    -1  
+$EndComp
+Text Label 10700 2100 2    50   ~ 0
+PCA9624_0
+Text Label 10700 2000 2    50   ~ 0
+PCA9624_1
+Text Label 10700 1900 2    50   ~ 0
+PCA9624_2
+Text Label 10700 1800 2    50   ~ 0
+PCA9624_3
+Text Label 10700 1700 2    50   ~ 0
+PCA9624_4
+Text Label 10700 1600 2    50   ~ 0
+PCA9624_5
+Text Label 10700 1500 2    50   ~ 0
+PCA9624_6
+Text Label 10700 1400 2    50   ~ 0
+PCA9624_7
+NoConn ~ 12850 2050
+NoConn ~ 12850 2150
+NoConn ~ 12850 2250
+NoConn ~ 12850 2350
+Text Label 12850 1950 2    50   ~ 0
+P1.09
+Text Label 8300 3250 0    50   ~ 0
+P0.01
+Text Label 8300 3150 0    50   ~ 0
+P0.00
+NoConn ~ 12850 1950
+NoConn ~ 12850 1850
+NoConn ~ 12850 1750
+Connection ~ 10300 5900
+Wire Wire Line
+	10300 5900 10300 6200
+Connection ~ 10200 5900
+Wire Wire Line
+	10200 5900 10200 6200
+$Comp
+L pbrick-rescue:RESISTOR_0603-MF_Passives R12
+U 1 1 5F125DEC
+P 10000 5900
+F 0 "R12" H 10068 5942 45  0000 L CNN
+F 1 "2.2K Ω 0402" H 10068 5858 45  0000 L CNN
+F 2 "Resistors:0402" H 10250 5810 20  0001 C CNN
+F 3 "https://d1d2qsbl8m0m72.cloudfront.net/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf" H 10000 5900 60  0001 C CNN
+F 4 "RES SMD 2.2K OHM 5% 1/4W 0603" H 10000 5900 50  0001 C CNN "Description"
+F 5 "ESR03EZPJ222" H 10000 5900 50  0001 C CNN "MPN"
+F 6 "Rohm Semiconductor" H 10000 5900 50  0001 C CNN "Manufacturer"
+F 7 "RHM2.2KDCT-ND" H 10000 5900 50  0001 C CNN "Digi-Key_PN"
+	1    10000 5900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L pbrick-rescue:RESISTOR_0603-MF_Passives R13
+U 1 1 5F1266C1
+P 10500 5900
+F 0 "R13" H 10568 5942 45  0000 L CNN
+F 1 "2.2K Ω 0402" H 10568 5858 45  0000 L CNN
+F 2 "Resistors:0402" H 10750 5810 20  0001 C CNN
+F 3 "https://d1d2qsbl8m0m72.cloudfront.net/en/products/databook/datasheet/passive/resistor/chip_resistor/esr-e.pdf" H 10500 5900 60  0001 C CNN
+F 4 "RHM2.2KDCT-ND" H 10500 5900 50  0001 C CNN "Digi-Key_PN"
+F 5 "Rohm Semiconductor" H 10500 5900 50  0001 C CNN "Manufacturer"
+F 6 "ESR03EZPJ222" H 10500 5900 50  0001 C CNN "MPN"
+F 7 "RES SMD 2.2K OHM 5% 1/4W 0603" H 10500 5900 50  0001 C CNN "Description"
+	1    10500 5900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10200 5900 10200 5800
+Wire Wire Line
+	10300 5900 10300 5800
+$Comp
+L pbrick-rescue:I2C_STANDARDQWIIC-SparkFun-Connectors J4
+U 1 1 5F11DB2A
+P 10500 6300
+F 0 "J4" V 10150 6450 45  0000 C CNN
+F 1 "QWIIC" V 10250 6450 45  0000 C CNN
+F 2 "1X04_1MM_RA" H 10500 6800 20  0001 C CNN
+F 3 "" H 10500 6300 50  0001 C CNN
+F 4 "CONN-13729" H 10458 6731 60  0001 C CNN "Field4"
+F 5 "dnp" V 10500 6300 50  0001 C CNN "fit_field"
+	1    10500 6300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR054
+U 1 1 601D9900
+P 10500 6200
+F 0 "#PWR054" H 10500 5950 50  0001 C CNN
+F 1 "GND" V 10505 6072 50  0000 R CNN
+F 2 "" H 10500 6200 50  0001 C CNN
+F 3 "" H 10500 6200 50  0001 C CNN
+	1    10500 6200
+	0    -1   -1   0   
+$EndComp
+Text Label 12850 1650 2    50   ~ 0
+P1.08
+NoConn ~ 12850 1650
+$Comp
+L pbrick:2533020201601 U6
+U 1 1 608ABC76
+P 7900 3400
+F 0 "U6" H 7900 3915 50  0000 C CNN
+F 1 "2533020201601" H 7900 3824 50  0000 C CNN
+F 2 "Package_LGA:LGA-12_2x2mm_P0.5mm" H 7900 3500 50  0001 C CNN
+F 3 "https://www.we-online.de/katalog/manual/2533020201601_WSEN-ITDS%202533020201601%20Manual_rev1.pdf" H 7900 3500 50  0001 C CNN
+	1    7900 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR039
+U 1 1 608AE305
+P 7500 3650
+F 0 "#PWR039" H 7500 3400 50  0001 C CNN
+F 1 "GND" V 7505 3522 50  0000 R CNN
+F 2 "" H 7500 3650 50  0001 C CNN
+F 3 "" H 7500 3650 50  0001 C CNN
+	1    7500 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR044
+U 1 1 608AF3A2
+P 8350 3600
+F 0 "#PWR044" H 8350 3350 50  0001 C CNN
+F 1 "GND" V 8355 3472 50  0000 R CNN
+F 2 "" H 8350 3600 50  0001 C CNN
+F 3 "" H 8350 3600 50  0001 C CNN
+	1    8350 3600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8300 3550 8350 3550
+Wire Wire Line
+	8350 3550 8350 3600
+Wire Wire Line
+	8300 3650 8350 3650
+Wire Wire Line
+	8350 3650 8350 3600
+Connection ~ 8350 3600
+NoConn ~ 7500 3550
+Wire Wire Line
+	8300 3350 8550 3350
+Wire Wire Line
+	8550 3350 8550 2750
+Wire Wire Line
+	8550 2750 7200 2750
+Wire Wire Line
+	7200 2750 7200 3250
+Wire Wire Line
+	7200 3250 7500 3250
+Wire Wire Line
+	7200 3250 7200 3350
+Wire Wire Line
+	7200 3350 7500 3350
+Connection ~ 7200 3250
+$Comp
+L pbrick-rescue:3.3V-SparkFun-PowerSymbols #SUPPLY011
+U 1 1 6091174D
+P 8850 3800
+F 0 "#SUPPLY011" H 8900 3800 45  0001 L BNN
+F 1 "3.3V" V 8850 3928 45  0000 L CNN
+F 2 "XXX-00000" V 8808 3927 60  0001 L CNN
+F 3 "" H 8850 3800 60  0001 C CNN
+	1    8850 3800
+	-1   0    0    1   
+$EndComp
+$Comp
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C26
+U 1 1 60913BD4
+P 6950 2850
+F 0 "C26" V 6850 3400 45  0000 L CNN
+F 1 "100nF 0402" V 6850 2950 45  0000 L CNN
+F 2 "Capacitors:0402" H 7200 2760 20  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 6950 2850 60  0001 C CNN
+F 4 "732-7989-1-ND" H 6950 2850 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" H 6950 2850 50  0001 C CNN "Manufacturer"
+F 6 "885012206071" H 6950 2850 50  0001 C CNN "MPN"
+F 7 "CAP CER 0.1UF 25V X7R 0603" H 6950 2850 50  0001 C CNN "Description"
+	1    6950 2850
+	-1   0    0    1   
+$EndComp
+$Comp
+L pbrick-rescue:3.3V-SparkFun-PowerSymbols #SUPPLY06
+U 1 1 60915013
+P 6750 2750
+F 0 "#SUPPLY06" H 6800 2750 45  0001 L BNN
+F 1 "3.3V" V 6750 2878 45  0000 L CNN
+F 2 "XXX-00000" V 6708 2877 60  0001 L CNN
+F 3 "" H 6750 2750 60  0001 C CNN
+	1    6750 2750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6750 2750 6950 2750
+Wire Wire Line
+	6950 2750 7200 2750
+Connection ~ 6950 2750
+Connection ~ 7200 2750
+$Comp
+L power:GND #PWR038
+U 1 1 60931E39
+P 6950 2950
+F 0 "#PWR038" H 6950 2700 50  0001 C CNN
+F 1 "GND" V 6955 2822 50  0000 R CNN
+F 2 "" H 6950 2950 50  0001 C CNN
+F 3 "" H 6950 2950 50  0001 C CNN
+	1    6950 2950
+	1    0    0    -1  
+$EndComp
+Connection ~ 9100 3600
+Wire Wire Line
+	9100 3500 9050 3500
+Wire Wire Line
+	9100 3600 9100 3500
+Wire Wire Line
+	9100 3700 9100 3600
+Wire Wire Line
+	9050 3700 9100 3700
+$Comp
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C21
+U 1 1 609425DC
+P 8950 3700
+F 0 "C21" H 9100 3750 45  0000 L CNN
+F 1 "100nF 0402" H 9100 3850 45  0000 L CNN
+F 2 "Capacitors:0402" H 9200 3610 20  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 8950 3700 60  0001 C CNN
+F 4 "732-7989-1-ND" H 8950 3700 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" H 8950 3700 50  0001 C CNN "Manufacturer"
+F 6 "885012206071" H 8950 3700 50  0001 C CNN "MPN"
+F 7 "CAP CER 0.1UF 25V X7R 0603" H 8950 3700 50  0001 C CNN "Description"
+	1    8950 3700
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR049
+U 1 1 6093321A
+P 9100 3600
+F 0 "#PWR049" H 9100 3350 50  0001 C CNN
+F 1 "GND" V 9105 3472 50  0000 R CNN
+F 2 "" H 9100 3600 50  0001 C CNN
+F 3 "" H 9100 3600 50  0001 C CNN
+	1    9100 3600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C20
+U 1 1 60933210
+P 8950 3500
+F 0 "C20" H 8750 3550 45  0000 L CNN
+F 1 "10nF 0402" H 8450 3650 45  0000 L CNN
+F 2 "Capacitors:0402" H 9200 3410 20  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 8950 3500 60  0001 C CNN
+F 4 "732-7989-1-ND" H 8950 3500 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" H 8950 3500 50  0001 C CNN "Manufacturer"
+F 6 "885012206071" H 8950 3500 50  0001 C CNN "MPN"
+F 7 "CAP CER 0.1UF 25V X7R 0603" H 8950 3500 50  0001 C CNN "Description"
+	1    8950 3500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8300 3450 8850 3450
+Wire Wire Line
+	8850 3450 8850 3500
+Wire Wire Line
+	8850 3700 8850 3500
+Connection ~ 8850 3500
+Wire Wire Line
+	8850 3700 8850 3800
+Connection ~ 8850 3700
+$Comp
+L power:GND #PWR0101
+U 1 1 60ACA9A7
+P 5250 1550
+F 0 "#PWR0101" H 5250 1300 50  0001 C CNN
+F 1 "GND" H 5255 1377 50  0000 C CNN
+F 2 "" H 5250 1550 50  0001 C CNN
+F 3 "" H 5250 1550 50  0001 C CNN
+	1    5250 1550
+	1    0    0    -1  
+$EndComp
+Connection ~ 4700 6000
+$Comp
+L power:GND #PWR0102
+U 1 1 6038E92C
+P 4700 6200
+F 0 "#PWR0102" H 4700 5950 50  0001 C CNN
+F 1 "GND" H 4850 6150 50  0000 C CNN
+F 2 "" H 4700 6200 50  0001 C CNN
+F 3 "" H 4700 6200 50  0001 C CNN
+	1    4700 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+2V8 #PWR0103
+U 1 1 60392560
+P 4700 6000
+F 0 "#PWR0103" H 4700 5850 50  0001 C CNN
+F 1 "+2V8" V 4715 6128 50  0000 L CNN
+F 2 "" H 4700 6000 50  0001 C CNN
+F 3 "" H 4700 6000 50  0001 C CNN
+	1    4700 6000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+2V8 #PWR0104
+U 1 1 60392933
+P 3000 2850
+F 0 "#PWR0104" H 3000 2700 50  0001 C CNN
+F 1 "+2V8" V 3015 2978 50  0000 L CNN
+F 2 "" H 3000 2850 50  0001 C CNN
+F 3 "" H 3000 2850 50  0001 C CNN
+	1    3000 2850
+	0    -1   1    0   
+$EndComp
+$Comp
+L power:+3.3VA #PWR0105
+U 1 1 603A2D97
+P 3350 2750
+F 0 "#PWR0105" H 3350 2600 50  0001 C CNN
+F 1 "+3.3VA" V 3365 2878 50  0000 L CNN
+F 2 "" H 3350 2750 50  0001 C CNN
+F 3 "" H 3350 2750 50  0001 C CNN
+	1    3350 2750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3350 2650 3350 2750
+Connection ~ 3350 2750
+Wire Wire Line
+	3350 2750 3350 2850
+$Comp
+L power:+3.3VA #PWR0106
+U 1 1 603A3842
+P 11600 5450
+F 0 "#PWR0106" H 11600 5300 50  0001 C CNN
+F 1 "+3.3VA" H 11615 5623 50  0000 C CNN
+F 2 "" H 11600 5450 50  0001 C CNN
+F 3 "" H 11600 5450 50  0001 C CNN
+	1    11600 5450
+	-1   0    0    1   
+$EndComp
+$Comp
+L pbrick-rescue:CAPACITOR_NP_0603-MF_Passives C5
+U 1 1 6020F934
+P 1850 5450
+F 0 "C5" V 1700 5200 45  0000 L CNN
+F 1 "1uF 0402" V 1700 5350 45  0000 L CNN
+F 2 "Capacitors:0402" H 2100 5360 20  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/885012006019.pdf" H 1850 5450 60  0001 C CNN
+F 4 "732-7994-1-ND" H 1850 5450 50  0001 C CNN "Digi-Key_PN"
+F 5 "Würth Elektronik" H 1850 5450 50  0001 C CNN "Manufacturer"
+F 6 "885012206076" H 1850 5450 50  0001 C CNN "MPN"
+F 7 "CAP CER 1UF 25V X7R 0603" H 1850 5450 50  0001 C CNN "Description"
+	1    1850 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 604831C3
+P 4600 7750
+F 0 "#PWR0110" H 4600 7500 50  0001 C CNN
+F 1 "GND" H 4750 7700 50  0000 C CNN
+F 2 "" H 4600 7750 50  0001 C CNN
+F 3 "" H 4600 7750 50  0001 C CNN
+	1    4600 7750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4600 7700 4600 7750
+Connection ~ 4600 7750
+Wire Wire Line
+	4600 7750 4600 7800
+$Comp
+L power:GND #PWR0111
+U 1 1 60488417
+P 4550 5700
+F 0 "#PWR0111" H 4550 5450 50  0001 C CNN
+F 1 "GND" V 4550 5700 50  0000 R CNN
+F 2 "" H 4550 5700 50  0001 C CNN
+F 3 "" H 4550 5700 50  0001 C CNN
+	1    4550 5700
+	0    -1   -1   0   
+$EndComp
+Text Label 12600 4050 0    50   ~ 0
+P0.22
+Text Label 12600 3950 0    50   ~ 0
+P0.00
+Text Label 12600 3850 0    50   ~ 0
+P0.01
+Text Label 7500 3450 2    50   ~ 0
+P0.19
+Text Label 7500 3150 2    50   ~ 0
+P0.22
+Text Label 10300 5800 1    50   ~ 0
+P0.19
+Text Label 10200 5800 1    50   ~ 0
+P0.22
+Text Label 2750 6600 2    50   ~ 0
+P0.19
+Text Label 2750 6500 2    50   ~ 0
+P0.22
+$Comp
+L pbrick-rescue:5V-SparkFun-PowerSymbols #SUPPLY0101
+U 1 1 604DCCBD
+P 11250 1050
+F 0 "#SUPPLY0101" H 11300 1050 45  0001 L BNN
+F 1 "5V" V 11250 1178 45  0000 L CNN
+F 2 "XXX-00000" V 11292 1178 60  0001 L CNN
+F 3 "" H 11250 1050 60  0001 C CNN
+	1    11250 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3VA #PWR0114
+U 1 1 60522B8A
+P 3650 1050
+F 0 "#PWR0114" H 3650 900 50  0001 C CNN
+F 1 "+3.3VA" V 3650 1350 50  0000 C CNN
+F 2 "" H 3650 1050 50  0001 C CNN
+F 3 "" H 3650 1050 50  0001 C CNN
+	1    3650 1050
+	-1   0    0    1   
+$EndComp
+$Comp
+L pbrick-rescue:3.3V-SparkFun-PowerSymbols #SUPPLY0102
+U 1 1 605C0668
+P 10400 6200
+F 0 "#SUPPLY0102" H 10450 6200 45  0001 L BNN
+F 1 "3.3V" V 10400 6328 45  0000 L CNN
+F 2 "XXX-00000" V 10358 6327 60  0001 L CNN
+F 3 "" H 10400 6200 60  0001 C CNN
+	1    10400 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L pbrick-rescue:3.3V-SparkFun-PowerSymbols #SUPPLY0103
+U 1 1 605C136D
+P 10700 5900
+F 0 "#SUPPLY0103" H 10750 5900 45  0001 L BNN
+F 1 "3.3V" V 10700 6028 45  0000 L CNN
+F 2 "XXX-00000" V 10658 6027 60  0001 L CNN
+F 3 "" H 10700 5900 60  0001 C CNN
+	1    10700 5900
+	0    1    1    0   
+$EndComp
+$Comp
+L pbrick-rescue:3.3V-SparkFun-PowerSymbols #SUPPLY0104
+U 1 1 605C19F6
+P 9800 5900
+F 0 "#SUPPLY0104" H 9850 5900 45  0001 L BNN
+F 1 "3.3V" V 9800 6028 45  0000 L CNN
+F 2 "XXX-00000" V 9758 6027 60  0001 L CNN
+F 3 "" H 9800 5900 60  0001 C CNN
+	1    9800 5900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	8750 5350 8850 5350
+Wire Wire Line
+	6100 6200 6100 6250
+$Comp
+L pbrick-rescue:3.3V-SparkFun-PowerSymbols #SUPPLY0108
+U 1 1 60340787
+P 6100 6250
+F 0 "#SUPPLY0108" H 6150 6250 45  0001 L BNN
+F 1 "3.3V" V 6100 6378 45  0000 L CNN
+F 2 "XXX-00000" V 6058 6377 60  0001 L CNN
+F 3 "" H 6100 6250 60  0001 C CNN
+	1    6100 6250
+	0    -1   -1   0   
+$EndComp
+Connection ~ 6100 6250
+Wire Wire Line
+	6100 6250 6100 6300
+Wire Wire Line
+	1400 5900 1850 5900
+Wire Wire Line
+	1400 6000 1650 6000
+Wire Wire Line
+	1650 6150 1650 6000
+Connection ~ 1650 6000
+Wire Wire Line
+	1650 6000 2150 6000
+Wire Wire Line
+	1850 5900 1850 6150
+Connection ~ 1850 5900
+Wire Wire Line
+	1850 5900 2250 5900
+$Comp
+L power:GND #PWR0115
+U 1 1 604C302D
+P 8850 5350
+F 0 "#PWR0115" H 8850 5100 50  0001 C CNN
+F 1 "GND" H 8855 5177 50  0000 C CNN
+F 2 "" H 8850 5350 50  0001 C CNN
+F 3 "" H 8850 5350 50  0001 C CNN
+	1    8850 5350
+	-1   0    0    1   
+$EndComp
+Connection ~ 8850 5350
+Wire Wire Line
+	8850 5350 8950 5350
+$Comp
+L 5055680471:5055680471 M1
+U 1 1 6051E596
+P 12300 6500
+F 0 "M1" V 12454 6172 50  0000 R CNN
+F 1 "5055680471" V 12363 6172 50  0000 R CNN
+F 2 "MOLEX_5055680471" H 12300 6500 50  0001 L BNN
+F 3 "" H 12300 6500 50  0001 L BNN
+F 4 "A" H 12300 6500 50  0001 L BNN "PARTREV"
+F 5 "Mnufacturer Recommendation" H 12300 6500 50  0001 L BNN "STANDARD"
+F 6 "MOLEX" H 12300 6500 50  0001 L BNN "MANUFACTURER"
+	1    12300 6500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L 5055680471:5055680471 M0
+U 1 1 6051EBC7
+P 11450 6500
+F 0 "M0" V 11604 6172 50  0000 R CNN
+F 1 "5055680471" V 11513 6172 50  0000 R CNN
+F 2 "MOLEX_5055680471" H 11450 6500 50  0001 L BNN
+F 3 "" H 11450 6500 50  0001 L BNN
+F 4 "A" H 11450 6500 50  0001 L BNN "PARTREV"
+F 5 "Mnufacturer Recommendation" H 11450 6500 50  0001 L BNN "STANDARD"
+F 6 "MOLEX" H 11450 6500 50  0001 L BNN "MANUFACTURER"
+	1    11450 6500
+	0    -1   -1   0   
+$EndComp
+NoConn ~ 11650 6100
+NoConn ~ 12500 6100
+$Comp
+L power:GND #PWR0117
+U 1 1 6055A376
+P 11450 6100
+F 0 "#PWR0117" H 11450 5850 50  0001 C CNN
+F 1 "GND" V 11450 5900 50  0000 C CNN
+F 2 "" H 11450 6100 50  0001 C CNN
+F 3 "" H 11450 6100 50  0001 C CNN
+	1    11450 6100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0118
+U 1 1 6055A9F7
+P 12300 6100
+F 0 "#PWR0118" H 12300 5850 50  0001 C CNN
+F 1 "GND" V 12300 5900 50  0000 C CNN
+F 2 "" H 12300 6100 50  0001 C CNN
+F 3 "" H 12300 6100 50  0001 C CNN
+	1    12300 6100
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VDD #PWR0121
+U 1 1 6059A41D
+P 11150 6100
+F 0 "#PWR0121" H 11150 5950 50  0001 C CNN
+F 1 "VDD" V 11150 6300 50  0000 C CNN
+F 2 "" H 11150 6100 50  0001 C CNN
+F 3 "" H 11150 6100 50  0001 C CNN
+	1    11150 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR0122
+U 1 1 6059BB74
+P 12000 6100
+F 0 "#PWR0122" H 12000 5950 50  0001 C CNN
+F 1 "VDD" V 12000 6300 50  0000 C CNN
+F 2 "" H 12000 6100 50  0001 C CNN
+F 3 "" H 12000 6100 50  0001 C CNN
+	1    12000 6100
+	1    0    0    -1  
+$EndComp
+Text Label 11350 6100 1    50   ~ 0
+M0_0
+Text Label 11250 6100 1    50   ~ 0
+M0_1
+Text Label 12100 6100 1    50   ~ 0
+M1_1
+Text Label 12200 6100 1    50   ~ 0
+M1_0
+$Comp
+L pbrick:PCA9624 U7
+U 1 1 6035C8D6
+P 11400 1800
+F 0 "U7" H 11400 2000 50  0000 C CNN
+F 1 "PCA9624" H 11400 1850 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-24-1EP_5x5mm_P0.65mm_EP3.2x3.2mm_ThermalVias" H 11450 1800 50  0001 C CNN
+F 3 "https://www.nxp.com/docs/en/data-sheet/PCA9624.pdf" H 11450 1800 50  0001 C CNN
+	1    11400 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L pbrick-rescue:5V-SparkFun-PowerSymbols #SUPPLY0105
+U 1 1 603806F3
+P 11550 1050
+F 0 "#SUPPLY0105" H 11600 1050 45  0001 L BNN
+F 1 "5V" V 11550 1178 45  0000 L CNN
+F 2 "XXX-00000" V 11592 1178 60  0001 L CNN
+F 3 "" H 11550 1050 60  0001 C CNN
+	1    11550 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11150 2450 11150 2500
+Wire Wire Line
+	11150 2500 11250 2500
+Wire Wire Line
+	11650 2500 11650 2450
+Wire Wire Line
+	11550 2450 11550 2500
+Connection ~ 11550 2500
+Wire Wire Line
+	11550 2500 11650 2500
+Wire Wire Line
+	11450 2450 11450 2500
+Connection ~ 11450 2500
+Wire Wire Line
+	11450 2500 11550 2500
+Wire Wire Line
+	11350 2450 11350 2500
+Connection ~ 11350 2500
+Wire Wire Line
+	11350 2500 11400 2500
+Wire Wire Line
+	11250 2450 11250 2500
+Connection ~ 11250 2500
+Wire Wire Line
+	11250 2500 11350 2500
+Connection ~ 11400 2500
+Wire Wire Line
+	11400 2500 11450 2500
+Wire Wire Line
+	12100 1900 12150 1900
+Wire Wire Line
+	12150 1900 12150 2000
+Wire Wire Line
+	12150 2100 12100 2100
+Wire Wire Line
+	12100 2000 12150 2000
+Connection ~ 12150 2000
+Wire Wire Line
+	12150 2000 12150 2100
+Wire Wire Line
+	12100 1700 12150 1700
+Wire Wire Line
+	12150 1700 12150 1600
+Wire Wire Line
+	12150 1500 12100 1500
+Wire Wire Line
+	12100 1600 12150 1600
+Connection ~ 12150 1600
+Wire Wire Line
+	12150 1600 12150 1500
+$Comp
+L pbrick-rescue:5V-SparkFun-PowerSymbols #SUPPLY0106
+U 1 1 60422EE3
+P 12100 1800
+F 0 "#SUPPLY0106" H 12150 1800 45  0001 L BNN
+F 1 "5V" V 12100 1928 45  0000 L CNN
+F 2 "XXX-00000" V 12142 1928 60  0001 L CNN
+F 3 "" H 12100 1800 60  0001 C CNN
+	1    12100 1800
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 6042343E
+P 12150 2000
+F 0 "#PWR0107" H 12150 1750 50  0001 C CNN
+F 1 "GND" V 12155 1872 50  0000 R CNN
+F 2 "" H 12150 2000 50  0001 C CNN
+F 3 "" H 12150 2000 50  0001 C CNN
+	1    12150 2000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 60423B66
+P 12150 1600
+F 0 "#PWR0108" H 12150 1350 50  0001 C CNN
+F 1 "GND" V 12155 1472 50  0000 R CNN
+F 2 "" H 12150 1600 50  0001 C CNN
+F 3 "" H 12150 1600 50  0001 C CNN
+	1    12150 1600
+	0    -1   -1   0   
+$EndComp
+Text Label 6250 7100 2    50   ~ 0
+PCA9624_1
+Text Label 6250 7000 2    50   ~ 0
+PCA9624_2
+Text Label 6250 6900 2    50   ~ 0
+PCA9624_3
+Text Label 6250 6800 2    50   ~ 0
+PCA9624_4
+Text Label 6250 6600 2    50   ~ 0
+PCA9624_5
+Text Label 6250 6500 2    50   ~ 0
+PCA9624_6
+$Comp
+L power:GND #PWR0109
+U 1 1 603639F2
+P 11100 3400
+F 0 "#PWR0109" H 11100 3150 50  0001 C CNN
+F 1 "GND" H 11105 3227 50  0000 C CNN
+F 2 "" H 11100 3400 50  0001 C CNN
+F 3 "" H 11100 3400 50  0001 C CNN
+	1    11100 3400
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3VA #PWR?
+U 1 1 60491C73
+P 4650 1250
+F 0 "#PWR?" H 4650 1100 50  0001 C CNN
+F 1 "+3.3VA" V 4665 1378 50  0000 L CNN
+F 2 "" H 4650 1250 50  0001 C CNN
+F 3 "" H 4650 1250 50  0001 C CNN
+	1    4650 1250
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

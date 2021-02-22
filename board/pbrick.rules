@@ -11,10 +11,10 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 7814)
+    (start_pass_no 10062)
     (layer_rule F.Cu
       (active on)
-      (preferred_direction horizontal)
+      (preferred_direction vertical)
       (preferred_direction_trace_costs 1.6)
       (against_preferred_direction_trace_costs 3.4)
     )
@@ -22,17 +22,17 @@
       (active on)
       (preferred_direction vertical)
       (preferred_direction_trace_costs 1.0)
-      (against_preferred_direction_trace_costs 1.6)
+      (against_preferred_direction_trace_costs 1.5)
     )
     (layer_rule GND
       (active off)
       (preferred_direction horizontal)
       (preferred_direction_trace_costs 1.0)
-      (against_preferred_direction_trace_costs 1.6)
+      (against_preferred_direction_trace_costs 1.5)
     )
     (layer_rule B.Cu
       (active on)
-      (preferred_direction vertical)
+      (preferred_direction horizontal)
       (preferred_direction_trace_costs 1.6)
       (against_preferred_direction_trace_costs 3.4)
     )
@@ -79,6 +79,9 @@
   (via 
     "Via[0-3]_609.6:304.8_um-VDD" "Via[0-3]_609.6:304.8_um" VDD
   )
+  (via 
+    "Via[0-3]_609.6:304.8_um-VTRACE" "Via[0-3]_609.6:304.8_um" VTRACE
+  )
   (via_rule
     default "Via[0-3]_609.6:304.8_um"
   )
@@ -100,6 +103,9 @@
   (via_rule
     VDD "Via[0-3]_609.6:304.8_um-VDD"
   )
+  (via_rule
+    VTRACE "Via[0-3]_609.6:304.8_um-VTRACE"
+  )
   (class default
     (clearance_class default)
     (via_rule default)
@@ -112,12 +118,10 @@
   )
   (class "kicad_default"
     Earth /P0.00 /P0.01 "Net-(LED1-Pad3)" "Net-(LED1-Pad2)" "Net-(LED1-Pad1)" /P0.18 /SWDCLK
-    /SWDIO /P0.07 /P0.21 /P1.00 /P0.23 /P0.10 /P0.09 /P0.22
-    /P0.19 /P1.09 /P0.11 /P0.12 /P0.03 /P1.08 /P0.02 /RF
-    /ANT "Net-(C3-Pad2)" "Net-(U2-Pad5)" "Net-(C10-Pad2)" "Net-(U3-Pad5)" "Net-(U3-Pad3)" "Net-(C14-Pad2)" "Net-(U1-Pad48)"
-    "Net-(U1-Pad47)" "Net-(J1-PadMP2)" "Net-(J1-PadMP1)" "Net-(C20-Pad1)" "Net-(C22-Pad2)" "Net-(C23-Pad2)" "Net-(C24-Pad2)" "Net-(Q1-Pad3)"
-    "Net-(R8-Pad2)" "/VBUS_EN_SNK" /DISCH "Net-(U4-Pad17)" "Net-(U4-Pad15)" "Net-(U4-Pad14)" "Net-(U4-Pad6)" "Net-(U4-Pad20)"
-    "Net-(U4-Pad19)" "Net-(U4-Pad11)" "Net-(C21-Pad2)" "Net-(C4-Pad1)" "Net-(J6-Pad6)" GND "Net-(C15-Pad1)"
+    /SWDIO /P0.23 /P0.10 /P0.09 /RF /ANT "Net-(C3-Pad2)" "Net-(C10-Pad2)"
+    "/VBUS_EN_SNK" /DISCH GND "Net-(C5-Pad1)" "Net-(C7-Pad2)" "Net-(C11-Pad2)" "Net-(C17-Pad2)" "Net-(D2-Pad2)"
+    "Net-(D2-Pad1)" "Net-(R2-Pad2)" +2V8 +3.3VA /P0.22 /P0.19 "Net-(M0-PadS1)" "Net-(M1-PadS1)"
+    "/PCA9624_1" "/PCA9624_2" "/PCA9624_3" "/PCA9624_4" "/PCA9624_5" "/PCA9624_6"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule
@@ -161,7 +165,7 @@
     )
   )
   (class VBUS
-    VBUS "Net-(D1-Pad2)" "Net-(D1-Pad1)"
+    VBUS
     (clearance_class VBUS)
     (via_rule VBUS)
     (rule
@@ -177,6 +181,17 @@
     (via_rule VDD)
     (rule
       (width 700.0)
+    )
+    (circuit 
+      (use_layer F.Cu M.Cu B.Cu)
+    )
+  )
+  (class VTRACE
+    "Net-(Q1-Pad3)" "Net-(C8-Pad2)"
+    (clearance_class VTRACE)
+    (via_rule VTRACE)
+    (rule
+      (width 500.0)
     )
     (circuit 
       (use_layer F.Cu M.Cu B.Cu)
