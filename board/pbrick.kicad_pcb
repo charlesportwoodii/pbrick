@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 9)
+    (drawings 10)
     (tracks 964)
     (zones 0)
     (modules 59)
@@ -11,10 +11,10 @@
 
   (page A4)
   (layers
-    (0 F.Cu signal)
-    (1 M.Cu signal)
-    (2 GND power)
-    (31 B.Cu signal)
+    (0 F.Cu signal hide)
+    (1 M.Cu signal hide)
+    (2 GND power hide)
+    (31 B.Cu signal hide)
     (32 B.Adhes user)
     (33 F.Adhes user)
     (34 B.Paste user)
@@ -3872,6 +3872,9 @@
     )
   )
 
+  (gr_text "PBRICK - PROTEUS III - REVISION VIII" (at 121 103.2 270) (layer B.SilkS)
+    (effects (font (size 0.45 0.45) (thickness 0.1125)) (justify mirror))
+  )
   (gr_line (start 121.6 98.8) (end 123 98.8) (layer F.SilkS) (width 0.12))
   (gr_circle (center 120.5 101) (end 120.55 101) (layer F.SilkS) (width 0.12))
   (gr_circle (center 124.5 116.2) (end 124.6 116.2) (layer F.SilkS) (width 0.12))
