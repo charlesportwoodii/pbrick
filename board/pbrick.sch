@@ -2334,4 +2334,12 @@ Text Label 12850 2450 2    50   ~ 0
 PCA9624_0
 Text Label 12850 2550 2    50   ~ 0
 PCA9624_7
+Wire Wire Line
+	3400 4450 3400 4350
+Wire Wire Line
+	3400 4350 3800 4350
+Wire Wire Line
+	3800 4350 3800 4450
+Connection ~ 3400 4450
+Connection ~ 3800 4450
 $EndSCHEMATC
