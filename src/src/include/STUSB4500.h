@@ -172,10 +172,11 @@ ret_code_t STUSB4500_check_cable_attached(uint8_t deviceAddress);
 /**@brief Loads active PDO sink data into storage buffer
  * 
  * @param[in] uint8_t          deviceAddress   Device Address of STUSB4500 (0x28 default)
+ * @param[in] STUSB4500_pdo_sink_typedef pdoSink Object container for PDO Sink Data
  * 
  *  @return ret_code_t
  */
-ret_code_t STUSB4500_read_sink_pdo(uint8_t deviceAddress);
+ret_code_t STUSB4500_read_sink_pdo(uint8_t deviceAddress, STUSB4500_pdo_sink_typedef *pdoSink);
 
 /**@brief Outputs active PDO sink data to RTT
  * 

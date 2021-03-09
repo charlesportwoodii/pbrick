@@ -868,12 +868,11 @@ int main(void)
     ret_code_t err_code;
 
     log_init();
+    pd_init();
 
     // Initialize the async SVCI interface to bootloader before any interrupts are enabled.
     err_code = ble_dfu_buttonless_async_svci_init();
     APP_ERROR_CHECK(err_code);
-
-    pd_init();
 
     timers_init();
     buttons_leds_init(&erase_bonds);

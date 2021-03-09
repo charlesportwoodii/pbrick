@@ -8,8 +8,6 @@
 #include "pbrick_twi.h"
 #include "nrf_log.h"
 
-static STUSB4500_pdo_sink_typedef pdoSink[3];
-
 ret_code_t STUSB4500_init(uint8_t deviceAddress)
 {
     ret_code_t ret;
@@ -27,7 +25,8 @@ ret_code_t STUSB4500_init(uint8_t deviceAddress)
         return NRF_ERROR_NOT_SUPPORTED;
     }
 
-    ret = STUSB4500_read_sink_pdo(deviceAddress);
+    STUSB4500_pdo_sink_typedef pdoSink[3];
+    ret = STUSB4500_read_sink_pdo(deviceAddress, &pdoSink[0]);
     
     // Clear interrupts 0x0D => 0x16
     for (int i = 0; i < 12; i++) {
@@ -124,7 +123,8 @@ ret_code_t STUSB4500_update_pdo(uint8_t deviceAddress, uint8_t pdo, int voltageM
     ret_code_t ret;
     uint8_t address = STUSB4500_DPM_SNK_PDO1 + 4 * (pdo - 1);
 
-    ret = STUSB4500_read_sink_pdo(deviceAddress);
+    STUSB4500_pdo_sink_typedef pdoSink[3];
+    ret = STUSB4500_read_sink_pdo(deviceAddress, &pdoSink[0]);
 
     uint32_t old = pdoSink[pdo - 1].d32;
     pdoSink[pdo - 1].fixed.OPERATIONAL_CURRENT = current;
@@ -198,7 +198,7 @@ ret_code_t STUSB4500_check_cable_attached(uint8_t deviceAddress)
     return NRF_ERROR_NOT_SUPPORTED;
 }
 
-ret_code_t STUSB4500_read_sink_pdo(uint8_t deviceAddress)
+ret_code_t STUSB4500_read_sink_pdo(uint8_t deviceAddress, STUSB4500_pdo_sink_typedef *pdoSink)
 {
     ret_code_t ret;
     uint8_t data[12] = {0};
@@ -229,8 +229,9 @@ ret_code_t STUSB4500_read_sink_pdo(uint8_t deviceAddress)
 ret_code_t STUSB4500_print_sink_pdo(uint8_t deviceAddress)
 {
     ret_code_t ret;
+    STUSB4500_pdo_sink_typedef pdoSink[3];
 
-    ret = STUSB4500_read_sink_pdo(deviceAddress);
+    ret = STUSB4500_read_sink_pdo(deviceAddress, &pdoSink[0]);
 
     if (NRF_SUCCESS != ret) {
         NRF_LOG_DEBUG("Unable to read sink PDO status");
