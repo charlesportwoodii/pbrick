@@ -37,9 +37,13 @@ ret_code_t twi_tx(uint8_t deviceAddress, uint8_t registerAddress, uint8_t *data,
     ret_code_t ret;
     uint8_t rwData[255] = {0};
     rwData[0] = registerAddress;
-    memcpy(&rwData[1], data, length);
+    for (int i = 0; i < length; i++) {
+        rwData[i+1] = data[i];
+    }
 
-    ret = nrf_drv_twi_tx(&m_twi_master, deviceAddress, rwData, sizeof(length), false);
+    NRF_LOG_DEBUG("Writing to %x: %x", registerAddress, rwData);
+
+    ret = nrf_drv_twi_tx(&m_twi_master, deviceAddress, rwData, length + 1, false);
 
     return ret;
 }

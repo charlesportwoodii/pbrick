@@ -842,13 +842,13 @@ static void pd_init()
     if (NRF_SUCCESS == err_code) {
         err_code = STUSB4500_check_cable_attached(STUSB4500_DEVICE_ADDRESS);
         if (NRF_SUCCESS == err_code) {
+            err_code = STUSB4500_update_pdo_number(STUSB4500_DEVICE_ADDRESS, 2);
+            APP_ERROR_CHECK(err_code);
             err_code = STUSB4500_update_pdo(STUSB4500_DEVICE_ADDRESS, 1, 5000, 500);
             APP_ERROR_CHECK(err_code);
             err_code = STUSB4500_update_pdo(STUSB4500_DEVICE_ADDRESS, 2, 9000, 2000);
             APP_ERROR_CHECK(err_code);
             err_code = STUSB4500_update_pdo(STUSB4500_DEVICE_ADDRESS, 3, 12000, 1500);
-            APP_ERROR_CHECK(err_code);
-            err_code = STUSB4500_update_pdo_number(STUSB4500_DEVICE_ADDRESS, 3);
             APP_ERROR_CHECK(err_code);
             err_code = STUSB4500_soft_reset(STUSB4500_DEVICE_ADDRESS);
             APP_ERROR_CHECK(err_code);

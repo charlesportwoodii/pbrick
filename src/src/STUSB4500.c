@@ -60,7 +60,7 @@ ret_code_t STUSB4500_soft_reset(uint8_t deviceAddress)
         data8[1] = (data16 >> 8) & 0xFF;
 
         // Write soft reset to device
-        ret = twi_tx(deviceAddress, STUSB4500_TX_HEADER_LOW, (uint8_t *)&data8, 2);
+        ret = twi_tx(deviceAddress, STUSB4500_TX_HEADER_LOW, data8, 2);
         if (NRF_SUCCESS != ret) {
             NRF_LOG_WARNING("Unable to write soft-reset to device");
             return ret;
@@ -136,10 +136,13 @@ ret_code_t STUSB4500_update_pdo(uint8_t deviceAddress, uint8_t pdo, int voltageM
     NRF_LOG_DEBUG("Current: %X - Writing %X to PDO %x", old, data, pdo);
 
     // Transmit the changes to the device
+    ret = twi_tx(deviceAddress, address, &data[0], 4);
+    /*
     ret = twi_tx(deviceAddress, address, &data[0], 1);
     ret = twi_tx(deviceAddress, address + 1, &data[1], 1);
     ret = twi_tx(deviceAddress, address + 2, &data[2], 1);
     ret = twi_tx(deviceAddress, address + 3, &data[3], 1);
+    */
     if (NRF_SUCCESS != ret) {
         NRF_LOG_DEBUG("Unable to update PDO data");
         return ret;
