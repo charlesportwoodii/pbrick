@@ -106,10 +106,10 @@ ret_code_t pbrick_motor_disable()
         return NRF_ERROR_INTERNAL;
     }
 
-    for (int i = 0; i < sizeof(motors.motors); i++) {
+    for (int i = 0; i < motors.size; i++) {
         // Clear the PWM driver pin
         ret = PCA9624_set(PCA9624_DEVICE_ADDRESS, motors.motors[i].driverPin, 0x00);
-        for (int j = 0; i < sizeof(motors.motors[i].pins); j++) {
+        for (int j = 0; i < 2; j++) {
             // Clear the PWM direction pin
             ret = PCA9624_set(PCA9624_DEVICE_ADDRESS, motors.motors[i].pins[j], 0x00);
         }
@@ -139,7 +139,7 @@ ret_code_t pbrick_motor_set(const uint8_t data[])
         return NRF_ERROR_INTERNAL;
     }
 
-    ret =  pbrick_motor_set_internal(motor, pwm, direction);
+    ret = pbrick_motor_set_internal(motor, pwm, direction);
     return ret;
 }
 
