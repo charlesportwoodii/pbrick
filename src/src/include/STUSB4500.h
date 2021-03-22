@@ -1,5 +1,5 @@
 #ifndef STUSB4500_H__
-#define STUSB4500_H__\
+#define STUSB4500_H__
 
 /** @usage
  * 
@@ -31,7 +31,10 @@ extern "C" {
 #include "sdk_common.h"
 #include "pbrick_twi.h"
 
+#ifndef STUSB4500_DEVICE_ADDRESS
 #define STUSB4500_DEVICE_ADDRESS        0x28
+#endif
+
 #define STUSB4500_REG_DEVICE_ID         0x2F
 #define STUSB4500_INTERRUPT             0x0B
 #define STUSB4500_ALERT_STATUS_MASK     0x0C

@@ -1485,14 +1485,6 @@ F 3 "" H 3850 1750 50  0001 C CNN
 	1    3850 1750
 	1    0    0    -1  
 $EndComp
-Text Label 12850 2050 2    50   ~ 0
-P0.11
-Text Label 12850 2150 2    50   ~ 0
-P0.12
-Text Label 12850 2250 2    50   ~ 0
-P0.03
-Text Label 12850 2350 2    50   ~ 0
-P0.07
 Wire Notes Line
 	450  3450 5700 3450
 Wire Notes Line
@@ -1539,19 +1531,10 @@ Text Label 10700 1500 2    50   ~ 0
 PCA9624_6
 Text Label 10700 1400 2    50   ~ 0
 PCA9624_7
-NoConn ~ 12850 2050
-NoConn ~ 12850 2150
-NoConn ~ 12850 2250
-NoConn ~ 12850 2350
-Text Label 12850 1950 2    50   ~ 0
-P1.09
 Text Label 8300 3250 0    50   ~ 0
 P0.01
 Text Label 8300 3150 0    50   ~ 0
 P0.00
-NoConn ~ 12850 1950
-NoConn ~ 12850 2550
-NoConn ~ 12850 2450
 Connection ~ 10300 5900
 Wire Wire Line
 	10300 5900 10300 6200
@@ -1616,9 +1599,6 @@ F 3 "" H 10500 6200 50  0001 C CNN
 	1    10500 6200
 	0    -1   -1   0   
 $EndComp
-Text Label 12850 1650 2    50   ~ 0
-P1.08
-NoConn ~ 12850 1650
 $Comp
 L pbrick:2533020201601 U6
 U 1 1 608ABC76
@@ -2051,17 +2031,6 @@ F 7 "IC LED DRIVER LINEAR DIM 24HVQFN" H 11400 1800 50  0001 C CNN "Description"
 	1    11400 1800
 	1    0    0    -1  
 $EndComp
-$Comp
-L pbrick-rescue:5V-SparkFun-PowerSymbols #SUPPLY0105
-U 1 1 603806F3
-P 11550 1050
-F 0 "#SUPPLY0105" H 11600 1050 45  0001 L BNN
-F 1 "5V" V 11550 1178 45  0000 L CNN
-F 2 "XXX-00000" V 11592 1178 60  0001 L CNN
-F 3 "" H 11550 1050 60  0001 C CNN
-	1    11550 1050
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	11650 2500 11650 2450
 Wire Wire Line
@@ -2179,10 +2148,6 @@ F 7 "CAP CER 0.1UF 16V X7R 0603" V 8550 6200 50  0001 C CNN "Description"
 	1    8550 6200
 	1    0    0    -1  
 $EndComp
-Text Label 12850 2450 2    50   ~ 0
-PCA9624_0
-Text Label 12850 2550 2    50   ~ 0
-PCA9624_7
 Wire Wire Line
 	3400 4450 3400 4350
 Wire Wire Line
@@ -2251,14 +2216,16 @@ F 3 "" H 4650 1250 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L pbrick-rescue:3.3V-SparkFun-PowerSymbols #SUPPLY?
+L pbrick-rescue:3.3V-SparkFun-PowerSymbols #SUPPLY0105
 U 1 1 6056102B
 P 2300 2800
-F 0 "#SUPPLY?" H 2350 2800 45  0001 L BNN
+F 0 "#SUPPLY0105" H 2350 2800 45  0001 L BNN
 F 1 "3.3V" V 2300 2928 45  0000 L CNN
 F 2 "XXX-00000" V 2258 2927 60  0001 L CNN
 F 3 "" H 2300 2800 60  0001 C CNN
 	1    2300 2800
 	0    1    1    0   
 $EndComp
+Text Label 11550 1050 1    50   ~ 0
+P1.00
 $EndSCHEMATC

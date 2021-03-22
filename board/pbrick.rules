@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 10285)
+    (start_pass_no 7411)
     (layer_rule F.Cu
       (active on)
       (preferred_direction vertical)
@@ -121,7 +121,10 @@
     /SWDIO /P0.23 /P0.10 /P0.09 /RF /ANT "Net-(C3-Pad2)" "Net-(C10-Pad2)"
     "/VBUS_EN_SNK" /DISCH GND "Net-(C5-Pad1)" "Net-(C7-Pad2)" "Net-(C11-Pad2)" "Net-(C17-Pad2)" "Net-(D2-Pad2)"
     "Net-(D2-Pad1)" "Net-(R2-Pad2)" /P0.22 /P0.19 "/PCA9624_1" "/PCA9624_2" "/PCA9624_3" "/PCA9624_4"
-    "/PCA9624_5" "/PCA9624_6" "Net-(C4-Pad1)" "Net-(C9-Pad2)"
+    "/PCA9624_5" "/PCA9624_6" "Net-(C4-Pad1)" "Net-(C9-Pad2)" "Net-(J2-Pad6)" /P0.07 /P0.21 /P1.00
+    /P1.09 /P0.11 /P0.12 /P0.03 /P1.08 /P0.02 "Net-(U1-Pad5)" "Net-(U2-Pad5)"
+    "Net-(U2-Pad3)" "Net-(U3-Pad17)" "Net-(U3-Pad15)" "Net-(U3-Pad14)" "Net-(U3-Pad6)" "Net-(U3-Pad20)" "Net-(U3-Pad19)" "Net-(U3-Pad11)"
+    "Net-(U5-Pad48)" "Net-(U5-Pad47)" "Net-(U6-Pad5)" "/PCA9624_7" "/PCA9624_0"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule

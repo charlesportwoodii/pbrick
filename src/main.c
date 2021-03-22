@@ -163,7 +163,7 @@ static bool app_shutdown_handler(nrf_pwr_mgmt_evt_t event)
     {
         case NRF_PWR_MGMT_EVT_PREPARE_DFU:
             NRF_LOG_INFO("Power management wants to reset to DFU mode.");
-            gpio_shutdown();
+            ble_pbrick_shutdown();
             break;
 
         default:

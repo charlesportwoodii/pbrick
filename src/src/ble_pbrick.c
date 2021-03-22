@@ -36,7 +36,7 @@ static void on_disconnect(ble_pbrick_t * p_pbrick, ble_evt_t const * p_ble_evt)
 
 #ifdef PBRICK_MOTOR_DISCONNECT_SHUTDOWN
     NRF_LOG_WARNING("Stopping motor on bluetooth disconnection.");
-    pbrick_motor_stop_all();
+    pbrick_motor_disable();
 #endif
 }
 
@@ -50,32 +50,14 @@ static void on_write(ble_pbrick_t * p_pbrick, ble_evt_t const * p_ble_evt)
     ble_gatts_evt_write_t const * p_evt_write = &p_ble_evt->evt.gatts_evt.params.write;
 
     if (p_evt_write->handle == p_pbrick->motor_value_handles.value_handle) {
-        pbrick_motor_set(p_evt_write->data);
+        ret_code_t ret = pbrick_motor_set(p_evt_write->data);
+        UNUSED_PARAMETER(ret);
     }
 }
 
-/** @brief Initializes the GPIO pins for all functions
- *
- * @param[in]   p_pbrick        Custom Service structure.
- * @param[in]   p_pbrick_init   Information needed to initialize the service.
- *
- * @return      void
- */
-static void gpio_init(
-    ble_pbrick_t * p_pbrick,
-    const ble_pbrick_init_t * p_pbrick_init
-)
+void ble_pbrick_shutdown()
 {
-    // Initialize motor0 control
-    pbrick_motor_init();
-}
-
-void gpio_shutdown()
-{
-    uint8_t data[] = { 0x00, 0x00, 0x00 };
-    uint8_t data2[] = { 0x01, 0x00, 0x00 };
-    pbrick_motor_set(data);
-    pbrick_motor_set(data2);
+    pbrick_motor_disable();
 }
 
 uint32_t ble_pbrick_init(
@@ -111,7 +93,10 @@ uint32_t ble_pbrick_init(
     err_code = motor_char_add(p_pbrick, p_pbrick_init);
     VERIFY_SUCCESS(err_code);
 
-    gpio_init(p_pbrick, p_pbrick_init);
+    // Ensure the motor driver activates
+    err_code = pbrick_motor_init();
+    VERIFY_SUCCESS(err_code);
+
     return NRF_SUCCESS;
 }
 

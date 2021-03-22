@@ -130,7 +130,6 @@ ret_code_t STUSB4500_update_pdo(uint8_t deviceAddress, uint8_t pdo, int voltageM
     pdoSink[pdo - 1].fixed.OPERATIONAL_CURRENT = current;
     pdoSink[pdo - 1].fixed.VOLTAGE = voltage;
 
-
     uint8_t data[4] = {0};
     memcpy(data, &pdoSink[pdo - 1].d32, sizeof(pdoSink[pdo - 1].d32));
     NRF_LOG_DEBUG("Current: %X - Writing %X to PDO %x", old, data, pdo);
