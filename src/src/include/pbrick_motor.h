@@ -5,7 +5,7 @@
 extern "C" {
 #endif
 
-#include "pbrick_board.h" 
+#include "pbrick_board.h"
 #include "PCA9624.h"
 
 struct s_pbrick_motor_state
@@ -34,7 +34,7 @@ ret_code_t pbrick_motor_init();
 /**@brief Enables the motor driver
  *          - Enables the OE pin LOW
  *          - Sets the LEDOUT0 and LEDOUT1 to 0x02 (10)
- * 
+ *
  * @return ret_code_t
  */
 ret_code_t pbrick_motor_enable();
@@ -43,7 +43,7 @@ ret_code_t pbrick_motor_enable();
  *          - Sets the OE pin HGIH
  *          - Sets LEDOUT0 and LEDOUT1 to 0x00 (00)
  *          - Clears PWM on all pins
- * 
+ *
  * @return ret_code_t
  */
 ret_code_t pbrick_motor_disable();
@@ -54,12 +54,12 @@ ret_code_t pbrick_motor_disable();
  *      Motor 0x01 = Motor 1
  *      Motor 0x02 = Motor 0 + Motor 1 in same direction
  *      Motor 0x03 = Motor 0 + Motor 1 in opposing directions
- * 
+ *
  *      Direction 0x00 = Normal
  *      Direction 0x01 = Counter
- * 
+ *
  *      PWM 0x00 => 0xFF (0-256)
- *                              
+ *
  * @return ret_code_t
  */
 ret_code_t pbrick_motor_set(const uint8_t data[]);

@@ -27,7 +27,7 @@ ret_code_t STUSB4500_init(uint8_t deviceAddress)
 
     STUSB4500_pdo_sink_typedef pdoSink[3];
     ret = STUSB4500_read_sink_pdo(deviceAddress, &pdoSink[0]);
-    
+
     // Clear interrupts 0x0D => 0x16
     for (int i = 0; i < 12; i++) {
         ret = twi_rx(deviceAddress, (STUSB4500_INTERRUPT + i), &data[0], 1);
@@ -195,7 +195,7 @@ ret_code_t STUSB4500_check_cable_attached(uint8_t deviceAddress)
 
         return NRF_SUCCESS;
     }
-    
+
     NRF_LOG_WARNING("USB Cable is not attached. Check connection and try again: %x", data);
     return NRF_ERROR_NOT_SUPPORTED;
 }
@@ -239,7 +239,7 @@ ret_code_t STUSB4500_print_sink_pdo(uint8_t deviceAddress)
         NRF_LOG_DEBUG("Unable to read sink PDO status");
         return ret;
     }
-    
+
     for (int i = 0; i < 3; i++) {
         float voltage =  pdoSink[i].fixed.VOLTAGE / 20;
         float current = pdoSink[i].fixed.OPERATIONAL_CURRENT / 100;

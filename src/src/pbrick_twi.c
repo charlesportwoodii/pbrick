@@ -21,7 +21,7 @@ ret_code_t pbrick_twi_init()
         .interrupt_priority = APP_IRQ_PRIORITY_HIGH,
         .clear_bus_init  = false
     };
-    
+
     err_code = nrf_drv_twi_init(&m_twi_master, &config, NULL, NULL);
 
     if (NRF_SUCCESS == err_code) {

@@ -2,21 +2,21 @@
 #define STUSB4500_H__
 
 /** @usage
- * 
+ *
  * ret_code_t ret;
- * 
+ *
  * ret = STUSB4500_init(STUSB4500_DEVICE_ADDRESS); // Iniitialize the STUSB4500 instance on a given address
  * APP_ERROR_CHECK(ret);
- * 
+ *
  * ret  = STUSB4500_check_cable_attached(STUSB4500_DEVICE_ADDRESS); // Optional: Ensure the USB cable is attached
  * APP_ERROR_CHECK(ret);
- * 
+ *
  * ret = STUSB4500_update_pdo(STUSB4500_DEVICE_ADDRESS, 2, 9000, 1500); // Set PDO1 to 9V1.5A
  * APP_ERROR_CHECK(ret);
- * 
+ *
  * ret = STUSB4500_update_pdo(STUSB4500_DEVICE_ADDRESS, 3, 12000, 1000); // Set PDO2 = 12V1A
  * APP_ERROR_CHECK(ret);
- * 
+ *
  * ret = STUSB4500_update_pdo_number(STUSB4500_DEVICE_ADDRESS, 3); // Enable PDO1, PDO2, and PDO3
  * APP_ERROR_CHECK(ret);
  *s * ret = STUSB4500_soft_reset(STUSB4500_DEVICE_ADDRESS); // Perform a soft reset to change the voltage without VBUS interruption
@@ -103,26 +103,26 @@ typedef union
         uint32_t OPERATING_CURRENT :10;
         uint32_t MIN_VOLTAGE:10;
         uint32_t MAX_VOLTAGE:10;
-        uint8_t VARIABLE_SUPPLY:2; 
+        uint8_t VARIABLE_SUPPLY:2;
       } variable;
       struct {
         uint32_t OPERATING_POWER :10;
         uint32_t MIN_VOLTAGE:10;
         uint32_t MAX_VOLTAGE:10;
-        uint8_t BATTERY:2; 
-      } battery;   
+        uint8_t BATTERY:2;
+      } battery;
 } STUSB4500_pdo_sink_typedef;
 
 typedef union
-{       
+{
         uint8_t d8;
         struct
         {
             uint8_t ccAttachState			:1;
-            uint8_t ccVConnSupplyState 		:1;    
-            uint8_t ccDataRole 			: 1;   
-            uint8_t ccPowerRole 			:1; 
-            uint8_t startupPowerMode 		: 1;    
+            uint8_t ccVConnSupplyState 		:1;
+            uint8_t ccDataRole 			: 1;
+            uint8_t ccPowerRole 			:1;
+            uint8_t startupPowerMode 		: 1;
             uint8_t ccAttachMode: 3;
         } b;
 } STUSB4500_cc_detection_typedef;
@@ -149,13 +149,13 @@ ret_code_t STUSB4500_soft_reset(uint8_t deviceAddress);
  * @oaram[in] uint8_t          pdo         The PDO instance to update (1-3)
  * @param[in] int                   voltageMv   Voltage to set in 50 milli-volt incriments
  * @param[in] int                   currentMa   Current to set in 50 milli-amp incriments
- * 
+ *
  * @return ret_code_t
  */
 ret_code_t STUSB4500_update_pdo(uint8_t deviceAddress, uint8_t pdo, int voltageMv, int currentMa);
 
 /**@brief Updates the number of active PDO instances
- * 
+ *
  * @param[in] uint8_t          deviceAddress   Device Address of STUSB4500 (0x28 default)
  * @param[in] uint8_t          number                The number of active PDO instances. Must be minimum of 1 (5V)
  *
@@ -164,35 +164,35 @@ ret_code_t STUSB4500_update_pdo(uint8_t deviceAddress, uint8_t pdo, int voltageM
 ret_code_t STUSB4500_update_pdo_number(uint8_t deviceAddress, uint8_t number);
 
 /**@brief Checks if the USB Type-C cable is attached
- * 
+ *
  * @param[in] uint8_t          deviceAddress   Device Address of STUSB4500 (0x28 default)
- * 
+ *
  *  @return ret_code_t
  */
 ret_code_t STUSB4500_check_cable_attached(uint8_t deviceAddress);
 
 /**@brief Loads active PDO sink data into storage buffer
- * 
+ *
  * @param[in] uint8_t          deviceAddress   Device Address of STUSB4500 (0x28 default)
  * @param[in] STUSB4500_pdo_sink_typedef pdoSink Object container for PDO Sink Data
- * 
+ *
  *  @return ret_code_t
  */
 ret_code_t STUSB4500_read_sink_pdo(uint8_t deviceAddress, STUSB4500_pdo_sink_typedef *pdoSink);
 
 /**@brief Outputs active PDO sink data to RTT
- * 
+ *
  * @param[in] uint8_t          deviceAddress   Device Address of STUSB4500 (0x28 default)
- * 
+ *
  *  @return ret_code_t
  */
 ret_code_t STUSB4500_print_sink_pdo(uint8_t deviceAddress);
 
 /**@brief Gets the current PDO sink number
- * 
+ *
  * @param[in] uint8_t          deviceAddress   Device Address of STUSB4500 (0x28 default)
  * @param[out] uint8_t*     pdo                        The PDO number that's currently active
- * 
+ *
  *  @return ret_code_t
  */
 ret_code_t STUSB4500_get_current_sink_pdo(uint8_t deviceAddress, uint8_t *pdo);
