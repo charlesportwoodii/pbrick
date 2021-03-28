@@ -56,8 +56,8 @@ ret_code_t pbrick_motor_enable()
     ret_code_t ret;
     UNUSED_PARAMETER(ret);
 
-    // Set the OE pin
-    nrf_gpio_pin_set(PBRICK_MOTOR_ENABLE);
+    // Set the OE pin ACTIVE LOW
+    nrf_gpio_pin_clear(PBRICK_MOTOR_ENABLE);
     PCA9624_LEDOUT_typedef ledout;
 
     ledout.ledout.ldr0 = 0x02;
@@ -85,8 +85,8 @@ ret_code_t pbrick_motor_disable()
     ret_code_t ret;
     UNUSED_PARAMETER(ret);
 
-    // Clear the OE pin
-    nrf_gpio_pin_clear(PBRICK_MOTOR_ENABLE);
+    // Clear the OE pin ACTIVE LOW
+    nrf_gpio_pin_set(PBRICK_MOTOR_ENABLE);
     PCA9624_LEDOUT_typedef ledout;
 
     ledout.ledout.ldr0 = 0x00;

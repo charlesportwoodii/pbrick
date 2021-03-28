@@ -57,29 +57,28 @@ typedef union  {
 ret_code_t PCA9642_init(uint8_t deviceAddress);
 
 /**@brief Sets LED[0-7] PWM frequency
- * 
+ *
  * @param[in] uint8_t       deviceAddress           Device Address of PCA9624
  * @param[in] uint8_t       address                         PWM[0-7] register address
  * @param[in] uint8_t       pwm                              pwm value 0x00 - 0xFF (0-255)
- * 
+ *
  * @return ret_code_t
  */
 ret_code_t PCA9624_set(uint8_t deviceAddress, uint8_t address, uint8_t pwm);
 
 /**@brief Configures LEDOUT
- * 
+ *
  * @param[in] uint8_t                                               deviceAddress           Device Address of PCA9624
  * @param[in] uint8_t                                               address                         LEDOUT address
  * @param[in] PCA9624_LEDOUT_typedef      ledout                            LEDOUT data
- * 
+ *
  * @return ret_code_t
  */
 ret_code_t PCA9624_set_ledout(uint8_t deviceAddress,  uint8_t address, PCA9624_LEDOUT_typedef ledout);
 
 /**@brief Software reset
- * 
+ *
  * @param[in] uint8_t                                               deviceAddress           Device Address of PCA9624
-
  * @return ret_code_t
  */
 ret_code_t PCA9624_reset(uint8_t deviceAddress);

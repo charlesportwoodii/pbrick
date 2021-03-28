@@ -35,6 +35,7 @@ extern "C" {
 
 #define STUSB4500_DEVICE_ADDRESS 0x28
 #define PCA9624_DEVICE_ADDRESS  0x08
+#define WC_2533020201601_DEVICE_ADDRESS 0x19
 
 #ifdef __cplusplus
 }

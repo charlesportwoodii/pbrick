@@ -19,8 +19,7 @@
  * 
  * ret = STUSB4500_update_pdo_number(STUSB4500_DEVICE_ADDRESS, 3); // Enable PDO1, PDO2, and PDO3
  * APP_ERROR_CHECK(ret);
- * 
- * ret = STUSB4500_soft_reset(STUSB4500_DEVICE_ADDRESS); // Perform a soft reset to change the voltage without VBUS interruption
+ *s * ret = STUSB4500_soft_reset(STUSB4500_DEVICE_ADDRESS); // Perform a soft reset to change the voltage without VBUS interruption
  * APP_ERROR_CHECK(ret);
  */
 
