@@ -33,4 +33,5 @@
   (lib (name TC2050-IDC-NL)(type Legacy)(uri /home/charlesportwoodii/Documents/KiCad/global-library/Libraries/TC2050-IDC-NL.lib)(options "")(descr ""))
   (lib (name TC2030-IDC-NL)(type Legacy)(uri /home/charlesportwoodii/Documents/KiCad/global-library/Libraries/TC2030-IDC-NL.lib)(options "")(descr ""))
   (lib (name 5055680471)(type Legacy)(uri /home/charlesportwoodii/Documents/KiCad/global-library/Libraries/5055680471.lib)(options "")(descr ""))
+  (lib (name 2021-03-30_00-34-32)(type Legacy)(uri /home/charlesportwoodii/Documents/KiCad/global-library/Libraries/2021-03-30_00-34-32.lib)(options "")(descr ""))
 )
