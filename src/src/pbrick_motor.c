@@ -40,7 +40,6 @@ ret_code_t pbrick_motor_init()
     pbrick_motor_setup(motor_pins1, PBRICK_PWM1_PWM);
     
     ret = PCA9685_init(PCA9685_DEVICE_ADDRESS);
-    VERIFY_SUCCESS(ret);
 
     return NRF_SUCCESS;
 }
