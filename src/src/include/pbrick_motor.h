@@ -6,7 +6,6 @@ extern "C" {
 #endif
 
 #include "pbrick_board.h"
-#include "PCA9624.h"
 
 struct s_pbrick_motor_state
 {
