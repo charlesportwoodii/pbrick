@@ -58,10 +58,12 @@ ret_code_t pbrick_motor_disable()
 ret_code_t pbrick_motor_set(const uint8_t data[])
 {
     uint8_t motor = data[0];
-    uint8_t direction = data[1];
+    //uint8_t direction = data[1];
     uint16_t pwm = ((uint16_t)data[3] << 8) | data[2];
 
     ret_code_t ret = PCA9685_setPin(PCA9685_DEVICE_ADDRESS, motor, pwm, false);
+    VERIFY_SUCCESS(ret);
+    
     return NRF_SUCCESS;
 }
 
