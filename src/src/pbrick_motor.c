@@ -11,6 +11,7 @@
 
 pbrick_motors motors;
 
+/*
 static void pbrick_motor_setup(uint8_t pins[2], uint8_t driverPin)
 {
     struct s_pbrick_motor_state s;
@@ -23,11 +24,13 @@ static void pbrick_motor_setup(uint8_t pins[2], uint8_t driverPin)
     motors.motors[motors.size] = s;
     motors.size += 1;
 }
+*/
 
 ret_code_t pbrick_motor_init()
 {
     ret_code_t ret;
     UNUSED_VARIABLE(ret);
+    /*
     motors.size = 0;
 
     uint8_t motor_pins[2] = { PBRICK_PWM0_P1, PBRICK_PWM0_P2 };
@@ -35,6 +38,9 @@ ret_code_t pbrick_motor_init()
 
     uint8_t motor_pins1[2] = { PBRICK_PWM1_P1, PBRICK_PWM1_P2 };
     pbrick_motor_setup(motor_pins1, PBRICK_PWM1_PWM);
+    */
+    ret = PCA9685_init(PCA9685_DEVICE_ADDRESS);
+    VERIFY_SUCCESS(ret);
 
     return NRF_SUCCESS;
 }

@@ -1,7 +1,6 @@
 #ifndef PCA9685_H__
 #define PCA9685_H__
 
-
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -9,7 +8,12 @@ extern "C" {
 #include "sdk_common.h"
 #include "pbrick_twi.h"
 
-#define PCA9685_DEVICE_ADDRESS 0xF8 /** 3 Byte Device ID **/
+
+#ifndef PCA9685_DEBUG
+#define PCA9685_DEBUG 0
+#endif
+
+#define PCA9685_DEVICE_ID 0xF8 /** 3 Byte Device ID **/
 #define PCA9685_MODE1 0x00      /**< Mode Register 1 */
 #define PCA9685_MODE2 0x01      /**< Mode Register 2 */
 #define PCA9685_SUBADR1 0x02    /**< I2C-bus subaddress 1 */
@@ -56,6 +60,15 @@ typedef union {
     } data;
 } PCA9685_MODE2_typedef;
 
+typedef union {
+    uint8_t d8;
+    struct {
+        uint8_t reserved: 3;
+        uint8_t LED : 1;
+        uint8_t LED_H: 4;
+    } data;
+} PCA9685_LED_typedef;
+
 // MODE1 bits
 #define PCA9685_MODE1_ALLCAL 0x01  /**< respond to LED All Call I2C-bus address */
 #define PCA9685_MODE1_SUB3 0x02    /**< respond to I2C-bus subaddress 3 */
@@ -79,21 +92,22 @@ typedef union {
 #define PCA9685_PRESCALE_MAX 255 /**< maximum prescale value */
 
 ret_code_t PCA9685_init(uint8_t deviceAddress);
-ret_code_t PCA9685_getMode1(uint8_t deviceAddress, PCA9685_MODE1_typedef mode);
-
-ret_code_t PCA9685_getMode2(uint8_t deviceAddress, PCA9685_MODE2_typedef mode);
-
+ret_code_t PCA9685_getMode1(uint8_t deviceAddress, PCA9685_MODE1_typedef *mode);
+ret_code_t PCA9685_setMode1(uint8_t deviceAddress, PCA9685_MODE1_typedef *mode);
+ret_code_t PCA9685_getMode2(uint8_t deviceAddress, PCA9685_MODE2_typedef *mode);
+ret_code_t PCA9685_setMode2(uint8_t deviceAddress, PCA9685_MODE2_typedef *mode);
 ret_code_t PCA9685_restart(uint8_t deviceAddress);
 ret_code_t PCA9685_sleep(uint8_t deviceAddress);
 ret_code_t PCA9685_wakeup(uint8_t deviceAddress);
-ret_code_t PCA9685_setExternalClock(uint8_t deviceAddress, uint8_t prescale);
 ret_code_t PCA9685_setPWMFrequency(uint8_t deviceAddress, float frequency);
 ret_code_t PCA9685_setOutputMode(uint8_t deviceAddress, bool totempole);
 ret_code_t PCA9685_getPWM(uint8_t deviceAddress, uint8_t num, uint8_t *pwm);
 ret_code_t PCA9685_setPWM(uint8_t deviceAddress, uint8_t num, uint16_t on, uint16_t off);
-ret_code_t PCA9685_setPin(uint8_t deviceAddress, uint8_t number, uint16_t val, bool invert);
-ret_code_t PCA9685_readPrescale(uint8_t deviceAddress, uint8_t *prescale);
+ret_code_t PCA9685_setPin(uint8_t deviceAddress, uint8_t num, uint16_t val, bool invert);
 ret_code_t PCA9685_writeMicroseconds(uint8_t deviceAddress, uint8_t num, uint16_t microseconds);
+
+uint32_t PCA9685_getOscillatorFrequency();
+void PCA9685_setOscillatorFrequency(uint32_t frequency);
 
 #ifdef __cplusplus
 }
