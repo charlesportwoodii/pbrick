@@ -30,8 +30,8 @@ extern "C" {
 #define PBRICK_PWM1_P1              PCA9624_PWM2
 #define PBRICK_PWM1_P2              PCA9624_PWM1
 
-#define PBRICK_SCL                          NRF_GPIO_PIN_MAP(0,1)
-#define PBRICK_SLA                          NRF_GPIO_PIN_MAP(0,0)
+#define PBRICK_SCL                          NRF_GPIO_PIN_MAP(0,22)
+#define PBRICK_SLA                          NRF_GPIO_PIN_MAP(0,19)
 
 #define STUSB4500_DEVICE_ADDRESS 0x28
 #define PCA9624_DEVICE_ADDRESS  0x08

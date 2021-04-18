@@ -20,8 +20,8 @@ ret_code_t STUSB4500_init(uint8_t deviceAddress)
         return ret;
     }
 
-    if (registerDeviceId == 0x25) {
-        NRF_LOG_ERROR("STUSB4500L is in use. Unable to configure.");
+    if (registerDeviceId != 0x25 && registerDeviceId != 0x21) {
+        NRF_LOG_ERROR("STUSB4500L is in use. Unable to configure. %x", registerDeviceId);
         return NRF_ERROR_NOT_SUPPORTED;
     }
 

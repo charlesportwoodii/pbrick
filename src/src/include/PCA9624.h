@@ -83,6 +83,20 @@ ret_code_t PCA9624_set_ledout(uint8_t deviceAddress,  uint8_t address, PCA9624_L
  */
 ret_code_t PCA9624_reset(uint8_t deviceAddress);
 
+/**@brief Puts the device in low-power mode, oscillator off
+ *
+ * @param[in] uint8_t                                               deviceAddress           Device Address of PCA9624
+ * @return ret_code_t
+ */
+ret_code_t PCA9624_sleep(uint8_t deviceAddress);
+
+/**@brief Wakes the device up
+ *
+ * @param[in] uint8_t                                               deviceAddress           Device Address of PCA9624
+ * @return ret_code_t
+ */
+ret_code_t PCA9624_wakeup(uint8_t deviceAddress);
+
 #ifdef __cplusplus
 }
 #endif
