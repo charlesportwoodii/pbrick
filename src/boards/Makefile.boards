@@ -105,7 +105,7 @@ SRC_FILES += \
   $(SDK_ROOT)/modules/nrfx/drivers/src/nrfx_twis.c \
   $(PROJ_DIR)/src/pbrick_twi.c \
   $(PROJ_DIR)/src/STUSB4500.c \
-  $(PROJ_DIR)/src/PCA9624.c \
+  $(PROJ_DIR)/src/PCA9685.c \
   $(PROJ_DIR)/src/pbrick_motor.c \
   $(PROJ_DIR)/src/ble_pbrick.c \
 

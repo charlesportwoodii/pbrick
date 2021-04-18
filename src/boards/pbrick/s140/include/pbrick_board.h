@@ -18,24 +18,22 @@ extern "C" {
 #define PBRICK_LED2                 LED_2
 #define PBRICK_LED3                 LED_3
 
-#define PBRICK_MOTOR_ENABLE NRF_GPIO_PIN_MAP(1,0)
+// Motor control
+#define PBRICK_PWM0_PWM         PCA9685_PWM10
+#define PBRICK_PWM0_P1              PCA9685_PWM8
+#define PBRICK_PWM0_P2              PCA9685_PWM7
 
 // Motor control
-#define PBRICK_PWM0_PWM         PCA9624_PWM6
-#define PBRICK_PWM0_P1              PCA9624_PWM4
-#define PBRICK_PWM0_P2              PCA9624_PWM3
-
-// Motor control
-#define PBRICK_PWM1_PWM        PCA9624_PWM5
-#define PBRICK_PWM1_P1              PCA9624_PWM2
-#define PBRICK_PWM1_P2              PCA9624_PWM1
+#define PBRICK_PWM1_PWM         PCA9685_PWM9
+#define PBRICK_PWM1_P1               PCA9685_PWM6
+#define PBRICK_PWM1_P2              PCA9685_PWM5
 
 #define PBRICK_SCL                          NRF_GPIO_PIN_MAP(0,22)
 #define PBRICK_SLA                          NRF_GPIO_PIN_MAP(0,19)
 
-#define STUSB4500_DEVICE_ADDRESS 0x28
-#define PCA9624_DEVICE_ADDRESS  0x08
-#define WC_2533020201601_DEVICE_ADDRESS 0x19
+#define STUSB4500_DEVICE_ADDRESS                     0x28
+#define PCA9685_DEVICE_ADDRESS                          0x80
+#define WC_2533020201601_DEVICE_ADDRESS    0x19
 
 #ifdef __cplusplus
 }
