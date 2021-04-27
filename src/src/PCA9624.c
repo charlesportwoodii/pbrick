@@ -11,51 +11,87 @@
 
 ret_code_t PCA9642_init(uint8_t deviceAddress)
 {
-    // Wake device from sleep mode
-    ret_code_t ret = PCA9624_wakeup(deviceAddress);
+    uint8_t data[3] = {0};
+    ret_code_t ret = twi_rx(deviceAddress, PCA9624_DEVICE_ID, &data[0], 3);
 
-    // Verify the MODE0[0:4] is 0
-    uint8_t data[1] = {0};
-    ret = twi_rx(deviceAddress, PCA9624_MODE0, &data[0], 1);
-    VERIFY_SUCCESS(ret);
+    NRF_LOG_DEBUG("Device ID %x %x %x", data[0], data[1], data[2]);
 
-    if (data[0] != 0x01) {
-        NRF_LOG_WARNING("Failed to wake device from sleep mode.");
-    }
-
-    // Have the device change on ACK instead of STOP
-    data[0] = 0x13;
+    data[0] =0x16;
     ret = twi_tx(deviceAddress, PCA9624_MODE1, &data[0], 1);
+    return NRF_SUCCESS;
+    return ret;
+}
+
+ret_code_t PCA9624_getMode1(uint8_t deviceAddress, PCA9624_MODE1_typedef *mode)
+{
+    uint8_t data = 0;
+    ret_code_t ret = twi_rx(deviceAddress, PCA9624_MODE1, &data, 1);
     VERIFY_SUCCESS(ret);
 
-    return ret;
+    mode->d8 = data;
+
+#if PCA9624_DEBUG
+    NRF_LOG_DEBUG("PCA9624 MODE1 Data: %x", mode->d8);
+#endif
+    return NRF_SUCCESS;
 }
 
-ret_code_t PCA9624_set(uint8_t deviceAddress, uint8_t address, uint8_t pwm)
+ret_code_t PCA9624_setMode1(uint8_t deviceAddress, PCA9624_MODE1_typedef *mode)
 {
-    // Clamp PWM from 0x00 to 0xFF
-    if (pwm < 0) {
-        pwm = 0x00;
-    }
+    uint8_t data = mode->d8;
+    ret_code_t ret = twi_tx(deviceAddress, PCA9624_MODE1, &data, 1);
+    VERIFY_SUCCESS(ret);
 
-    if (pwm > 0xFF) {
-        pwm = 0xFF;
-    }
-
-    uint8_t data[1] = {0};
-    data[0] = pwm;
-
-    ret_code_t ret = twi_tx(deviceAddress, address, &data[0], 1);
-    return ret;
+#ifdef PCA9624_DEBUG
+    NRF_LOG_DEBUG("PCA9624 MODE 1 set to %x", mode->d8);
+#endif
+    return NRF_SUCCESS;
 }
 
-ret_code_t PCA9624_set_ledout(uint8_t deviceAddress,  uint8_t address, PCA9624_LEDOUT_typedef ledout)
+ret_code_t PCA9624_setPWM(uint8_t deviceAddress, uint8_t address, uint8_t pwm)
 {
-    uint8_t data[1] = {0};
-    memcpy(data, &ledout.d8, sizeof(ledout.d8));
+    uint8_t data = pwm;
+    ret_code_t ret = twi_tx(deviceAddress, address, &data, 1);
+    VERIFY_SUCCESS(ret);
 
-    ret_code_t ret = twi_tx(deviceAddress, address, &data[0], 1);
-    return ret;
+#if PCA9624_DEBUG
+    NRF_LOG_DEBUG("PWM %x set to %x", address - 2, pwm);
+#endif
+    return NRF_SUCCESS;
+}
+
+ret_code_t PCA9624_getPWM(uint8_t deviceAddress, uint8_t address, uint8_t *pwm)
+{
+    uint8_t data = 0;
+    ret_code_t ret = twi_rx(deviceAddress, address, &data, 1);
+    VERIFY_SUCCESS(ret);
+    memcpy(pwm, &data, 1);
+
+#if PCA9624_DEBUG
+    NRF_LOG_DEBUG("PWM %x: %x", address - 2, data);
+#endif
+    return NRF_SUCCESS;
+}
+
+ret_code_t PCA9624_setLedout(uint8_t deviceAddress,  uint8_t address, PCA9624_LEDOUT_typedef ledout)
+{
+    uint8_t data = ledout.d8;
+    ret_code_t ret = twi_tx(deviceAddress, address, &data, 1);
+    VERIFY_SUCCESS(ret);
+    
+    return NRF_SUCCESS;
+}
+
+ret_code_t PCA9624_getLedout(uint8_t deviceAddress,  uint8_t address, PCA9624_LEDOUT_typedef ledout)
+{
+    uint8_t data = 0;
+    ret_code_t ret = twi_rx(deviceAddress, address, &data, 1);
+    VERIFY_SUCCESS(ret);
+
+#if PCA9624_DEBUG
+    NRF_LOG_DEBUG("LEDOUT %x = %x", address, data);
+#endif
+    return NRF_SUCCESS;
 }
 
 ret_code_t PCA9624_reset(uint8_t deviceAddress)
@@ -65,22 +101,38 @@ ret_code_t PCA9624_reset(uint8_t deviceAddress)
 
 ret_code_t PCA9624_sleep(uint8_t deviceAddress)
 {
-    uint8_t data[1] = {0};
-    data[0] = 0x16;
-    ret_code_t ret = twi_tx(deviceAddress, PCA9624_MODE0, &data[0], 1);
+    PCA9624_MODE1_typedef mode;
+    ret_code_t ret = PCA9624_getMode1(deviceAddress, &mode);
     VERIFY_SUCCESS(ret);
-    return ret;
+
+    mode.d8 |= PCA9624_MODE1_SLEEP;
+
+    ret = PCA9624_setMode1(deviceAddress, &mode);
+    VERIFY_SUCCESS(ret);
+
+    nrf_delay_ms(1);
+
+#ifdef PCA9624_DEBUG
+    NRF_LOG_DEBUG("PCA9685 put to sleep");
+#endif
+    return NRF_SUCCESS;
 }
 
 ret_code_t PCA9624_wakeup(uint8_t deviceAddress)
 {
-    uint8_t data[1] = {0};
-    data[0] = 0x00;
-    ret_code_t ret = twi_tx(deviceAddress, PCA9624_MODE0, &data[0], 1);
+    PCA9624_MODE1_typedef mode;
+    ret_code_t ret = PCA9624_getMode1(deviceAddress, &mode);
     VERIFY_SUCCESS(ret);
 
-    // The oscillator needs 500 uS to wake up - wait 1 ms. 
+    mode.d8 = mode.d8 & ~PCA9624_MODE1_SLEEP;
+
+    ret = PCA9624_setMode1(deviceAddress, &mode);
+    VERIFY_SUCCESS(ret);
+
     nrf_delay_ms(1);
 
-    return ret;
+#ifdef PCA9624_DEBUG
+    NRF_LOG_DEBUG("PCA9685 woke up");
+#endif
+    return NRF_SUCCESS;
 }

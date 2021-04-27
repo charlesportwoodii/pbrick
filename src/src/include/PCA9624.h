@@ -7,12 +7,15 @@ extern "C" {
 
 #include "sdk_common.h"
 #include "pbrick_twi.h"
+#include "pbrick_board.h"
 
+#define PCA9624_DEVICE_ID   0xF8
 #define PCA9624_LEDOUT0     0x0C
 #define PCA9624_LEDOUT1     0x0D
 
-#define PCA9624_MODE0          0x00
-#define PCA9624_MODE1          0x01
+#define PCA9624_MODE1          0x00
+#define PCA9624_MODE2          0x01
+
 #define PCA9624_PWM0            0x02
 #define PCA9624_PWM1            0x03
 #define PCA9624_PWM2            0x04
@@ -22,6 +25,7 @@ extern "C" {
 #define PCA9624_PWM6            0x08
 #define PCA9624_PWM7            0x09
 
+#define PCA9624_MODE1_SLEEP 0x10
 typedef union {
     uint8_t d8;
     struct {
@@ -33,8 +37,8 @@ typedef union {
         uint8_t AI0 :1;
         uint8_t AI1 :1;
         uint8_t AI2 :1;
-    } mode0;
-} PCA9624_MODE0_typedef;
+    } mode1;
+} PCA9624_MODE1_typedef;
 
 typedef union  {
 	uint8_t d8;
@@ -56,6 +60,24 @@ typedef union  {
  */
 ret_code_t PCA9642_init(uint8_t deviceAddress);
 
+/**@brief Gets MODE1
+ *
+ * @param[in] uint8_t                                                deviceAddress           Device Address of PCA9624
+ * @param[in] PCA9624_MODE01_typedef       mode                       MODE1 information
+ *
+ * @return ret_code_t
+ */
+ret_code_t PCA9624_getMode1(uint8_t deviceAddress, PCA9624_MODE1_typedef *mode);
+
+/**@brief Sets Mode1
+ *
+ * @param[in] uint8_t                                               deviceAddress           Device Address of PCA9624
+ * @param[in] PCA9624_MODE01_typedef       mode                       MODE1 information
+ *
+ * @return ret_code_t
+ */
+ret_code_t PCA9624_setMode1(uint8_t deviceAddress, PCA9624_MODE1_typedef *mode);
+
 /**@brief Sets LED[0-7] PWM frequency
  *
  * @param[in] uint8_t       deviceAddress           Device Address of PCA9624
@@ -64,9 +86,19 @@ ret_code_t PCA9642_init(uint8_t deviceAddress);
  *
  * @return ret_code_t
  */
-ret_code_t PCA9624_set(uint8_t deviceAddress, uint8_t address, uint8_t pwm);
+ret_code_t PCA9624_setPWM(uint8_t deviceAddress, uint8_t address, uint8_t pwm);
 
-/**@brief Configures LEDOUT
+/**@brief Get LED[0-7] PWM frequency
+ *
+ * @param[in] uint8_t       deviceAddress           Device Address of PCA9624
+ * @param[in] uint8_t       address                         PWM[0-7] register address
+ * @param[in] uint8_t       pwm                              pwm value 0x00 - 0xFF (0-255)
+ *
+ * @return ret_code_t
+ */
+ret_code_t PCA9624_getPWM(uint8_t deviceAddress, uint8_t address, uint8_t *pwm);
+
+/**@brief Sets LEDOUT
  *
  * @param[in] uint8_t                                               deviceAddress           Device Address of PCA9624
  * @param[in] uint8_t                                               address                         LEDOUT address
@@ -74,7 +106,17 @@ ret_code_t PCA9624_set(uint8_t deviceAddress, uint8_t address, uint8_t pwm);
  *
  * @return ret_code_t
  */
-ret_code_t PCA9624_set_ledout(uint8_t deviceAddress,  uint8_t address, PCA9624_LEDOUT_typedef ledout);
+ret_code_t PCA9624_setLedout(uint8_t deviceAddress,  uint8_t address, PCA9624_LEDOUT_typedef ledout);
+
+/**@brief Get LEDOUT
+ *
+ * @param[in] uint8_t                                               deviceAddress           Device Address of PCA9624
+ * @param[in] uint8_t                                               address                         LEDOUT address
+ * @param[in] PCA9624_LEDOUT_typedef      ledout                            LEDOUT data
+ *
+ * @return ret_code_t
+ */
+ret_code_t PCA9624_getLedout(uint8_t deviceAddress,  uint8_t address, PCA9624_LEDOUT_typedef ledout);
 
 /**@brief Software reset
  *

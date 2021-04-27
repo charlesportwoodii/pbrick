@@ -13,6 +13,10 @@ extern "C" {
 #include "nrf_gpio.h"
 #include "PCA9624.h"
 
+#ifdef DEBUG
+#define PCA9624_DEBUG 1
+#endif
+
 // On board LEDS
 #define PBRICK_LED1                 LED_1
 #define PBRICK_LED2                 LED_2
