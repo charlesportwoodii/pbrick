@@ -1,135 +1,183 @@
-#include <stdbool.h>
-#include <stdlib.h>
-#include <stdint.h>
-
-#include "pbrick_board.h"
-#include "pbrick_motor.h"
-#include "sdk_common.h"
-#include "nrf_log.h"
-
+#include "app_pwm.h"
 #include "nrf_gpio.h"
+#include "nrf_delay.h"
+#include "nrf_log.h"
+#include "pbrick_motor.h"
+#include "pbrick_board.h"
+
+APP_PWM_INSTANCE(PWM0, 1);
 
 pbrick_motors motors;
 
-static void pbrick_motor_setup(uint8_t pins[2], uint8_t driverPin)
+/**@brief Ready callback for PWM
+ *
+ * @param[in] pwm_id    The PWM id
+ *
+ * @return      void
+ */
+static void pwm_ready_callback(uint32_t pwm_id)
+{
+    ready_flag = true;
+}
+
+/**@brief Setups a motor
+ *
+ * @param[in] pins      List of pins associated with the motor
+ * @param[in] driver    The PWM driver to use
+ * @param[in] id        The motor id used internally
+ *
+ * @return      void
+ */
+static void motor_setup(uint8_t pins[2], const app_pwm_t *driver, uint8_t id, uint8_t channel)
 {
     struct s_pbrick_motor_state s;
 
+    nrf_gpio_cfg_output(pins[0]);
+    nrf_gpio_cfg_output(pins[1]);
+
     memcpy(s.pins, pins, 2);
     s.direction = 1;
-    s.pwm = 0;
-    s.driverPin = driverPin;
+    s.speed = 0;
+    s.driver = driver;
+    s.id = id;
+    s.channel = channel;
 
-    motors.motors[motors.size] = s;
-    motors.size += 1;
+    motors.motors[motors.elements] = s;
+    motors.elements += 1;
 }
 
-ret_code_t pbrick_motor_init()
+/**@brief Setups a 3 wire configuration (PWM, IN0, IN1) for TB6612FNG or similar ICs
+ *        The IN0 and IN1 are high/low, and PWM carries the PWM signal to the motor controller
+ *
+ * @return      void
+ */
+static void setup()
 {
-    ret_code_t ret;
-    ret = PCA9642_init(PCA9624_DEVICE_ADDRESS);
-    if (ret != NRF_SUCCESS) {
-        NRF_LOG_ERROR("Failed to initialize PCA9624 device");
-        return NRF_ERROR_INTERNAL;
-    }
-
-    nrf_gpio_cfg_output(PBRICK_MOTOR_ENABLE);
-    nrf_gpio_pin_clear(PBRICK_MOTOR_ENABLE);
-
-    motors.size = 0;
-
+#if defined(PBRICK_PWM0_P1) && defined(PBRICK_PWM0_P2) && defined(PBRICK_PWM0_PWM)
+    // If PWM0_P1 and PWM0_P2 are defined, setup that motor group
     uint8_t motor_pins[2] = { PBRICK_PWM0_P1, PBRICK_PWM0_P2 };
-    pbrick_motor_setup(motor_pins, PBRICK_PWM0_PWM);
+    motor_setup(motor_pins, &PWM0, 1, 0);
+#endif
 
-    uint8_t motor_pins1[2] = { PBRICK_PWM1_P1, PBRICK_PWM1_P2 };
-    pbrick_motor_setup(motor_pins1, PBRICK_PWM1_PWM);
+#if defined(PBRICK_PWM1_P1) && defined(PBRICK_PWM1_P2) && defined(PBRICK_PWM1_PWM)
+    // If PWM1_P1 and PWM1_P2 are defined, setup that motor group
+    uint8_t motor_pins2[2] = { PBRICK_PWM1_P1, PBRICK_PWM1_P2 };
+    motor_setup(motor_pins2, &PWM0, 2, 1);
+#endif
 
-    PCA9624_MODE1_typedef mode;
-    ret = PCA9624_getMode1(PCA9624_DEVICE_ADDRESS, &mode);
-    VERIFY_SUCCESS(ret);
-    NRF_LOG_DEBUG("Mode1 Sleep: %x %x", mode.d8, mode.mode1.SLEEP);
+#if defined(PBRICK_PWM0_PWM) && defined(PBRICK_PWM1_PWM)
+    // If PWM0_P1 and PWM0_P2 and PWM1_P1 and PWM1_P2 are setup, create a dual channel PWM config
+    app_pwm_config_t pwm_cfg = APP_PWM_DEFAULT_CONFIG_2CH(5000L, PBRICK_PWM0_PWM, PBRICK_PWM1_PWM);
+    pwm_cfg.pin_polarity[0] = APP_PWM_POLARITY_ACTIVE_HIGH;
+    pwm_cfg.pin_polarity[1] = APP_PWM_POLARITY_ACTIVE_HIGH;
+#else
+    // If PWM0_P1 and PWM0_P2 are the only pins setup, create a single channel PWM config
+    app_pwm_config_t pwm_cfg = APP_PWM_DEFAULT_CONFIG_1CH(5000L, PBRICK_PWM0_PWM);
+    pwm_cfg.pin_polarity[0] = APP_PWM_POLARITY_ACTIVE_HIGH;
+#endif
 
-    ret = pbrick_motor_enable();
-     if (ret != NRF_SUCCESS) {
-         NRF_LOG_ERROR("Failed to enable PCA9624 device drivers");
-        return NRF_ERROR_INTERNAL;
+    ret_code_t err_code = app_pwm_init(&PWM0, &pwm_cfg, pwm_ready_callback);
+    APP_ERROR_CHECK(err_code);
+    app_pwm_enable(&PWM0);
+}
+
+void pbrick_motor_init()
+{
+    // Create mock sentinel values.
+    motors.size = 2;
+    motors.elements = 0;
+
+    for (int i = 0; i < motors.size; i++) {
+        motors.motors[i].id = -1;
     }
 
-    ret = PCA9624_getMode1(PCA9624_DEVICE_ADDRESS, &mode);
-    VERIFY_SUCCESS(ret);
-    NRF_LOG_DEBUG("Mode1 Sleep: %x %x", mode.d8, mode.mode1.SLEEP);
+    setup();
+}
 
-    PCA9624_MODE1_typedef mode1;
-    mode1.d8 = 0x00;
-    ret = PCA9624_setMode1( PCA9624_DEVICE_ADDRESS,  &mode1);
-    VERIFY_SUCCESS(ret);
-    PCA9624_LEDOUT_typedef ledout0;
-    PCA9624_LEDOUT_typedef ledout1;
+static void pbrick_motor_set_internal(uint8_t motor, uint8_t direction, uint8_t pwm)
+{
+    motors.motors[motor].direction = direction;
+    motors.motors[motor].speed = pwm;
+    uint8_t channel = motors.motors[motor].channel;
+    uint8_t motorId = motors.motors[motor].id;
 
-    // Set LEDOUT
-    ret = PCA9624_getLedout(PCA9624_DEVICE_ADDRESS, PCA9624_LEDOUT0, ledout0);
-    ret = PCA9624_getLedout(PCA9624_DEVICE_ADDRESS, PCA9624_LEDOUT1, ledout1);
-    NRF_LOG_DEBUG("LEDOUT0: %x", ledout0.d8);
-    NRF_LOG_DEBUG("LEDOUT1: %x", ledout1.d8);
+    const app_pwm_t *driver = motors.motors[motor].driver;
 
-    ledout0.ledout.ldr0 = 3;
-    ledout0.ledout.ldr1 = 3;
-    ledout0.ledout.ldr2 = 3;
-    ledout0.ledout.ldr3 = 3;
-
-    ledout1.ledout.ldr0 = 3;
-    ledout1.ledout.ldr1 = 3;
-    ledout1.ledout.ldr2 = 3;
-    ledout1.ledout.ldr3 = 3;
-
-    ret = PCA9624_setLedout(PCA9624_DEVICE_ADDRESS, PCA9624_LEDOUT0, ledout0);
-    ret = PCA9624_setLedout(PCA9624_DEVICE_ADDRESS, PCA9624_LEDOUT1, ledout1);
-
-    ret = PCA9624_getLedout(PCA9624_DEVICE_ADDRESS, PCA9624_LEDOUT0, ledout0);
-    ret = PCA9624_getLedout(PCA9624_DEVICE_ADDRESS, PCA9624_LEDOUT1, ledout1);
-    NRF_LOG_DEBUG("LEDOUT0: %x", ledout0.d8);
-    NRF_LOG_DEBUG("LEDOUT1: %x", ledout1.d8);
-
-    for (int i = 0; i < 8; i++) {
-        uint8_t pwm;
-        ret = PCA9624_getPWM(PCA9624_DEVICE_ADDRESS, PCA9624_PWM0 + i, &pwm);
+    int speed = (int)pwm;
+    if (speed > 100) {
+        NRF_LOG_INFO("Adjusting speed %x in excess to 100", speed)
+        speed = 100;
     }
 
-    ret = PCA9624_setPWM(PCA9624_DEVICE_ADDRESS, PBRICK_PWM0_PWM, 0xFF);
-    ret = PCA9624_setPWM(PCA9624_DEVICE_ADDRESS, PBRICK_PWM0_P1, 0xFF);
-    ret = PCA9624_setPWM(PCA9624_DEVICE_ADDRESS, PBRICK_PWM0_P2, 0x00);
+    while (app_pwm_channel_duty_set(driver, channel, abs(motors.motors[motor].speed)) == NRF_ERROR_BUSY);
 
-    ret = PCA9624_setPWM(PCA9624_DEVICE_ADDRESS, PBRICK_PWM1_PWM, 0xFF);
-    ret = PCA9624_setPWM(PCA9624_DEVICE_ADDRESS, PBRICK_PWM1_P1, 0xFF);
-    ret = PCA9624_setPWM(PCA9624_DEVICE_ADDRESS, PBRICK_PWM1_P2, 0x00);
-
-    for (int i = 0; i < 8; i++) {
-        uint8_t pwm;
-        ret = PCA9624_getPWM(PCA9624_DEVICE_ADDRESS, PCA9624_PWM0 + i, &pwm);
+    if (direction == 0x00) {
+        nrf_gpio_pin_clear(motors.motors[motor].pins[0]);
+        nrf_gpio_pin_set(motors.motors[motor].pins[1]);
+    } else if (direction == 0x01) {
+        nrf_gpio_pin_clear(motors.motors[motor].pins[1]);
+        nrf_gpio_pin_set(motors.motors[motor].pins[0]);
+    } else {
+        NRF_LOG_WARNING("%X motor direction is not defined", direction);
     }
-    return NRF_SUCCESS;
+
+    NRF_LOG_DEBUG("Set Motor %d: Direction: %X Speed: %X", motorId, direction, speed);
 }
 
-ret_code_t pbrick_motor_enable()
+
+void pbrick_motor_set(const uint8_t data[])
 {
-    ret_code_t ret = PCA9624_wakeup(PCA9624_DEVICE_ADDRESS);
-    VERIFY_SUCCESS(ret);
-    return NRF_SUCCESS;
+    uint8_t motor = data[0];
+    uint8_t pwm = data[1];
+    uint8_t direction = data[2];
+
+    // For PWM0, set the channel and speed directly since PWM just controls the speed
+    if (motor == 0x00 || motor == 0x01) {
+        pbrick_motor_set_internal(motor, direction, pwm);
+    } else {
+#if defined(PBRICK_PWM0_PWM) && defined(PBRICK_PWM1_PWM)
+        // Motor startup needs to be in sync - stoping all motors then disabling PWM
+        pbrick_motor_stop_all();
+
+        if (motor == 0x02) {
+            // Set both motors to operate in the same rotational direction
+            pbrick_motor_set_internal(0x00, direction, pwm);
+            pbrick_motor_set_internal(0x01, direction, pwm);
+        } else if (motor == 0x03) {
+            // Set both motors to operate in opposite directions
+            pbrick_motor_set_internal(0x00, direction, pwm);
+            pbrick_motor_set_internal(0x01, (direction ^ 0x01), pwm);
+        } else {
+            NRF_LOG_WARNING("Motor Option (%X) is not defined", motor);
+        }
+#else
+        NRF_LOG_WARNING("Dual channel motor not setup. Unable to set.")
+#endif
+    }
 }
 
-ret_code_t pbrick_motor_disable()
+void pbrick_motor_stop(uint8_t motor)
 {
-    ret_code_t ret = PCA9624_sleep(PCA9624_DEVICE_ADDRESS);
-    VERIFY_SUCCESS(ret);
-    return NRF_SUCCESS;
+    uint8_t motorId = motors.motors[motor].id;
+    if (motorId == -1) {
+        NRF_LOG_INFO("Unable to force stop motor due to undefined instance.");
+        return;
+    } else {
+        NRF_LOG_INFO("Force stopping motor %d", motorId);
+    }
+
+    nrf_gpio_pin_clear(motors.motors[motor].pins[0]);
+    nrf_gpio_pin_clear(motors.motors[motor].pins[1]);
+
+    pbrick_motor_set_internal(motor, 0x00, 0x00);
 }
 
-ret_code_t pbrick_motor_set(const uint8_t data[])
+void pbrick_motor_stop_all()
 {
-    return NRF_SUCCESS;
-}
-
-ret_code_t pbrick_motor_set_internal(uint8_t motor, uint8_t pwm, uint8_t direction)
-{
-    return NRF_SUCCESS;
+    for (int i = 0; i < motors.size; i++) {
+        uint8_t motorId = motors.motors[i].id;
+        if (motorId != -1) {
+            pbrick_motor_stop(motorId);
+        }
+    }
 }
