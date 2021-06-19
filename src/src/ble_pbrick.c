@@ -36,7 +36,8 @@ static void on_disconnect(ble_pbrick_t * p_pbrick, ble_evt_t const * p_ble_evt)
 
 #ifdef PBRICK_MOTOR_DISCONNECT_SHUTDOWN
     NRF_LOG_WARNING("Stopping motor on bluetooth disconnection.");
-    pbrick_motor_disable();
+    ret_code_t ret = pbrick_motor_disable();
+    UNUSED_PARAMETER(ret);
 #endif
 }
 

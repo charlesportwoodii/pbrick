@@ -1775,9 +1775,9 @@ M1_0
 Text Label 6250 7100 2    50   ~ 0
 P0.07
 Text Label 6250 7000 2    50   ~ 0
-P0.08
+P1.08
 Text Label 6250 6900 2    50   ~ 0
-P0.09
+P1.09
 Text Label 6250 6800 2    50   ~ 0
 P0.11
 Text Label 6250 6600 2    50   ~ 0

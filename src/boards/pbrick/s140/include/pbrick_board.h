@@ -11,7 +11,6 @@ extern "C" {
 #include "nrf.h"
 #include "boards.h"
 #include "nrf_gpio.h"
-#include "PCA9624.h"
 
 #ifdef DEBUG
 #define PCA9624_DEBUG 1
@@ -22,10 +21,8 @@ extern "C" {
 #define PBRICK_LED2                 LED_2
 #define PBRICK_LED3                 LED_3
 
-#define PBRICK_MOTOR_ENABLE NRF_GPIO_PIN_MAP(1,0)
-
 // Motor control
-#define PBRICK_PWM0_PWM         NRF_GPIO_PIN_MAP(MAP(0.3)
+#define PBRICK_PWM0_PWM         NRF_GPIO_PIN_MAP(0,3)
 #define PBRICK_PWM0_P1              NRF_GPIO_PIN_MAP(0,11)
 #define PBRICK_PWM0_P2              NRF_GPIO_PIN_MAP(0,9)
 
@@ -38,7 +35,6 @@ extern "C" {
 #define PBRICK_SLA                          NRF_GPIO_PIN_MAP(0,19)
 
 #define STUSB4500_DEVICE_ADDRESS 0x28
-#define PCA9624_DEVICE_ADDRESS  0x0C
 #define WC_2533020201601_DEVICE_ADDRESS 0x19
 
 #ifdef __cplusplus

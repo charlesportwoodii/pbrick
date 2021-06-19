@@ -6,18 +6,21 @@ extern "C" {
 #endif
 
 #include "pbrick_board.h"
-#include "PCA9624.h"
+#include "app_pwm.h"
 
 struct s_pbrick_motor_state
 {
+    uint8_t id;
     uint8_t direction;
     uint8_t pwm;
-    uint8_t driverPin;
     uint8_t pins[2];
+    uint8_t channel;
+    const app_pwm_t   *driver;
 };
 
 typedef struct s_pbrick_motors
 {
+    uint8_t elements;
     uint8_t size;
     struct s_pbrick_motor_state motors[2];
 } pbrick_motors;
@@ -70,7 +73,11 @@ ret_code_t pbrick_motor_set(const uint8_t data[]);
  * @param[in] uint8_t   direction   The motor direction
  * @return ret_code_t
  */
-ret_code_t pbrick_motor_set_internal(uint8_t motor, uint8_t pwm, uint8_t direction);
+void pbrick_motor_set_internal(uint8_t motor, uint8_t pwm, uint8_t direction);
+
+void pbrick_motor_stop(uint8_t motor);
+
+void pbrick_motor_stop_all();
 
 #ifdef __cplusplus
 }
