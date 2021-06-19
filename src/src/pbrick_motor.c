@@ -15,9 +15,9 @@ pbrick_motors motors;
  *
  * @return      void
  */
-//static void pwm_ready_callback(uint32_t pwm_id)
-//{
-//}
+static void pwm_ready_callback(uint32_t pwm_id)
+{
+}
 
 /**@brief Setups a motor
  *
@@ -64,7 +64,6 @@ static void setup()
     motor_setup(motor_pins2, &PWM0, 2, 1);
 #endif
 
-/*
 #if defined(PBRICK_PWM0_PWM) && defined(PBRICK_PWM1_PWM)
     // If PWM0_P1 and PWM0_P2 and PWM1_P1 and PWM1_P2 are setup, create a dual channel PWM config
     app_pwm_config_t pwm_cfg = APP_PWM_DEFAULT_CONFIG_2CH(5000L, PBRICK_PWM0_PWM, PBRICK_PWM1_PWM);
@@ -79,7 +78,6 @@ static void setup()
     ret_code_t err_code = app_pwm_init(&PWM0, &pwm_cfg, pwm_ready_callback);
     APP_ERROR_CHECK(err_code);
     app_pwm_enable(&PWM0);
-*/
 }
 
 ret_code_t pbrick_motor_init()
@@ -109,15 +107,13 @@ ret_code_t pbrick_motor_disable()
 
 void pbrick_motor_set_internal(uint8_t motor, uint8_t direction, uint8_t pwm)
 {
-    nrf_gpio_pin_set(PBRICK_PWM0_PWM);
-    nrf_gpio_pin_set(PBRICK_PWM1_PWM);
 
     motors.motors[motor].direction = direction;
     motors.motors[motor].pwm = pwm;
-//    uint8_t channel = motors.motors[motor].channel;
+    uint8_t channel = motors.motors[motor].channel;
     uint8_t motorId = motors.motors[motor].id;
 
-//    const app_pwm_t *driver = motors.motors[motor].driver;
+    const app_pwm_t *driver = motors.motors[motor].driver;
 
     int speed = (int)pwm;
     if (speed > 100) {
@@ -125,7 +121,7 @@ void pbrick_motor_set_internal(uint8_t motor, uint8_t direction, uint8_t pwm)
         speed = 100;
     }
 
-    //while (app_pwm_channel_duty_set(driver, channel, abs(motors.motors[motor].pwm)) == NRF_ERROR_BUSY);
+    while (app_pwm_channel_duty_set(driver, channel, abs(motors.motors[motor].pwm)) == NRF_ERROR_BUSY);
 
     if (direction == 0x00) {
         nrf_gpio_pin_clear(motors.motors[motor].pins[0]);
