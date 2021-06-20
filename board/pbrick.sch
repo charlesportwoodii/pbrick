@@ -2081,7 +2081,7 @@ U 1 1 607BE31E
 P 5350 4000
 F 0 "JP1" H 5350 4205 50  0000 C CNN
 F 1 "SolderJumper_2_Bridged" H 5350 4114 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm" H 5350 4000 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" H 5350 4000 50  0001 C CNN
 F 3 "~" H 5350 4000 50  0001 C CNN
 	1    5350 4000
 	0    -1   -1   0   
