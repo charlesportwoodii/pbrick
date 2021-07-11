@@ -24,7 +24,7 @@ extern "C" {
 // Motor control
 #define PBRICK_PWM0_PWM         NRF_GPIO_PIN_MAP(0,3)
 #define PBRICK_PWM0_P1              NRF_GPIO_PIN_MAP(0,11)
-#define PBRICK_PWM0_P2              NRF_GPIO_PIN_MAP(0,9)
+#define PBRICK_PWM0_P2              NRF_GPIO_PIN_MAP(1,9)
 
 // Motor control
 //#define PBRICK_PWM1_PWM        NRF_GPIO_PIN_MAP(0,12)
