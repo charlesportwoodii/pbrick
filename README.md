@@ -10,7 +10,7 @@
 </div>
 
 ## About
-PBrick is a personal project born out of a desire to learn Kicad, and develop embedded software, learn USB-C PD, and create a full end-to-end software solutions. I currently use pbrick to power a few custom toys, and other things that require motor driver for myself and kids.
+PBrick is a personal project born out of a desire to learn Kicad, and develop embedded software, learn USB-C PD, and create a full end-to-end software solutions. I currently use pbrick to power a few custom toys, and other things that require motor driver for toys and gadgets.
 
 While I won't call this "battle-tested" hardware and software, I have successfully manufactured and used it for over a year now without problem or incident.
 
